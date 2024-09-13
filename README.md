@@ -26,11 +26,11 @@
 <table>
     <tr valign="top">
         <td>
-            <a href='https://mariezin.github.io/Search-For-Hotels/app/pages/colors-&-type.html'>Colors & Type</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Colors & Type</a><br><br>
             <img src='./pixel-perfect/Colors%26Type.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/Search-For-Hotels/app/pages/form-elements.html'>Form Elements</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Form Elements</a><br><br>
             <img src='./pixel-perfect/FormElements.jpg' width='200'>
         </td>
     </tr>
