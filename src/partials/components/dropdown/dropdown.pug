@@ -1,0 +1,21 @@
+mixin dropdown(title, subtitle, buttonText, elements, isOpen)
+  - const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
+
+  div(class= className)
+    h3.dropdown__header= title
+      span.dropdown__subtitle= subtitle
+    .dropdown__menu
+      button.dropdown__btn(aria-expanded="false")= buttonText
+        svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="8"
+            viewBox="0 0 12 8")
+          path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"
+              fill="#1F2041"
+              fill-opacity="0.75")
+
+      ul.dropdown__list
+        each element in elements
+          li.dropdown__item
+            label.dropdown__label= element.name
+              input.dropdown__input(type='number', value= element.value, min= element.min, max= element.max disabled)

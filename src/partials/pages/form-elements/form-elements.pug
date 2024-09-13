@@ -1,0 +1,95 @@
+extends ../../templates/template-uikit/template-uikit
+include ../../components/text-field/text-field
+include ../../components/bullet-list/bullet-list
+include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../components/icon-text-list/icon-text-list
+include ../../components/radio-buttons/radio-buttons
+include ../../components/dropdown/dropdown
+include ../../components/toggle/toggle
+
+
+block content
+  section.forms-elements
+    .forms-elements__container
+      .forms-elements__column.forms-elements__column--left
+        .forms-elements__text-field-one
+          +text-field('Text Field', 'Default', 'Email')
+
+        .forms-elements__text-field-two
+          +text-field('Text Field', 'Hover / Focus', 'Email')
+
+        .forms-elements__subscription-text-field
+          include ../../components/subscription-text-field/subscription-text-field
+
+        .forms-elements__dropdown
+          -
+            const elements = [
+              {name: 'спальни', value: 2, min: 0, max: 5},
+              {name: 'кровати', value: 2, min: 0, max: 5},
+              {name: 'ванные комнаты', value: 0, min: 0, max: 5},
+            ]
+
+          +dropdown('dropdown', 'Default', '2 спальни, 2 кровати...', elements, false)
+
+        .forms-elements__dropdown--open
+          +dropdown('dropdown', 'expanded', '2 спальни, 2 кровати...', elements, true)
+
+
+
+
+      .forms-elements__column.forms-elements__column--center
+
+        .forms-elements__checkbox-buttons
+          -
+            const btns = [
+              {text: 'Можно курить', isChecked: false},
+              {text: 'Можно с питомцами', isChecked: true},
+              {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true},
+            ]
+
+          +checkbox-btns('Checkbox Buttons', btns)
+
+        .forms-elements__radio-buttons
+          - const radios = [{text: 'Мужчина', isChecked: true}, {text: 'Женщина', isChecked: false}]
+          +radioButtons('Radio Buttons', radios)
+
+        .forms-elements__toggle
+          -
+            const toggleElems = [
+              {description: 'Получать спецпредложения', isChecked: true},
+              {description: 'Получать спецпредложения', isChecked: false},
+            ]
+
+          +toggle('toggle', toggleElems)
+
+        .forms-elements__rate-buttons
+          include ../../components/rate-button/rate-button
+
+        .forms-elements__rich-checkbox-buttons
+          -
+            const itemsRichBtns = [
+              {title: 'Широкий коридор', description: 'Ширина коридоров в номере<br>не менее 91 см.', isChecked: false},
+              {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.', isChecked: false},
+            ]
+
+          +rich-checkbox-btns('rich Checkbox Buttons', itemsRichBtns)
+
+
+
+      .forms-elements__column.forms-elements__column--right
+
+        .forms-elements__bullet-list
+            - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+            +bullet-list('bullet list', items)
+
+
+    .forms-elements__footer
+      .forms-elements__icon-text-list
+        -
+          const iconArr = [
+            {src_icon: '../img/components/icon-text-list/comfort.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'},
+            {src_icon: '../img/components/icon-text-list/ease.svg', title: 'Удобство', description: 'Окно в каждой из спален'},
+          ]
+
+        +icon-text-list(iconArr)

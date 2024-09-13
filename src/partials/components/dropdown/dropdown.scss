@@ -1,0 +1,111 @@
+.dropdown {
+  // padding-top: 200px;
+  // padding-bottom: 300px;
+  max-width: 100%;
+  transition: var(--transit);
+
+  &__header {
+    @include form-subtitle;
+
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4px;
+  }
+
+  &__subtitle {
+    font: var(--sub-title-light);
+    color: var(--color-dark-50);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    border: 1px solid var(--color-dark-25);
+    border-radius: var(--bd-radius) var(--bd-radius) 0 0;
+    padding: 15px;
+    width: 100%;
+    height: 44px;
+    font: var(--text);
+    line-height: 1;
+    color: var(--color-dark-75);
+    background-color: var(--color-light);
+    cursor: pointer;
+  }
+
+  &__menu {
+    position: relative;
+  }
+
+  &__list {
+    @include form-subtitle;
+
+    position: absolute;
+    left: 0;
+    top: 44px;
+    border: 1px solid var(--color-dark-50);
+    border-top: none;
+    border-radius: 0 0 var(--bd-radius) var(--bd-radius);
+    padding: 5px 7px 1px 15px;
+    width: 100%;
+    box-shadow: 0 10px 20px 0 rgba(31, 32, 65, 0.05);
+    background-color: var(--color-light);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__item {
+    padding-bottom: 7px;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input:disabled {
+    background: transparent;
+  }
+}
+
+.dropdown--open {
+  .dropdown__btn {
+    border-color: var(--color-dark-50);
+  }
+
+  .dropdown__list {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nice-number {
+  justify-content: space-between;
+  width: 92px;
+
+  &__button--disabed {
+    border-color: var(--color-dark-25)!important;
+    color: var(--color-dark-25)!important;
+    cursor: not-allowed!important;
+  }
+}
+
+.nice-number button{
+  border: 1px solid var(--color-dark-50);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: var(--color-dark-50);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nice-number input {
+  @include form-subtitle;
+
+  border: none;
+  max-width: 20px;
+}

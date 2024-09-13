@@ -1,0 +1,39 @@
+extends ../../templates/template-uikit/template-uikit
+
+block content
+  -
+    const colors = [
+        {title: "Dark Shade 100%", value: "#1F2041", color: "--color-bg: var(--color-dark-100)"},
+        {title: "Dark Shade 75%", value: "#1F2041", color: "--color-bg: var(--color-dark-75)"},
+        {title: "Dark Shade 50%", value: "#1F2041", color: "--color-bg: var(--color-dark-50)"},
+        {title: "Dark Shade 25%", value: "#1F2041", color: "--color-bg: var(--color-dark-25)"},
+        {title: "Dark Shade 5%", value: "#1F2041", color: "--color-bg: var(--color-dark-5)"},
+        {title: "Purple", value: "#BC9CFF", color: "--color-bg: var(--color-purple)"},
+        {title: "Green", value: "#6FCF97", color: "--color-bg: var(--color-green)"},
+      ]
+
+    const types = [
+        {tag: "h1", textType: "H1", text: "This one is the sub-section or widget title"},
+        {tag: "h2", textType: "H2", text: "Next one is the item title inside widgets"},
+        {tag: "h3", textType: "H3", text: "This is a label or CTA text"},
+        {tag: "p", textType: "Body", text: "This is the body text which is used for most<br> of the design, like paragraphs, lists, etc."},
+      ]
+
+  section.colors-type
+    .colors-type__container
+      .colors-type__left
+        ul.colors
+          each color in colors
+            li.colors__item
+              .colors__color(style= color.color)
+              .colors__info
+                h2.colors__title= color.title
+                p.colors__value= color.value
+
+
+      .colors-type__right
+        ul.type
+          each type in types
+            li.type__item
+              #{type.tag} <span>#{type.textType}</span> !{type.text}
+

@@ -1,0 +1,35 @@
+:root {
+  // base
+  --container: 1190px;
+
+  // colors
+  --color-dark-100: rgba(31, 32, 65, 1);
+  --color-dark-75: rgba(31, 32, 65, .75);
+  --color-dark-50: rgba(31, 32, 65, .5);
+  --color-dark-25: rgba(31, 32, 65, .25);
+  --color-dark-5: rgba(31, 32, 65, .05);
+  --color-dark-1: rgba(31, 32, 65, .1);
+  --color-purple: #bc9Cff;
+  --color-green: #6fcf97;
+  --color-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  --color-light: #fff;
+  --color-error: #d82020;
+
+  // other
+  --bd-radius: 4px;
+  --transit: .3s ease-in;
+
+  // fonts
+  --font-family: montserrat, arial, sans-serif;
+  --sub-title: 700 12px var(--font-family);
+  --sub-title-light: 400 12px var(--font-family);
+  --text: 400 14px var(--font-family);
+  --text-bold: 700 14px var(--font-family);
+}
+
+// breakpoints
+$min-smart: 374px;
+$smart: 575px;
+$min-tab: 767px;
+$tabl: 991px;
+$screen: 1024px;

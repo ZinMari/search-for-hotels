@@ -1,0 +1,77 @@
+.rate-button {
+  --star-width: 20px;
+  --star-offset: 4px;
+  --star-count: 5;
+  --star-offset-count: 4;
+
+  &__title {
+    @include form-subtitle;
+
+    margin-bottom: 16px;
+  }
+
+  &__wrapp {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__group {
+    position: relative;
+    margin: 2px;
+    width: calc(var(--star-width) * var(--star-count) + var(--star-offset) * var(--star-offset-count));
+    height: 20px;
+    background-image: url("../img/components/rate-button/star-empty.svg");
+    background-size: 20px auto;
+    background-repeat: space;
+  }
+
+  &__star {
+    appearance: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: var(--star-width);
+    height: var(--star-width);
+    background-size: var(--star-width) auto;
+    background-repeat: space;
+    cursor: pointer;
+
+    &:checked,
+    &:hover{
+      background-image: url("../img/components/rate-button/star.svg");
+    }
+
+    &:hover ~ .rate-button__star {
+      background-image: url("../img/components/rate-button/star-empty.svg");
+    }
+
+    &:nth-of-type(1) {
+      z-index: 5;
+      width: calc(var(--star-width) + var(--star-offset));
+    }
+
+    &:nth-of-type(2) {
+      z-index: 4;
+      width: calc(var(--star-width) * 2 + var(--star-offset));
+    }
+
+    &:nth-of-type(3) {
+      z-index: 3;
+      width: calc(var(--star-width) * 3 + var(--star-offset) * 2);
+    }
+
+    &:nth-of-type(4) {
+      z-index: 2;
+      width: calc(var(--star-width) * 4 + var(--star-offset) * 3);
+      width: 92px;
+    }
+
+    &:nth-of-type(5) {
+      z-index: 1;
+      width: calc(var(--star-width) * var(--star-count) + var(--star-offset) * var(--star-offset-count));
+    }
+  }
+}
+
+

@@ -1,0 +1,8 @@
+mixin radioButtons(title, radios)
+  .radio
+    h4.radio__title= title
+    .radio__container
+      each radio in radios
+        label.radio__btn
+          input.radio__input(type="radio" name="name" checked= radio.isChecked)
+          span.radio__span= radio.text

@@ -1,0 +1,26 @@
+.rich-checkbox-btns {
+  max-width: 100%;
+
+  &__title {
+    @include form-subtitle;
+
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    margin-bottom: 9px;
+
+    label {
+      margin-bottom: 5px;
+      font: var(--text-bold);
+      color: var(--color-dark-75);
+    }
+  }
+
+  &__description {
+    margin-left: 30px;
+    font: var(--sub-title-light);
+    line-height: 1.17;
+    color: var(--color-dark-50);
+  }
+}
