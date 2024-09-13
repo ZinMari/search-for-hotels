@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>TOXIN</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/vendor.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <script defer src="../js/main.js"></script>
+  <body class="page__body">
+    <div class="site-container">
+      <div class="template-uikt">
+        <div class="template-uikt__container">
+          <section class="forms-elements">
+            <div class="forms-elements__container">
+              <div class="forms-elements__column forms-elements__column--left">
+                <div class="forms-elements__text-field-one">
+                  <div class="text-field">
+                    <label class="text-field__header" for="text"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Default</span></label>
+                    <input class="text-field__input" id="text" type="data" placeholder="Email"/>
+                  </div>
+                </div>
+                <div class="forms-elements__text-field-two">
+                  <div class="text-field">
+                    <label class="text-field__header" for="text"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Hover / Focus</span></label>
+                    <input class="text-field__input" id="text" type="data" placeholder="Email"/>
+                  </div>
+                </div>
+                <div class="forms-elements__subscription-text-field">
+                  <form class="subscr-form" id="subscr-form" method="POST" action="">
+                    <label class="subscr-form__title" for="subscription">subscription text field</label>
+                    <div class="subscr-form__wrapp">
+                      <input class="subscr-form__input" id="subscription" type="email" placeholder="Email" name="email_subscr">
+                      <button class="subscr-form__button" type="submit"></button>
+                    </div>
+                  </form>
+                </div>
+                <div class="forms-elements__dropdown">
+                  <div class="dropdown">
+                    <h3 class="dropdown__header">dropdown<span class="dropdown__subtitle">Default</span></h3>
+                    <div class="dropdown__menu">
+                      <button class="dropdown__btn" aria-expanded="false">2 спальни, 2 кровати...
+                        <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                          <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"></path>
+                        </svg>
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">спальни
+                            <input class="dropdown__input" type="number" value="2" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">кровати
+                            <input class="dropdown__input" type="number" value="2" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">ванные комнаты
+                            <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="forms-elements__dropdown--open">
+                  <div class="dropdown dropdown--open">
+                    <h3 class="dropdown__header">dropdown<span class="dropdown__subtitle">expanded</span></h3>
+                    <div class="dropdown__menu">
+                      <button class="dropdown__btn" aria-expanded="false">2 спальни, 2 кровати...
+                        <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                          <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.75"></path>
+                        </svg>
+                      </button>
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">спальни
+                            <input class="dropdown__input" type="number" value="2" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">кровати
+                            <input class="dropdown__input" type="number" value="2" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                        <li class="dropdown__item">
+                          <label class="dropdown__label">ванные комнаты
+                            <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="forms-elements__column forms-elements__column--center">
+                <div class="forms-elements__checkbox-buttons">
+                  <div class="checkbox-btns">
+                    <h3 class="checkbox-btns__title">Checkbox Buttons</h3>
+                    <ul class="checkbox-btns__wrap">
+                      <li>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" value="Можно курить"/><span class="checkbox__box"></span>Можно курить
+                        </label>
+                      </li>
+                      <li>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" checked="checked" value="Можно с питомцами"/><span class="checkbox__box"></span>Можно с питомцами
+                        </label>
+                      </li>
+                      <li>
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" checked="checked" value="Можно пригласить гостей (до 10 человек)"/><span class="checkbox__box"></span>Можно пригласить гостей (до 10 человек)
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="forms-elements__radio-buttons">
+                  <div class="radio">
+                    <h4 class="radio__title">Radio Buttons</h4>
+                    <div class="radio__container">
+                      <label class="radio__btn">
+                        <input class="radio__input" type="radio" name="name" checked="checked"/><span class="radio__span">Мужчина</span>
+                      </label>
+                      <label class="radio__btn">
+                        <input class="radio__input" type="radio" name="name"/><span class="radio__span">Женщина</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="forms-elements__toggle">
+                  <div class="toggle">
+                    <h3 class="toggle__title">toggle</h3>
+                    <ul class="toggle__container">
+                      <li class="toggle__item">
+                        <label class="toggle__label">
+                          <input class="toggle__input" type="checkbox" checked="checked"/><span class="toggle__display"></span>Получать спецпредложения
+                        </label>
+                      </li>
+                      <li class="toggle__item">
+                        <label class="toggle__label">
+                          <input class="toggle__input" type="checkbox"/><span class="toggle__display"></span>Получать спецпредложения
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="forms-elements__rate-buttons">
+                  <fieldset class="rate-button">
+                    <legend class="rate-button__title">rate button</legend>
+                    <div class="rate-button__wrapp">
+                      <div class="rate-button__group">
+                        <input class="rate-button__star" name="rating" value="1" aria-label="Ужасно" type="radio">
+                        <input class="rate-button__star" name="rating" value="2" aria-label="Сносно" type="radio">
+                        <input class="rate-button__star" name="rating" value="3" aria-label="Нормально" type="radio">
+                        <input class="rate-button__star" name="rating" value="4" aria-label="Хорошо" type="radio" checked>
+                        <input class="rate-button__star" name="rating" value="5" aria-label="Супер" type="radio">
+                      </div>
+                      <div class="rate-button__group">
+                        <input class="rate-button__star" name="rating_2" value="1" aria-label="Ужасно" type="radio">
+                        <input class="rate-button__star" name="rating_2" value="2" aria-label="Сносно" type="radio">
+                        <input class="rate-button__star" name="rating_2" value="3" aria-label="Нормально" type="radio">
+                        <input class="rate-button__star" name="rating_2" value="4" aria-label="Хорошо" type="radio">
+                        <input class="rate-button__star" name="rating_2" value="5" aria-label="Супер" type="radio" checked>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="forms-elements__rich-checkbox-buttons">
+                  <div class="rich-checkbox-btns">
+                    <h3 class="rich-checkbox-btns__title">rich Checkbox Buttons</h3>
+                    <ul class="rich-checkbox-btns__list">
+                      <li class="rich-checkbox-btns__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" value="Широкий коридор"/><span class="checkbox__box"></span>Широкий коридор
+                        </label>
+                        <p class="rich-checkbox-btns__description">Ширина коридоров в номере<br>не менее 91 см.</p>
+                      </li>
+                      <li class="rich-checkbox-btns__item">
+                        <label class="checkbox">
+                          <input class="checkbox__input" type="checkbox" value="Помощник для инвалидов"/><span class="checkbox__box"></span>Помощник для инвалидов
+                        </label>
+                        <p class="rich-checkbox-btns__description">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="forms-elements__column forms-elements__column--right">
+                <div class="forms-elements__bullet-list">
+                  <div class="bullet-list">
+                    <h3 class="bullet-list__title">bullet list</h3>
+                    <ul class="bullet-list__list">
+                      <li class="bullet-list__item">Нельзя с питомцами</li>
+                      <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+                      <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="forms-elements__footer">
+              <div class="forms-elements__icon-text-list">
+                <ul class="icon-text-list">
+                  <li class="icon-text-list__item">
+                    <div class="icon-text-list__img"><img src="../img/components/icon-text-list/comfort.svg"/></div>
+                    <div class="icon-text-list__text">
+                      <h4 class="icon-text-list__title">Комфорт</h4>
+                      <p class="icon-text-list__description">Шумопоглощающие стены</p>
+                    </div>
+                  </li>
+                  <li class="icon-text-list__item">
+                    <div class="icon-text-list__img"><img src="../img/components/icon-text-list/ease.svg"/></div>
+                    <div class="icon-text-list__text">
+                      <h4 class="icon-text-list__title">Удобство</h4>
+                      <p class="icon-text-list__description">Окно в каждой из спален</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

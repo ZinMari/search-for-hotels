@@ -1,9 +1,0 @@
-include ../checkbox/checkbox
-
-mixin checkbox-btns(title, btns)
-  .checkbox-btns
-    h3.checkbox-btns__title= title
-    ul.checkbox-btns__wrap
-      each btn in btns
-        li
-          +checkbox(btn.text, btn.isChecked)
