@@ -7,6 +7,7 @@ include ../../components/icon-text-list/icon-text-list
 include ../../components/radio-buttons/radio-buttons
 include ../../components/dropdown/dropdown
 include ../../components/toggle/toggle
+include ../../components/like-button/like-button
 
 
 block content
@@ -62,6 +63,15 @@ block content
             ]
 
           +toggle('toggle', toggleElems)
+
+        .forms-elements__like-button
+          -
+            const likeBtns = [
+              {count: 2, isLike: false},
+              {count: 12, isLike: true},
+            ]
+
+          +like-button('like button', likeBtns)
 
         .forms-elements__rate-buttons
           include ../../components/rate-button/rate-button
