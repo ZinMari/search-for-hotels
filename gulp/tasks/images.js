@@ -4,7 +4,7 @@ import newer from "gulp-newer";
 
 export const images = () => {
   return app.gulp.src([
-    `${app.paths.srcImgFolder}/**/*.{jpg,jpeg,png,svg}`,
+    // `${app.paths.srcImgFolder}/**/*.{jpg,jpeg,png,svg}`,
     `${app.paths.srcPartialsFolder}/**/*.{jpg,jpeg,png,svg}`], { encoding: false })
     .pipe(newer(app.paths.buildImgFolder))
     .pipe(gulpif(app.isProd, imagemin([
