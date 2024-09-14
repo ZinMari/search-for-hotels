@@ -12637,6 +12637,8 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _partials_components_subscription_text_field_subscription_text_field_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../partials/components/subscription-text-field/subscription-text-field.js */ "./src/partials/components/subscription-text-field/subscription-text-field.js");
 /* harmony import */ var _partials_components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../partials/components/dropdown/dropdown.js */ "./src/partials/components/dropdown/dropdown.js");
+/* harmony import */ var _partials_components_like_button_like_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials/components/like-button/like-button.js */ "./src/partials/components/like-button/like-button.js");
+
 
 
 
@@ -12698,6 +12700,24 @@ dropInputs.forEach(dropInput => {
       dropInput.nextElementSibling.classList.add('nice-number__button--disabed');
       break;
   }
+});
+
+/***/ }),
+
+/***/ "./src/partials/components/like-button/like-button.js":
+/*!************************************************************!*\
+  !*** ./src/partials/components/like-button/like-button.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const likeBtns = document.querySelectorAll('.like-button___btn');
+likeBtns.forEach(elem => {
+  elem.addEventListener('click', () => {
+    elem.classList.toggle('like-button___btn--like');
+    elem.classList.contains('like-button___btn--like') ? elem.textContent++ : elem.textContent--;
+  });
 });
 
 /***/ }),

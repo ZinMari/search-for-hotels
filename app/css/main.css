@@ -809,6 +809,42 @@ a {
   transform: translateY(-50%);
 }
 
+.like-button__title {
+  font: var(--sub-title);
+  text-transform: uppercase;
+  color: var(--color-dark-100);
+  margin-bottom: 16px;
+}
+.like-button___container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.like-button___btn {
+  border: 1px solid currentcolor;
+  border-radius: 10px;
+  padding: 0;
+  padding-left: 9px;
+  width: 40px;
+  height: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--color-dark-25);
+  background-image: url("../img/components/like-button/not-like.svg");
+  background-position: 4px center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  -webkit-transition: var(--trans);
+  transition: var(--trans);
+  cursor: pointer;
+}
+.like-button___btn--like {
+  color: var(--color-purple);
+  background-image: url("../img/components/like-button/like.svg");
+}
+
 .colors-type {
   padding-top: 145px;
   padding-right: 130px;
@@ -954,7 +990,10 @@ a {
   margin-bottom: 41px;
 }
 .forms-elements__toggle {
-  margin-bottom: 122px;
+  margin-bottom: 31px;
+}
+.forms-elements__like-button {
+  margin-bottom: 40px;
 }
 .forms-elements__rate-buttons {
   margin-bottom: 516px;
