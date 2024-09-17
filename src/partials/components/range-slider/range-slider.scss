@@ -1,0 +1,37 @@
+.range-slider {
+  max-width: 266px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    @include form-subtitle;
+  }
+
+  &__slider {
+    margin-bottom: 20px;
+    border: 1px solid var(--color-dark-25) !important;
+    border-radius: 3px;
+    height: 6px;
+  }
+}
+
+.range-slider .ui-slider-handle {
+  top: -6px;
+  border: 2px solid var(--color-light);
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  background: var(--color-gradient-green);
+}
+
+.range-slider .ui-slider-range {
+  top: -1px;
+  border: 1px solid var(--color-light);
+  height: 6px;
+  background: var(--color-gradient-green);
+}
