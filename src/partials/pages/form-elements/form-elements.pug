@@ -8,6 +8,7 @@ include ../../components/radio-buttons/radio-buttons
 include ../../components/dropdown/dropdown
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
+include ../../components/range-slider/range-slider
 
 
 block content
@@ -88,6 +89,14 @@ block content
 
 
       .forms-elements__column.forms-elements__column--right
+        .forms-elements__range-slider
+          -
+            const rangeSlider = {
+              title: 'Range Slider',
+              min: "550", max: "15350",
+              start: "5000", end: "10000"
+            }
+          +range-slider(rangeSlider)
 
         .forms-elements__bullet-list
             - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']

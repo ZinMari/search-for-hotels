@@ -89,8 +89,13 @@
   }
 
   // ----- column right ----- //
+  &__range-slider{
+    margin-top: 3px;
+    max-width: 266px;
+  }
+
   &__bullet-list {
-    margin-top: 1056px;
+    margin-top: 1006px;
     max-width: 263px;
   }
 
