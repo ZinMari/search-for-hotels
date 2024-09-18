@@ -61,6 +61,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "jquery.nice-number": "^2.1.0"
+    "jquery.nice-number": "^2.1.0",
+    "ng-ion-range-slider": "^2.0.2"
   }
 }

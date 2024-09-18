@@ -1,5 +1,13 @@
-.range-slider
-  .range-slider__header
-    h3.range-slider__title Range Slider
+mixin range-slider({title, min, max, start, end})
+  .range-slider
+    .range-slider__header
+      h3.range-slider__title= title
+      .range-slider__values
 
-
+    .range-slider__body
+      input.range-slider__slider(
+        data-min= min,
+        data-max= max
+        data-from= start
+        data-to= end
+      )
