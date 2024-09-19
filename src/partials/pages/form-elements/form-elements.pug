@@ -11,6 +11,7 @@ include ../../components/like-button/like-button
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/subtitle/subtitle
+include ../../components/expandable-checkbox-list/expandable-checkbox-list
 
 
 block content
@@ -43,7 +44,7 @@ block content
 
           +dropdown(dropdownData)
 
-        .forms-elements__dropdown--open
+        .forms-elements__dropdown-open
           -
             const dropdownDataOpen = {
               title: 'dropdown',
@@ -59,7 +60,32 @@ block content
             }
           +dropdown(dropdownDataOpen)
 
+        .forms-elements__expandable-checkbox-list
+          -
+            const checkboxList = [
+              { text: 'Завтрак',
+                isChecked: false
+              },
+              { text: 'Письменный стол',
+                isChecked: true
+              },
+              { text: 'Стул для кормления',
+                isChecked: true
+              },
+              { text: 'Кроватка',
+                isChecked: true
+              },
+              { text: 'Телевизор',
+                isChecked: false
+              },
+              { text: 'Шампунь',
+                isChecked: false
+              },
+            ]
+          +expandable-checkbox-list('expandable checkbox list', checkboxList, false)
 
+        .forms-elements__expandable-checkbox-list
+          +expandable-checkbox-list('expandable checkbox list', checkboxList, true)
 
 
       .forms-elements__column.forms-elements__column--center
