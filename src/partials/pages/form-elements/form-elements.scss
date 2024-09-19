@@ -91,7 +91,24 @@
   // ----- column right ----- //
   &__range-slider{
     margin-top: 3px;
+    margin-bottom: 40px;
     max-width: 266px;
+  }
+
+  &__buttons-title {
+    margin-bottom: 16px;
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__button-mini {
+    display: flex;
+    max-width: 218px;
+    gap: 20px;
   }
 
   &__bullet-list {

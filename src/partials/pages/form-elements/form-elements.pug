@@ -9,6 +9,8 @@ include ../../components/dropdown/dropdown
 include ../../components/toggle/toggle
 include ../../components/like-button/like-button
 include ../../components/range-slider/range-slider
+include ../../components/button/button
+include ../../components/subtitle/subtitle
 
 
 block content
@@ -97,6 +99,25 @@ block content
               start: "5000", end: "10000"
             }
           +range-slider(rangeSlider)
+
+        .forms-elements__buttons-title
+          +subtitle('buttons')
+
+        .forms-elements__buttons-container
+          .forms-elements__button-mini
+            +button('click me', 'fill')
+            +button('click me', 'fill', true)
+
+          .forms-elements__button-mini
+            +button('click me', 'border')
+            +button('click me', 'border', true)
+
+          .forms-elements__button-mini
+            +button('click me', 'text')
+            +button('click me', 'text', true)
+
+          .forms-elements__button--arrow
+            +button('перейти к оплате', 'arrow')
 
         .forms-elements__bullet-list
             - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
