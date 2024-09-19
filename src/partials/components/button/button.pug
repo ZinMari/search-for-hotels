@@ -1,0 +1,16 @@
+mixin button(text, style, isDisabled= false)
+  -
+    const styles = {
+      fill: 'fill',
+      border: 'border',
+      text: 'text',
+      arrow: 'arrow',
+    }
+
+  -
+    const classes = [
+      `btn`,
+      `btn__${styles[style]}`
+    ]
+  button(class= [...classes], disabled= isDisabled)
+    span= text
