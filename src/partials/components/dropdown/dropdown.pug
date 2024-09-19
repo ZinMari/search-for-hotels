@@ -25,9 +25,9 @@ mixin dropdown(title, buttonText, elements, isOpen, hasButtons, subtitle=false)
                   min= element.min,
                   max= element.max disabled
                 )
-
-        .dropdown__buttons
-          .dropdown__clear
-            +button('очистить', 'text')
-          .dropdown__apply
-            +button('применить', 'text')
+        if(hasButtons)
+          .dropdown__buttons
+            .dropdown__clear
+              +button('очистить', 'text')
+            .dropdown__apply
+              +button('применить', 'text')
