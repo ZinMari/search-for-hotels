@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin dropdown(title, buttonText, elements, isOpen, hasButtons, subtitle=false)
+mixin dropdown({title, buttonText, elements, isOpen, hasButtons, subtitle=false})
   - const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
 
   div(class= className)

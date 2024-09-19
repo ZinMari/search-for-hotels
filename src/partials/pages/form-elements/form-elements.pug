@@ -28,16 +28,36 @@ block content
 
         .forms-elements__dropdown
           -
-            const elements = [
-              {name: 'спальни', value: 2, min: 0, max: 5},
-              {name: 'кровати', value: 2, min: 0, max: 5},
-              {name: 'ванные комнаты', value: 0, min: 0, max: 5},
-            ]
+            const dropdownData = {
+              title: 'dropdown',
+              subtitle: 'Default',
+              buttonText: '2 спальни, 2 кровати...',
+              elements: [
+                {name: 'спальни', value: 2, min: 0, max: 5},
+                {name: 'кровати', value: 2, min: 0, max: 5},
+                {name: 'ванные комнаты', value: 0, min: 0, max: 5},
+              ],
+              isOpen: false,
+              hasButtons: false
+            }
 
-          +dropdown('dropdown', '2 спальни, 2 кровати...', elements, false, false, 'Default')
+          +dropdown(dropdownData)
 
         .forms-elements__dropdown--open
-          +dropdown('dropdown', '2 спальни, 2 кровати...', elements, true, false, 'expanded')
+          -
+            const dropdownDataOpen = {
+              title: 'dropdown',
+              subtitle: 'Default',
+              buttonText: '2 спальни, 2 кровати...',
+              elements: [
+                {name: 'спальни', value: 2, min: 0, max: 5},
+                {name: 'кровати', value: 2, min: 0, max: 5},
+                {name: 'ванные комнаты', value: 0, min: 0, max: 5},
+              ],
+              isOpen: true,
+              hasButtons: false
+            }
+          +dropdown(dropdownDataOpen)
 
 
 
