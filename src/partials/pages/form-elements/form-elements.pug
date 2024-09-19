@@ -24,6 +24,10 @@ block content
         .forms-elements__text-field-two
           +text-field('Text Field', 'Hover / Focus', 'Email')
 
+        .forms-elements__dropdown-guest
+          - const dropGuestData = {title: 'dropdown', buttonText: 'Сколько гостей', elements: []}
+          +dropdown(dropGuestData)
+          
         .forms-elements__subscription-text-field
           include ../../components/subscription-text-field/subscription-text-field
 
