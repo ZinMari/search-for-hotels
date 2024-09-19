@@ -1,9 +1,12 @@
-mixin dropdown(title, subtitle, buttonText, elements, isOpen)
+include ../button/button
+
+mixin dropdown(title, buttonText, elements, isOpen, hasButtons, subtitle=false)
   - const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
 
   div(class= className)
     h3.dropdown__header= title
-      span.dropdown__subtitle= subtitle
+      if(subtitle)
+        span.dropdown__subtitle= subtitle
     .dropdown__menu
       button.dropdown__btn(aria-expanded="false")= buttonText
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
@@ -13,9 +16,20 @@ mixin dropdown(title, subtitle, buttonText, elements, isOpen)
           path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"
               fill="#1F2041"
               fill-opacity="0.75")
+      .dropdown__body
+        ul.dropdown__list
+          each element in elements
+            li.dropdown__item
+              label.dropdown__label= element.name
+                input.dropdown__input(
+                  type='number',
+                  value= element.value,
+                  min= element.min,
+                  max= element.max disabled
+                )
 
-      ul.dropdown__list
-        each element in elements
-          li.dropdown__item
-            label.dropdown__label= element.name
-              input.dropdown__input(type='number', value= element.value, min= element.min, max= element.max disabled)
+        .dropdown__buttons
+          .dropdown__clear
+            +button('очистить', 'text')
+          .dropdown__apply
+            +button('применить', 'text')

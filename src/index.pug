@@ -3,7 +3,15 @@
 extends ./partials/templates/template-uikit/template-uikit
 
 block content
-  include ./partials/components/range-slider/range-slider
+  include ./partials/components/dropdown/dropdown
+  -
+    const elements = [
+      {name: 'спальни', value: 2, min: 0, max: 5},
+      {name: 'кровати', value: 2, min: 0, max: 5},
+      {name: 'ванные комнаты', value: 0, min: 0, max: 5},
+    ]
+
+  +dropdown('dropdown', '2 спальни, 2 кровати...', elements, false)
 
 
 
