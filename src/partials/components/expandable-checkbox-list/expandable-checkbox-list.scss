@@ -1,0 +1,48 @@
+.expandable-checkbox-list {
+  --height-btn: 45px;
+
+  position: relative;
+
+  &__btn {
+    @include form-subtitle;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 2px;
+    border: none;
+    padding: 0;
+    padding-right: 16px;
+    width: 100%;
+    height: var(--height-btn);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__svg {
+    fill: var(--color-dark-50)
+  }
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: var(--height-btn);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    gap: 4px;
+  }
+}
+
+.expandable-checkbox-list--open {
+  .expandable-checkbox-list__list {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .expandable-checkbox-list__svg {
+    transform: rotate(-180deg);
+  }
+}
