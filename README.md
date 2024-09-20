@@ -2,21 +2,19 @@
 
 Проект находится в разработке.
 
-## ✴︎ Тут изучается :
+## ✴︎ Тут используется :
 - PUG
 - Компоненая архитектура
 - jQuery
-
-## ✴︎ Также используются :
 - SCSS
 - Gulp
 - Pixel Perfect верстка
 
 ## ✴︎ jQuery библиотеки:
-В этом проекте я учусь подключать и настраивать различные плагины jQuery, по этому тут они используются даже там, где их можно было избежать.
 
 - [jQuery Validation ](https://jqueryvalidation.org/)
 - [jQuery Nice Number](https://www.npmjs.com/package/jquery.nice-number)
+- [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeslider/index.html)
 
 ## ✴︎ Макет сайта :
 - [В Figma](https://www.figma.com/design/7W5R6uxAk0vCVzFZcPVegk/Untitled?t=UA9JdK1Lq5xzQqtc-0)
