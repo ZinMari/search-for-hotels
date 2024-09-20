@@ -94,6 +94,15 @@
     margin-bottom: 40px;
   }
 
+  &__like-button-title {
+    margin-bottom: 16px;
+  }
+
+  &__like-button-line {
+    display: flex;
+    gap: 10px;
+  }
+
   &__rate-buttons {
     margin-bottom: 516px;
   }

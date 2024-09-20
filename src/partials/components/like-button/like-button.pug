@@ -1,10 +1,6 @@
-mixin like-button(title, likeBtns)
-
+mixin like-button({countLike, isLike})
   .like-button
-    h3.like-button__title like button
     .like-button___container
-      each btn in likeBtns
-        - const btnClass = btn.isLike ? 'like-button___btn like-button___btn--like' : 'like-button___btn'
-
-        button(class= btnClass)= btn.count
+        - const btnClass = isLike ? 'like-button___btn like-button___btn--like' : 'like-button___btn'
+        button(class= btnClass)= countLike
 

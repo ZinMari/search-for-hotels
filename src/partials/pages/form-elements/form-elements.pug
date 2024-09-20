@@ -27,7 +27,7 @@ block content
         .forms-elements__dropdown-guest
           - const dropGuestData = {title: 'dropdown', buttonText: 'Сколько гостей', elements: []}
           +dropdown(dropGuestData)
-          
+
         .forms-elements__subscription-text-field
           include ../../components/subscription-text-field/subscription-text-field
 
@@ -118,13 +118,11 @@ block content
           +toggle('toggle', toggleElems)
 
         .forms-elements__like-button
-          -
-            const likeBtns = [
-              {count: 2, isLike: false},
-              {count: 12, isLike: true},
-            ]
-
-          +like-button('like button', likeBtns)
+          .forms-elements__like-button-title
+            +subtitle('like button')
+          .forms-elements__like-button-line
+            +like-button({countLike: 2, isLike: false})
+            +like-button({countLike: 12, isLike: true})
 
         .forms-elements__rate-buttons
           include ../../components/rate-button/rate-button
