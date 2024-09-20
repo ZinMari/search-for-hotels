@@ -11,7 +11,7 @@
   &__footer {
     display: grid;
     grid-template-columns: 320px 711px;
-    gap: 167px;
+    gap: 125px;
   }
 
   &__column {
@@ -139,9 +139,14 @@
     max-width: 263px;
   }
 
+  // ----- footer ----- //
 
 
   &__icon-text-list {
     margin-left: 3px;
+  }
+
+  &__comment {
+    margin-top: 7px;
   }
 }
