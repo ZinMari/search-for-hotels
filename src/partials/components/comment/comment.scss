@@ -1,0 +1,44 @@
+.comment {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  font: var(--text);
+  color: var(--color-dark-75);
+  column-gap: 10px;
+  row-gap: 12px;
+
+  &__img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--color-light);
+    border-radius: 50%;
+
+
+    img {
+      max-width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__name {
+    font: var(--text-bold);
+  }
+
+  &__like {
+    justify-self: center;
+  }
+
+  &__text {
+    display: flex;
+    margin-top: 1px;
+    line-height: 1.7;
+  }
+}

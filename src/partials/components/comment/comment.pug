@@ -1,0 +1,12 @@
+include ../like-button/like-button
+
+mixin comment({imgPath, name, date, countLike, isLike, text})
+  .comment
+    .comment__img
+      img(src= imgPath, alt="Фото комментатора")
+    .comment__title
+      p.comment__name= name
+      p.comment__time= date
+    .comment__like
+      +like-button({countLike: 12, isLike: true})
+    p.comment__text= text
