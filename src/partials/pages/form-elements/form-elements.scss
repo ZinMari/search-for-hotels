@@ -66,6 +66,8 @@
   }
 
   &__expandable-checkbox-list {
+    position: relative;
+    z-index: 1;
     margin-bottom: 17px;
     width: 266px;
   }
