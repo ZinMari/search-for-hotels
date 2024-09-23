@@ -20,10 +20,30 @@ block content
     .forms-elements__container
       .forms-elements__column.forms-elements__column--left
         .forms-elements__text-field-one
-          +text-field('Text Field', 'Default', 'Email')
+
+          -
+            const textFieldOne = {
+              title: 'Text Field',
+              id: 'textFieldFormElementsOne',
+              typeInput: 'text',
+              subtitle: 'Default',
+              placeholder: 'Email'
+            }
+
+          +text-field(textFieldOne)
 
         .forms-elements__text-field-two
-          +text-field('Text Field', 'Hover / Focus', 'Email')
+          -
+            const textFieldTwo = {
+              title: 'Text Field',
+              id: 'textFieldFormElementsTwo',
+              typeInput: 'text',
+              subtitle: 'Hover / Focus',
+              value: "This is pretty awesome",
+              autofocus: true,
+            }
+
+          +text-field(textFieldTwo)
 
         .forms-elements__dropdown-guest
           - const dropGuestData = {title: 'dropdown', buttonText: 'Сколько гостей', elements: []}
