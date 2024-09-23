@@ -19,35 +19,45 @@ block content
   section.forms-elements
     .forms-elements__container
       .forms-elements__column.forms-elements__column--left
-        .forms-elements__text-field-one
-
+        .forms-elements__text-field
           -
-            const textFieldOne = {
+            const textField = {
               title: 'Text Field',
-              id: 'textFieldFormElementsOne',
+              id: 'textField',
               typeInput: 'text',
               subtitle: 'Default',
               placeholder: 'Email'
             }
 
-          +text-field(textFieldOne)
+          +text-field(textField)
 
-        .forms-elements__text-field-two
+        .forms-elements__text-field-focus
           -
-            const textFieldTwo = {
+            const textFieldFocus = {
               title: 'Text Field',
-              id: 'textFieldFormElementsTwo',
+              id: 'textFieldFocus',
               typeInput: 'text',
               subtitle: 'Hover / Focus',
               value: "This is pretty awesome",
               autofocus: true,
             }
 
-          +text-field(textFieldTwo)
+          +text-field(textFieldFocus)
 
         .forms-elements__dropdown-guest
           - const dropGuestData = {title: 'dropdown', buttonText: 'Сколько гостей', elements: []}
           +dropdown(dropGuestData)
+
+        .forms-elements__masked-text-field
+          -
+            const maskedTextField = {
+              title: 'masked text field',
+              id: 'maskedTextField',
+              typeInput: 'date',
+              placeholder: 'ДД.ММ.ГГГГ'
+            }
+
+          +text-field(maskedTextField)
 
         .forms-elements__subscription-text-field
           include ../../components/subscription-text-field/subscription-text-field
@@ -111,7 +121,6 @@ block content
 
         .forms-elements__expandable-checkbox-list-open
           +expandable-checkbox-list('expandable checkbox list', checkboxList, true)
-
 
       .forms-elements__column.forms-elements__column--center
 

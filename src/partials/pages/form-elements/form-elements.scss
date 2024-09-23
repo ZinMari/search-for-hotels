@@ -36,21 +36,25 @@
   }
 
   // ----- column left ----- //
-  &__text-field-one {
+  &__text-field {
     margin-bottom: 17px;
   }
 
-  &__text-field-two {
+  &__text-field-focus {
     margin-bottom: 21px;
   }
 
   &__dropdown-guest {
-    margin-bottom: 337px;
+    margin-bottom: 20px;
   }
 
   &__subscription-text-field {
     margin-bottom: 101px;
     max-width: 267px;
+  }
+
+  &__masked-text-field {
+    margin-bottom: 251px;
   }
 
   &__dropdown {
