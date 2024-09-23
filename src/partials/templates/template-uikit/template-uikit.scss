@@ -1,4 +1,8 @@
 .template-uikt {
+  &--dark {
+    background-color: #f4f4f6;
+  }
+
   &__container {
     margin: 0 auto;
     max-width: 1440px;

@@ -1,7 +1,9 @@
 extends ../template-main/template-main
 
 block page
-  .template-uikt
+  block container
+  - var className = backgroundDark ? `template-uikt template-uikt--dark` : 'template-uikt'
+  div(class= className)
     .template-uikt__container
       block content
 
