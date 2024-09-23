@@ -1,40 +1,42 @@
 // подключения библиотек
-@import "./vendor/reset";
-@import "../../node_modules/jquery.nice-number/dist/jquery.nice-number";
-@import "../../node_modules/ion-rangeslider/css/ion.rangeSlider";
+@import './vendor/reset';
+@import '../../node_modules/jquery.nice-number/dist/jquery.nice-number';
+@import '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
+@import '../../node_modules/air-datepicker/air-datepicker';
 
 // базовые подключения
-@import "vars";
-@import "fonts";
-@import "settings";
-@import "mixins";
+@import 'vars';
+@import 'fonts';
+@import 'settings';
+@import 'mixins';
 
 // подключение шаблонов
-@import "../partials/templates/template-uikit/template-uikit";
+@import '../partials/templates/template-uikit/template-uikit';
 
 // подключение компонентов
-@import "../partials/components/text-field/text-field";
-@import "../partials/components/icon-text-list/icon-text-list";
-@import "../partials/components/dropdown/dropdown";
-@import "../partials/components/radio-buttons/radio-buttons";
-@import "../partials/components/subscription-text-field/subscription-text-field";
-@import "../partials/components/bullet-list/bullet-list";
-@import "../partials/components/checkbox/checkbox";
-@import "../partials/components/checkbox-buttons/checkbox-buttons";
-@import "../partials/components/rich-checkbox-buttons/rich-checkbox-buttons";
-@import "../partials/components/rate-button/rate-button";
-@import "../partials/components/toggle/toggle";
-@import "../partials/components/like-button/like-button";
-@import "../partials/components/range-slider/range-slider";
-@import "../partials/components/button/button";
-@import "../partials/components/subtitle/subtitle";
-@import "../partials/components/expandable-checkbox-list/expandable-checkbox-list";
-@import "../partials/components/comment/comment";
+@import '../partials/components/text-field/text-field';
+@import '../partials/components/icon-text-list/icon-text-list';
+@import '../partials/components/dropdown/dropdown';
+@import '../partials/components/radio-buttons/radio-buttons';
+@import '../partials/components/subscription-text-field/subscription-text-field';
+@import '../partials/components/bullet-list/bullet-list';
+@import '../partials/components/checkbox/checkbox';
+@import '../partials/components/checkbox-buttons/checkbox-buttons';
+@import '../partials/components/rich-checkbox-buttons/rich-checkbox-buttons';
+@import '../partials/components/rate-button/rate-button';
+@import '../partials/components/toggle/toggle';
+@import '../partials/components/like-button/like-button';
+@import '../partials/components/range-slider/range-slider';
+@import '../partials/components/button/button';
+@import '../partials/components/subtitle/subtitle';
+@import '../partials/components/expandable-checkbox-list/expandable-checkbox-list';
+@import '../partials/components/comment/comment';
+@import '../partials/components/datepicker/datepicker';
 
 
 // подключение страниц
-@import "../partials/pages/colors-&-type/colors-&-type";
-@import "../partials/pages/form-elements/form-elements";
+@import '../partials/pages/colors-&-type/colors-&-type';
+@import '../partials/pages/form-elements/form-elements';
 
 
 

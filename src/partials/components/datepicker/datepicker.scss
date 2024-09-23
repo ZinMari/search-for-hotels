@@ -1,0 +1,133 @@
+.air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month-,
+.air-datepicker-cell.-day-.-disabled- {
+  color: var(--color-dark-25);
+}
+
+.air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month-.-focus-,
+.air-datepicker-cell.-day-.-disabled-.-focus- {
+  background: transparent;
+}
+
+.air-datepicker-body--cells.-days- {
+  grid-auto-rows: 40px;
+  grid-template-columns: repeat(7, 40px);
+}
+
+.air-datepicker-body--day-names {
+  grid-auto-rows: 40px;
+  margin-bottom: -1px;
+}
+
+.air-datepicker {
+  * {
+    box-sizing: border-box;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  border-radius: 4px;
+  padding: 20px;
+  padding-top: 15px;
+  width: 320px;
+  min-height: 369px;
+  box-sizing: border-box;
+  font: var(--sub-title-light);
+  color: var(--color-dark-50);
+
+  &-nav {
+    margin-bottom: 18px;
+    border-bottom: none;
+    padding: 0;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--color-dark-100);
+  }
+
+  &-body {
+    &--day-name {
+      font-weight: 700;
+      text-transform: none;
+      color: var(--color-purple);
+    }
+  }
+
+  &--content {
+    margin-bottom: 6px;
+    padding: 0;
+  }
+
+  &--buttons {
+    border-top: none;
+    padding: 0;
+  }
+
+  &-button {
+    padding: 0;
+  }
+
+  &-button span {
+    align-items: end;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-purple);
+  }
+
+  .clearBtn span{
+    justify-content: start;
+  }
+
+  .applyBtn span{
+    justify-content: end;
+  }
+}
+
+
+
+.air-datepicker-cell.-day-.-current- span {
+  font-weight: 700;
+  color: var(--color-light);
+  background: var(--color-gradient-green);
+}
+
+.air-datepicker-cell.-day-.-selected-.-range-from- {
+  border-radius: 50% 0 0 50%;
+  background: var(--color-gradient-opacity);
+}
+
+.air-datepicker-cell.-day-.-selected-.-range-to- {
+  border-radius: 0 50% 50% 0;
+  background: var(--color-gradient-opacity);
+}
+
+.air-datepicker-cell.-day-.-selected- {
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--color-light);
+  background: var(--color-gradient);
+}
+
+.air-datepicker-cell.-day-.-range-to-.-focus-,
+.air-datepicker-cell.-day-.-range-from-.-focus-,
+.air-datepicker-cell.-day-.-other-month-.-range-to- {
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--color-light);
+  background: var(--color-gradient);
+}
+
+.air-datepicker-cell.-day-.-selected- span {
+  background: var(--color-gradient);
+}
+
+.air-datepicker-cell.-day-.-in-range- {
+  color: var(--color-dark-50);
+  background: var(--color-gradient-opacity);
+}
