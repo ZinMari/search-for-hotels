@@ -1,6 +1,7 @@
-mixin toggle(title, elements)
+mixin toggle(elements, title= false)
   .toggle
-    h3.toggle__title= title
+    if title
+      h3.toggle__title= title
     ul.toggle__container
       each elem in elements
         li.toggle__item
