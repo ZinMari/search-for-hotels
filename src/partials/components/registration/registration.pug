@@ -1,0 +1,53 @@
+include ../text-field/text-field
+include ../subtitle/subtitle
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
+include ../button/button
+
+.registration
+  h2.registration__title Регистрация аккаунта
+  form.registration__form
+    .registration__group
+      .registration__item
+        - const userName = {id: 'userName', typeInput: 'text', placeholder: 'Имя'}
+        +text-field(userName)
+      .registration__item
+        - const userSurName = {id: 'userSurName', typeInput: 'text', placeholder: 'Фамилия'}
+        +text-field(userSurName)
+      .registration__item
+        -
+          const genders = {
+            name: 'genders',
+            radios: [{text: 'Мужчина', isChecked: true}, {text: 'Женщина', isChecked: false}]
+          }
+        +radioButtons(genders)
+
+    .registration__group
+      .registration__subtitle
+        +subtitle('дата рождения')
+      .registration__item
+        - const birthInput = {id: 'userBirth', typeInput: 'date', placeholder: 'ДД.ММ.ГГГГ'}
+        +text-field(birthInput)
+
+    .registration__group
+      .registration__subtitle
+          +subtitle('данные для входа в сервис')
+      .registration__item
+        - const userEmail = {id: 'userEmail', typeInput: 'email', placeholder: 'Email'}
+        +text-field(userEmail)
+      .registration__item
+        - const userPassword = {id: 'userPassword', typeInput: 'password', placeholder: 'Пароль'}
+        +text-field(userPassword)
+      .registration__item
+        - const specToggle = [{isChecked: false, description: 'Получать спецпредложения'}]
+        +toggle(specToggle)
+
+    .registration__goToPay
+      +button('перейти к оплате', 'arrow')
+
+  .registration__signIn
+    .registration__text Уже есть аккаунт на Toxin
+    .registration__enter
+      +button('войти', 'border')
+
+
