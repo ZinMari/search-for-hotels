@@ -135,8 +135,13 @@ block content
           +checkbox-btns('Checkbox Buttons', btns)
 
         .forms-elements__radio-buttons
-          - const radios = [{text: 'Мужчина', isChecked: true}, {text: 'Женщина', isChecked: false}]
-          +radioButtons('Radio Buttons', radios)
+          -
+            const radioElem = {
+              name: 'formElementsRadio',
+              radios: [{text: 'Мужчина', isChecked: true}, {text: 'Женщина', isChecked: false}],
+              title: 'Radio Buttons',
+            }
+          +radioButtons(radioElem)
 
         .forms-elements__toggle
           -

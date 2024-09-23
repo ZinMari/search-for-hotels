@@ -12,6 +12,10 @@
     gap: 20px;
   }
 
+  &__btn {
+    cursor: pointer;
+  }
+
   &__input {
     @include visually-hidden;
 
