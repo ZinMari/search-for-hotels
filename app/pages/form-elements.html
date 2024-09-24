@@ -18,16 +18,18 @@
           <section class="forms-elements">
             <div class="forms-elements__container">
               <div class="forms-elements__column forms-elements__column--left">
-                <div class="forms-elements__text-field-one">
+                <div class="forms-elements__text-field">
                   <div class="text-field">
-                    <label class="text-field__header" for="text"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Default</span></label>
-                    <input class="text-field__input" id="text" type="data" placeholder="Email"/>
+                    <label class="text-field__header" for="textField"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Default</span>
+                    </label>
+                    <input class="text-field__input" id="textField" value="" placeholder="Email"/>
                   </div>
                 </div>
-                <div class="forms-elements__text-field-two">
+                <div class="forms-elements__text-field-focus">
                   <div class="text-field">
-                    <label class="text-field__header" for="text"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Hover / Focus</span></label>
-                    <input class="text-field__input" id="text" type="data" placeholder="Email"/>
+                    <label class="text-field__header" for="textFieldFocus"><span class="text-field__title">Text Field</span><span class="text-field__subtitle">Hover / Focus</span>
+                    </label>
+                    <input class="text-field__input" id="textFieldFocus" value="This is pretty awesome" autofocus="autofocus" placeholder=""/>
                   </div>
                 </div>
                 <div class="forms-elements__dropdown-guest">
@@ -45,6 +47,13 @@
                         </ul>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="forms-elements__masked-text-field">
+                  <div class="text-field">
+                    <label class="text-field__header" for="maskedTextField"><span class="text-field__title">masked text field</span>
+                    </label>
+                    <input class="text-field__input" id="maskedTextField" value="" placeholder="ДД.ММ.ГГГГ"/>
                   </div>
                 </div>
                 <div class="forms-elements__subscription-text-field">
@@ -161,7 +170,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="forms-elements__expandable-checkbox-list">
+                <div class="forms-elements__expandable-checkbox-list-open">
                   <div class="expandable-checkbox-list expandable-checkbox-list--open">
                     <button class="expandable-checkbox-list__btn" aria-expanded="aria-expanded">expandable checkbox list
                       <svg class="expandable-checkbox-list__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
@@ -231,10 +240,10 @@
                     <h4 class="radio__title">Radio Buttons</h4>
                     <div class="radio__container">
                       <label class="radio__btn">
-                        <input class="radio__input" type="radio" name="name" checked="checked"/><span class="radio__span">Мужчина</span>
+                        <input class="radio__input" type="radio" name="formElementsRadio" checked="checked"/><span class="radio__span">Мужчина</span>
                       </label>
                       <label class="radio__btn">
-                        <input class="radio__input" type="radio" name="name"/><span class="radio__span">Женщина</span>
+                        <input class="radio__input" type="radio" name="formElementsRadio"/><span class="radio__span">Женщина</span>
                       </label>
                     </div>
                   </div>
@@ -257,11 +266,19 @@
                   </div>
                 </div>
                 <div class="forms-elements__like-button">
-                  <div class="like-button">
-                    <h3 class="like-button__title">like button</h3>
-                    <div class="like-button___container">
-                      <button class="like-button___btn">2</button>
-                      <button class="like-button___btn like-button___btn--like">12</button>
+                  <div class="forms-elements__like-button-title">
+                    <h3 class="subtitle">like button</h3>
+                  </div>
+                  <div class="forms-elements__like-button-line">
+                    <div class="like-button">
+                      <div class="like-button___container">
+                        <button class="like-button___btn">2</button>
+                      </div>
+                    </div>
+                    <div class="like-button">
+                      <div class="like-button___container">
+                        <button class="like-button___btn like-button___btn--like">12</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -368,6 +385,23 @@
                     </div>
                   </li>
                 </ul>
+              </div>
+              <div class="forms-elements__comment">
+                <div class="comment">
+                  <div class="comment__img"><img src="../img/components/comment/ava.webp" alt="Фото комментатора"/></div>
+                  <div class="comment__title">
+                    <p class="comment__name">Мурад Сарафанов</p>
+                    <p class="comment__time">5 дней назад</p>
+                  </div>
+                  <div class="comment__like">
+                    <div class="like-button">
+                      <div class="like-button___container">
+                        <button class="like-button___btn like-button___btn--like">12</button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                </div>
               </div>
             </div>
           </section>
