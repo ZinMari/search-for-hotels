@@ -11,7 +11,7 @@
   &__footer {
     display: grid;
     grid-template-columns: 320px 711px;
-    gap: 125px;
+    gap: 127px;
   }
 
   &__column {
@@ -37,7 +37,8 @@
 
   // ----- column left ----- //
   &__text-field {
-    margin-bottom: 17px;
+    margin-top: 3px;
+    margin-bottom: 21px;
   }
 
   &__text-field-focus {
@@ -45,7 +46,7 @@
   }
 
   &__dropdown-guest {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   &__subscription-text-field {
@@ -84,7 +85,7 @@
 
   &__checkbox-buttons {
     margin-top: 4px;
-    margin-bottom: 36px;
+    margin-bottom: 39px;
     max-width: 222px;
   }
 
@@ -110,7 +111,7 @@
   }
 
   &__rate-buttons {
-    margin-bottom: 516px;
+    margin-bottom: 517px;
   }
 
   &__rich-checkbox-buttons {
@@ -149,6 +150,7 @@
 
 
   &__icon-text-list {
+    max-width: 277px;
     margin-left: 3px;
   }
 
