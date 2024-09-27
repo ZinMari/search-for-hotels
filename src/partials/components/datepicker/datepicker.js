@@ -37,12 +37,12 @@ staticDateElems.forEach(diap => {
   new AirDatepicker(`#${diap.id}`, {
     range: true,
     buttons: [clearBtn, applyBtn],
-    // prevHtml: 'prev',
-    // nextHtml: 'next',
+    nextHtml: '',
+    prevHtml: '',
     navTitles: {
       days: 'MMMM yyyy'
     },
-    fixedHeight: true,
+    showOtherMonths: false,
     onRenderCell({date, cellType}) {
       if (cellType === 'day') {
         return {
