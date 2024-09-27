@@ -1,4 +1,6 @@
 extends ../../templates/template-uikit/template-uikit
+include ../../components/registration/registration
+include ../../components/find-rooms/find-rooms
 
 
 block container
@@ -8,10 +10,12 @@ block content
   section.cards
     .cards__container
       .cards__search
+        +find-rooms
       .cards__book
       .cards__calendar
       .cards__registration
-        include ../../components/registration/registration
+        +registration
+
 
 
 
