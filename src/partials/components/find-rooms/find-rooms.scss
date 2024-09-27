@@ -1,0 +1,17 @@
+.find-rooms {
+  @include form-style;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__btn {
+    margin-top: 10px;
+  }
+}

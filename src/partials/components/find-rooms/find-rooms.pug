@@ -1,0 +1,31 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../button/button
+
+mixin find-rooms
+  .find-rooms
+    .find-rooms__wrap
+      h2.find-rooms__title Найдём номера под ваши пожелания
+
+      .find-rooms__date
+        -const dateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд'}
+        +date-dropdown(dateDropdown)
+
+      .find-rooms__guests
+        -
+          const dropdownItem = {
+            title: 'гости',
+            buttonText: 'Сколько гостей',
+            elements: [
+              {name: 'взрослые', value: 0, min: 0, max: 5},
+              {name: 'дети', value: 0, min: 0, max: 5},
+              {name: 'младенцы', value: 0, min: 0, max: 5},
+            ],
+            isOpen: false,
+            hasButtons: true
+          }
+
+        +dropdown(dropdownItem)
+
+      .find-rooms__btn
+        +button('подобрать номер', 'arrow')
