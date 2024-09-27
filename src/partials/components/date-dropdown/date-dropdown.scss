@@ -1,0 +1,34 @@
+.date-dropdown {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+  gap: 5px 20px;
+
+  &__title {
+    @include form-subtitle
+  }
+
+  &__calendar {
+    @include visually-hidden;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--color-dark-25);
+    border-radius: var(--bd-radius);
+    padding: 0 15px;
+    width: 150px;
+    height: 44px;
+    font: var(--text);
+    color: var(--color-dark-75);
+    background-color: var(--color-light);
+    cursor: pointer;
+  }
+
+  &__datepicker {
+    margin-top: 58px;
+  }
+}

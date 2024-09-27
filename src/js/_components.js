@@ -5,3 +5,4 @@ import '../partials/components/range-slider/range-slider.js';
 import '../partials/components/expandable-checkbox-list/expandable-checkbox-list.js';
 import '../partials/components/datepicker/datepicker.js';
 import '../partials/components/text-field/text-field.js';
+import '../partials/components/date-dropdown/date-dropdown.js';
