@@ -1,9 +1,5 @@
 .registration {
-  border-radius: var(--bd-radius);
-  padding: 40px 30px 30px;
-  max-width: 380px;
-  box-shadow: var(--card-box-shadow);
-  background-color: var(--color-light);
+  @include form-style;
 
   &__title {
     @include title;
