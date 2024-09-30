@@ -14,6 +14,7 @@ include ../../components/subtitle/subtitle
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/comment/comment
 include ../../components/date-dropdown/date-dropdown
+include ../../components/rate-button/rate-button
 
 
 block content
@@ -165,7 +166,13 @@ block content
             +like-button({countLike: 12, isLike: true})
 
         .forms-elements__rate-buttons
-          include ../../components/rate-button/rate-button
+          .forms-elements__rate-buttons-title
+            +subtitle('rate button')
+          .forms-elements__rate-buttons-container
+            - const formElementsRateleft = {name: 'formElementsRateleft', numValueCheck: 4}
+            - const formElementsRateRight = {name: 'formElementsRateRight', numValueCheck: 5}
+            +rate-button(formElementsRateleft)
+            +rate-button(formElementsRateRight)
 
         .forms-elements__rich-checkbox-buttons
           -

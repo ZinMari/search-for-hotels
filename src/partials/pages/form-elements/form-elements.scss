@@ -102,7 +102,7 @@
   }
 
   &__like-button {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   &__like-button-title {
@@ -116,6 +116,16 @@
 
   &__rate-buttons {
     margin-bottom: 517px;
+    max-width: 260px;
+  }
+
+  &__rate-buttons-title {
+    margin-bottom: 16px;
+  }
+
+  &__rate-buttons-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__rich-checkbox-buttons {
