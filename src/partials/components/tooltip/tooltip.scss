@@ -1,0 +1,33 @@
+.tooltip {
+  position: relative;
+
+  &__btn {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover + .tooltip__txt,
+    &:focus + .tooltip__txt {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(20px);
+    }
+  }
+
+  &__txt {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 10px);
+    z-index: 3;
+    padding: 10px;
+    width: max-content;
+    font: var(--sub-title-light);
+    color: var(--color-dark-100);
+    background: var(--color-light);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+    transition: opacity .3s ease-in-out,transform .3s ease-in-out,visibility .3s ease-in-out;
+  }
+}
