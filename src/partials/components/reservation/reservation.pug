@@ -1,0 +1,58 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../tooltip/tooltip
+include ../number-and-cost/number-and-cost
+mixin reservation
+  .reservation
+    .reservation__wrapp
+      .reservation__header
+        -
+          const reservationHeader = {
+            number: 888,
+            nuberType: 'люкс',
+            price: '9 990',
+            isMiniVariant: false,
+          }
+
+        +number-and-cost(reservationHeader)
+      .reservation__date-dropdown
+        - const reservationDateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд'}
+        +date-dropdown(reservationDateDropdown)
+      .reservation__guest
+        -
+          const guestDropdownItem = {
+            title: 'гости',
+            buttonText: '3 гостя',
+            elements: [
+              {name: 'взрослые', value: 0, min: 0, max: 5},
+              {name: 'дети', value: 0, min: 0, max: 5},
+              {name: 'младенцы', value: 0, min: 0, max: 5},
+            ],
+            isOpen: false,
+            hasButtons: true
+          }
+
+        +dropdown(guestDropdownItem)
+      table.reservation__info
+        tbody
+          tr
+            td 9 990₽ х 4 суток
+            td
+            td 39 960₽
+          tr
+            td Сбор за услуги: скидка 2 179₽
+            td
+              .reservation__tooltip
+                +tooltip('info')
+            td 0₽
+          tr
+            td Сбор за дополнительные услуги
+            td
+              .reservation__tooltip
+                +tooltip('info')
+            td 300₽
+      .reservation__total
+        span.reservation__name-sum Итого
+        span.reservation__sum 38 081₽
+      .reservation__button
+        +button('забронировать', 'arrow')

@@ -1,0 +1,71 @@
+.reservation {
+  @include form-style;
+
+  padding-top: 36px;
+  max-width: 100%;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-bottom: 17px;
+  }
+
+  &__date-dropdown {
+    margin-bottom: 21px;
+  }
+
+  &__guest {
+    margin-bottom: 22px;
+  }
+
+  &__info {
+    margin-bottom: 10px;
+
+    td {
+      position: relative;
+      vertical-align: top;
+      padding-bottom: 16px;
+      line-height: 1.29;
+    }
+
+    tr td:first-child {
+      max-width: 124px;
+    }
+
+    tr td:last-child {
+      text-align: right;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: 0;
+  }
+
+  &__total {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--color-dark-100);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 75%;
+      border-bottom: 1px dotted var(--color-dark-75);
+      width: 100%;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+      background-color: var(--color-light);
+    }
+  }
+}
