@@ -4,17 +4,6 @@
   --star-count: 5;
   --star-offset-count: 4;
 
-  &__title {
-    @include form-subtitle;
-
-    margin-bottom: 16px;
-  }
-
-  &__wrapp {
-    display: flex;
-    gap: 20px;
-  }
-
   &__group {
     position: relative;
     margin: 2px;
