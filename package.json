@@ -61,6 +61,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.6.2",
     "air-datepicker": "^3.5.3",
     "inputmask": "^5.0.9",
     "jquery.nice-number": "^2.1.0",
