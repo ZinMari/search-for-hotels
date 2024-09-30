@@ -1,0 +1,45 @@
+.number-and-cost {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  &__number {
+    @include title;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  &__symbol {
+    font-size: 14px;
+  }
+
+  &__number-room {
+    margin-right: 4px;
+
+    &--mini {
+      font-size: 19px;
+    }
+  }
+
+  &__type-room {
+    font: var(--sub-title);
+    text-transform: uppercase;
+    color: var(--color-purple);
+  }
+
+  &__price {
+    margin-right: 5px;
+    font: var(--text-bold);
+    color: var(--color-dark-50);
+  }
+
+  &__in-what-time {
+    font: var(--sub-title-light);
+    color: var(--color-dark-50);
+  }
+
+}
+
