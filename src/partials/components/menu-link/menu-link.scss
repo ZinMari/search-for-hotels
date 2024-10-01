@@ -1,0 +1,22 @@
+.menu-link {
+  display: flex;
+  align-items: center;
+  font: var(--text);
+  text-transform: capitalize;
+  color: var(--color-dark-50);
+  transition: var(--transit);
+  gap: 6px;
+
+  &:hover {
+    color: var(--color-dark-100);
+
+    .menu-link__arrow {
+      transform: rotate(180deg);
+      transition: var(--transit);
+    }
+  }
+
+  &__arrow {
+    transition: var(--transit);
+  }
+}
