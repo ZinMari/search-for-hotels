@@ -1,0 +1,31 @@
+include ../logo/logo
+include ../button/button
+include ../menu-link/menu-link
+
+mixin header(username= false)
+  header.header
+    .header__container.container
+      .header__logo
+        +logo
+      nav.header__nav
+        ul.header__list
+          li.header__item
+            +menu-link({text: 'О нас'})
+          li.header__item
+            +menu-link({text: 'Услуги', arrow: true})
+          li.header__item
+            +menu-link({text: 'Вакансии'})
+          li.header__item
+            +menu-link({text: 'Новости'})
+          li.header__item
+            +menu-link({text: 'Соглашения', arrow: true})
+
+      if username
+        .header__user
+          +menu-link({text: username})
+      else
+        .header__btns
+          .header__login
+            +button('войти', 'border')
+          .header__registration
+            +button('зарегистрироваться', 'fill')
