@@ -151,8 +151,19 @@
 
   &__button-mini {
     display: flex;
+    height: 44px;
     max-width: 218px;
     gap: 20px;
+  }
+
+  &__button-text {
+    display: flex;
+    max-width: 218px;
+    gap: 20px;
+  }
+
+  &__button--arrow {
+    height: 44px;
   }
 
   &__bullet-list {
