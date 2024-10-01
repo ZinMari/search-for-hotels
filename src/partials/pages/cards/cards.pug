@@ -3,6 +3,7 @@ include ../../components/registration/registration
 include ../../components/find-rooms/find-rooms
 include ../../components/login/login
 include ../../components/reservation/reservation
+include ../../components/room-card/room-card
 
 
 block container
@@ -21,7 +22,49 @@ block content
         +registration
       .cards__login
         +login
-
+      .cards__room
+        -
+          const roomCard888 = {
+            images: [
+              "../img/888/1-sm.jpg",
+              "../img/888/1-sm.jpg",
+              "../img/888/1-sm.jpg",
+              "../img/888/1-sm.jpg"
+            ],
+            info: {
+              number: 888,
+              nuberType: 'люкс',
+              price: '9 990',
+              isMiniVariant: true,
+            },
+            starValue: {
+              name: 'room-card',
+              numValueCheck: 5
+            },
+            reviews: 145,
+          }
+        +room-card(roomCard888)
+      .cards__room
+        -
+          const roomCard840 = {
+            images: [
+              "../img/rooms/840.jpg",
+              "../img/rooms/840.jpg",
+              "../img/rooms/840.jpg",
+              "../img/rooms/840.jpg"
+            ],
+            info: {
+              number: 840,
+              price: '9 990',
+              isMiniVariant: true,
+            },
+            starValue: {
+              name: 'room-card',
+              numValueCheck: 4
+            },
+            reviews: 65,
+          }
+        +room-card(roomCard840)
 
 
 
