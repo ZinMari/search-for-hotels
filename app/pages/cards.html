@@ -17,8 +17,184 @@
         <div class="template-uikt__container">
           <section class="cards">
             <div class="cards__container">
-              <div class="cards__search"></div>
-              <div class="cards__book"></div>
+              <div class="cards__search">
+                <div class="find-rooms">
+                  <div class="find-rooms__wrap">
+                    <h2 class="find-rooms__title">Найдём номера под ваши пожелания</h2>
+                    <div class="find-rooms__date">
+                      <div class="date-dropdown">
+                        <input class="date-dropdown__calendar"/>
+                        <h3 class="date-dropdown__title">прибытие</h3>
+                        <h3 class="date-dropdown__title">выезд</h3>
+                        <button class="date-dropdown__btn" data-value="start"><span>ДД.ММ.ГГГГ</span>
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                          </svg>
+                        </button>
+                        <button class="date-dropdown__btn" data-value="end"><span>ДД.ММ.ГГГГ</span>
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="find-rooms__guests">
+                      <div class="dropdown">
+                        <h3 class="dropdown__header">гости
+                        </h3>
+                        <div class="dropdown__menu">
+                          <button class="dropdown__btn" aria-expanded="false">Сколько гостей
+                            <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                              <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
+                            </svg>
+                          </button>
+                          <div class="dropdown__body">
+                            <ul class="dropdown__list">
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">взрослые
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">дети
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">младенцы
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                            </ul>
+                            <div class="dropdown__buttons">
+                              <div class="dropdown__clear">
+                                <button class="btn btn__text"><span>очистить</span></button>
+                              </div>
+                              <div class="dropdown__apply">
+                                <button class="btn btn__text"><span>применить</span></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="find-rooms__btn">
+                      <button class="btn btn__arrow"><span>подобрать номер</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__reservation">
+                <div class="reservation">
+                  <div class="reservation__wrapp">
+                    <div class="reservation__header">
+                      <div class="number-and-cost">
+                        <div class="number-and-cost__number"><span class="number-and-cost__symbol">№</span><span class="number-and-cost__number-room">888</span><span class="number-and-cost__type-room">люкс</span>
+                        </div>
+                        <div class="number-and-cost__cost"><span class="number-and-cost__price">9 990₽</span><span class="number-and-cost__in-what-time">в сутки</span></div>
+                      </div>
+                    </div>
+                    <div class="reservation__date-dropdown">
+                      <div class="date-dropdown">
+                        <input class="date-dropdown__calendar"/>
+                        <h3 class="date-dropdown__title">прибытие</h3>
+                        <h3 class="date-dropdown__title">выезд</h3>
+                        <button class="date-dropdown__btn" data-value="start"><span>ДД.ММ.ГГГГ</span>
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                          </svg>
+                        </button>
+                        <button class="date-dropdown__btn" data-value="end"><span>ДД.ММ.ГГГГ</span>
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="reservation__guest">
+                      <div class="dropdown">
+                        <h3 class="dropdown__header">гости
+                        </h3>
+                        <div class="dropdown__menu">
+                          <button class="dropdown__btn" aria-expanded="false">3 гостя
+                            <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
+                              <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
+                            </svg>
+                          </button>
+                          <div class="dropdown__body">
+                            <ul class="dropdown__list">
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">взрослые
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">дети
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                              <li class="dropdown__item">
+                                <label class="dropdown__label">младенцы
+                                  <input class="dropdown__input" type="number" value="0" min="0" max="5" disabled="disabled"/>
+                                </label>
+                              </li>
+                            </ul>
+                            <div class="dropdown__buttons">
+                              <div class="dropdown__clear">
+                                <button class="btn btn__text"><span>очистить</span></button>
+                              </div>
+                              <div class="dropdown__apply">
+                                <button class="btn btn__text"><span>применить</span></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <table class="reservation__info">
+                      <tbody>
+                        <tr>
+                          <td>9 990₽ х 4 суток</td>
+                          <td></td>
+                          <td>39 960₽</td>
+                        </tr>
+                        <tr>
+                          <td>Сбор за услуги: скидка 2 179₽</td>
+                          <td>
+                            <div class="reservation__tooltip"><span class="tooltip">
+                                <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"></circle>
+                                    <path d="M9.25463 14.5576V8.10162H11.1266V14.5576H9.25463ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.58562 11.3546 5.82562 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8226 7.10162 10.5426 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"></path>
+                                  </svg>
+                                </button><span class="tooltip__txt" role="tooltip" id="some_id">info</span></span>
+                            </div>
+                          </td>
+                          <td>0₽</td>
+                        </tr>
+                        <tr>
+                          <td>Сбор за дополнительные услуги</td>
+                          <td>
+                            <div class="reservation__tooltip"><span class="tooltip">
+                                <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"></circle>
+                                    <path d="M9.25463 14.5576V8.10162H11.1266V14.5576H9.25463ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.58562 11.3546 5.82562 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8226 7.10162 10.5426 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"></path>
+                                  </svg>
+                                </button><span class="tooltip__txt" role="tooltip" id="some_id">info</span></span>
+                            </div>
+                          </td>
+                          <td>300₽</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="reservation__total"><span class="reservation__name-sum">Итого</span><span class="reservation__sum">38 081₽</span></div>
+                    <div class="reservation__button">
+                      <button class="btn btn__arrow"><span>забронировать</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="cards__calendar"></div>
               <div class="cards__registration">
                 <div class="registration">
@@ -26,72 +202,213 @@
                   <form class="registration__form">
                     <div class="registration__group">
                       <div class="registration__item">
-                                        <div class="text-field">
-                                          <input class="text-field__input" id="userName" value="" placeholder="Имя">
-                                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" id="userName" value="" placeholder="Имя"/>
+                        </div>
                       </div>
                       <div class="registration__item">
-                                        <div class="text-field">
-                                          <input class="text-field__input" id="userSurName" value="" placeholder="Фамилия">
-                                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" id="userSurName" value="" placeholder="Фамилия"/>
+                        </div>
                       </div>
                       <div class="registration__item">
-                                        <div class="radio">
-                                          <div class="radio__container">
-                                            <label class="radio__btn">
-                                              <input class="radio__input" type="radio" name="genders" checked><span class="radio__span">Мужчина</span>
-                                            </label>
-                                            <label class="radio__btn">
-                                              <input class="radio__input" type="radio" name="genders"><span class="radio__span">Женщина</span>
-                                            </label>
-                                          </div>
-                                        </div>
+                        <div class="radio">
+                          <div class="radio__container">
+                            <label class="radio__btn">
+                              <input class="radio__input" type="radio" name="genders" checked="checked"/><span class="radio__span">Мужчина</span>
+                            </label>
+                            <label class="radio__btn">
+                              <input class="radio__input" type="radio" name="genders"/><span class="radio__span">Женщина</span>
+                            </label>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="registration__group">
                       <div class="registration__subtitle">
-                                        <h3 class="subtitle">дата рождения</h3>
+                        <h3 class="subtitle">дата рождения</h3>
                       </div>
                       <div class="registration__item">
-                                        <div class="text-field">
-                                          <input class="text-field__input" id="userBirth" value="" placeholder="ДД.ММ.ГГГГ">
-                                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" id="userBirth" value="" placeholder="ДД.ММ.ГГГГ"/>
+                        </div>
                       </div>
                     </div>
                     <div class="registration__group">
                       <div class="registration__subtitle">
-                                        <h3 class="subtitle">данные для входа в сервис</h3>
+                        <h3 class="subtitle">данные для входа в сервис</h3>
                       </div>
                       <div class="registration__item">
-                                        <div class="text-field">
-                                          <input class="text-field__input" id="userEmail" value="" placeholder="Email">
-                                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" id="userEmail" value="" placeholder="Email"/>
+                        </div>
                       </div>
                       <div class="registration__item">
-                                        <div class="text-field">
-                                          <input class="text-field__input" id="userPassword" value="" placeholder="Пароль">
-                                        </div>
+                        <div class="text-field">
+                          <input class="text-field__input" id="userPassword" value="" placeholder="Пароль"/>
+                        </div>
                       </div>
                       <div class="registration__item">
-                                        <div class="toggle">
-                                          <ul class="toggle__container">
-                                            <li class="toggle__item">
-                                              <label class="toggle__label">
-                                                <input class="toggle__input" type="checkbox"><span class="toggle__display"></span>Получать спецпредложения
-                                              </label>
-                                            </li>
-                                          </ul>
-                                        </div>
+                        <div class="toggle">
+                          <ul class="toggle__container">
+                            <li class="toggle__item">
+                              <label class="toggle__label">
+                                <input class="toggle__input" type="checkbox"/><span class="toggle__display"></span>Получать спецпредложения
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                     <div class="registration__goToPay">
-                                      <button class="btn btn__arrow"><span>перейти к оплате</span></button>
+                      <button class="btn btn__arrow"><span>перейти к оплате</span></button>
                     </div>
                   </form>
                   <div class="registration__signIn">
                     <div class="registration__text">Уже есть аккаунт на Toxin</div>
                     <div class="registration__enter">
-                                      <button class="btn btn__border"><span>войти</span></button>
+                      <button class="btn btn__border"><span>войти</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__login">
+                <div class="login">
+                  <h2 class="login__title">Войти</h2>
+                  <form class="login__form" action="#">
+                    <div class="login__inputs">
+                      <div class="login__input">
+                        <div class="text-field">
+                          <input class="text-field__input" id="loginEmail" value="" placeholder="Email"/>
+                        </div>
+                      </div>
+                      <div class="login__input">
+                        <div class="text-field">
+                          <input class="text-field__input" id="loginPassword" value="" placeholder="Пароль"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="login__form-btn">
+                      <button class="btn btn__arrow"><span>войти</span></button>
+                    </div>
+                  </form>
+                  <div class="login__create"><span class="login__text">Нет аккаунта на Toxin?</span>
+                    <div class="login__create-btn">
+                      <button class="btn btn__border"><span>создать</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__room">
+                <div class="room-card">
+                  <div class="room-card__slider">
+                    <div class="glide">
+                      <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                          <li class="glide__slide"><img src="../img/888/1-sm.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/888/1-sm.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/888/1-sm.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/888/1-sm.jpg" alt="Изображение номера отеля"/></li>
+                        </ul>
+                      </div>
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z" fill="white"></path>
+                          </svg>
+                        </button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+                          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                        <button class="glide__bullet" data-glide-dir="=3"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="room-card__info">
+                    <div class="room-card__number-and-cost">
+                      <div class="number-and-cost">
+                        <div class="number-and-cost__number"><span class="number-and-cost__symbol">№</span><span class="number-and-cost__number-room--mini">888</span><span class="number-and-cost__type-room">люкс</span>
+                        </div>
+                        <div class="number-and-cost__cost"><span class="number-and-cost__price">9 990₽</span><span class="number-and-cost__in-what-time">в сутки</span></div>
+                      </div>
+                    </div>
+                    <div class="room-card__rating">
+                      <div class="room-card__stars">
+                        <div class="rate-button">
+                          <div class="rate-button__group">
+                            <input class="rate-button__star" name="room-card" value="1" aria-label="Ужасно" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="2" aria-label="Сносно" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="3" aria-label="Нормально" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="4" aria-label="Хорошо" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="5" aria-label="Супер" type="radio" checked="checked"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="room-card__reviews"><span>145</span>Отзывов</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cards__room">
+                <div class="room-card">
+                  <div class="room-card__slider">
+                    <div class="glide">
+                      <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                          <li class="glide__slide"><img src="../img/rooms/840.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/rooms/840.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/rooms/840.jpg" alt="Изображение номера отеля"/></li>
+                          <li class="glide__slide"><img src="../img/rooms/840.jpg" alt="Изображение номера отеля"/></li>
+                        </ul>
+                      </div>
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z" fill="white"></path>
+                          </svg>
+                        </button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+                          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.42188 11.0928L6.01563 12.499L0.0156253 6.49902L6.01563 0.499024L7.42188 1.90527L2.82813 6.49902L7.42188 11.0928Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                        <button class="glide__bullet" data-glide-dir="=3"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="room-card__info">
+                    <div class="room-card__number-and-cost">
+                      <div class="number-and-cost">
+                        <div class="number-and-cost__number"><span class="number-and-cost__symbol">№</span><span class="number-and-cost__number-room--mini">840</span>
+                        </div>
+                        <div class="number-and-cost__cost"><span class="number-and-cost__price">9 990₽</span><span class="number-and-cost__in-what-time">в сутки</span></div>
+                      </div>
+                    </div>
+                    <div class="room-card__rating">
+                      <div class="room-card__stars">
+                        <div class="rate-button">
+                          <div class="rate-button__group">
+                            <input class="rate-button__star" name="room-card" value="1" aria-label="Ужасно" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="2" aria-label="Сносно" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="3" aria-label="Нормально" type="radio"/>
+                            <input class="rate-button__star" name="room-card" value="4" aria-label="Хорошо" type="radio" checked="checked"/>
+                            <input class="rate-button__star" name="room-card" value="5" aria-label="Супер" type="radio"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="room-card__reviews"><span>65</span>Отзывов</div>
                     </div>
                   </div>
                 </div>

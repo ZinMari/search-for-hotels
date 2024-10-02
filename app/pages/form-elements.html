@@ -56,6 +56,23 @@
                     <input class="text-field__input" id="maskedTextField" value="" placeholder="ДД.ММ.ГГГГ"/>
                   </div>
                 </div>
+                <div class="forms-elements__date-dropdown">
+                  <div class="date-dropdown">
+                    <input class="date-dropdown__calendar"/>
+                    <h3 class="date-dropdown__title">date dropdown</h3>
+                    <h3 class="date-dropdown__title">date dropdown</h3>
+                    <button class="date-dropdown__btn" data-value="start"><span>ДД.ММ.ГГГГ</span>
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                      </svg>
+                    </button>
+                    <button class="date-dropdown__btn" data-value="end"><span>19.08.2019</span>
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
                 <div class="forms-elements__subscription-text-field">
                   <form class="subscr-form" id="subscr-form" method="POST" action="">
                     <label class="subscr-form__title" for="subscription">subscription text field</label>
@@ -283,25 +300,29 @@
                   </div>
                 </div>
                 <div class="forms-elements__rate-buttons">
-                  <fieldset class="rate-button">
-                    <legend class="rate-button__title">rate button</legend>
-                    <div class="rate-button__wrapp">
+                  <div class="forms-elements__rate-buttons-title">
+                    <h3 class="subtitle">rate button</h3>
+                  </div>
+                  <div class="forms-elements__rate-buttons-container">
+                    <div class="rate-button">
                       <div class="rate-button__group">
-                        <input class="rate-button__star" name="rating" value="1" aria-label="Ужасно" type="radio">
-                        <input class="rate-button__star" name="rating" value="2" aria-label="Сносно" type="radio">
-                        <input class="rate-button__star" name="rating" value="3" aria-label="Нормально" type="radio">
-                        <input class="rate-button__star" name="rating" value="4" aria-label="Хорошо" type="radio" checked>
-                        <input class="rate-button__star" name="rating" value="5" aria-label="Супер" type="radio">
-                      </div>
-                      <div class="rate-button__group">
-                        <input class="rate-button__star" name="rating_2" value="1" aria-label="Ужасно" type="radio">
-                        <input class="rate-button__star" name="rating_2" value="2" aria-label="Сносно" type="radio">
-                        <input class="rate-button__star" name="rating_2" value="3" aria-label="Нормально" type="radio">
-                        <input class="rate-button__star" name="rating_2" value="4" aria-label="Хорошо" type="radio">
-                        <input class="rate-button__star" name="rating_2" value="5" aria-label="Супер" type="radio" checked>
+                        <input class="rate-button__star" name="formElementsRateleft" value="1" aria-label="Ужасно" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateleft" value="2" aria-label="Сносно" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateleft" value="3" aria-label="Нормально" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateleft" value="4" aria-label="Хорошо" type="radio" checked="checked"/>
+                        <input class="rate-button__star" name="formElementsRateleft" value="5" aria-label="Супер" type="radio"/>
                       </div>
                     </div>
-                  </fieldset>
+                    <div class="rate-button">
+                      <div class="rate-button__group">
+                        <input class="rate-button__star" name="formElementsRateRight" value="1" aria-label="Ужасно" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateRight" value="2" aria-label="Сносно" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateRight" value="3" aria-label="Нормально" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateRight" value="4" aria-label="Хорошо" type="radio"/>
+                        <input class="rate-button__star" name="formElementsRateRight" value="5" aria-label="Супер" type="radio" checked="checked"/>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="forms-elements__rich-checkbox-buttons">
                   <div class="rich-checkbox-btns">
@@ -347,7 +368,7 @@
                     <button class="btn btn__border"><span>click me</span></button>
                     <button class="btn btn__border" disabled="disabled"><span>click me</span></button>
                   </div>
-                  <div class="forms-elements__button-mini">
+                  <div class="forms-elements__button-text">
                     <button class="btn btn__text"><span>click me</span></button>
                     <button class="btn btn__text" disabled="disabled"><span>click me</span></button>
                   </div>
