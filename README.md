@@ -8,6 +8,7 @@
 - jQuery
 - SCSS
 - Gulp
+- Webpack
 - Pixel Perfect
 
 ## ✴︎ Библиотеки:
@@ -27,15 +28,19 @@
     <tr valign="top">
         <td>
             <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Form Elements</a><br><br>
-            <img src='./pixel-perfect/FormElements.jpg' width='200'>
+            <img src='./pixel-perfect/form-elements.jpg' width='200'>
         </td>
         <td>
             <a href='https://mariezin.github.io/search-for-hotels/app/pages/cards.html'>Cards</a><br><br>
-            <img src='./pixel-perfect/Cards.jpg' width='200'>
+            <img src='./pixel-perfect/cards.jpg' width='200'>
         </td>
         <td>
             <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Colors & Type</a><br><br>
-            <img src='./pixel-perfect/Colors%26Type.jpg' width='200'>
+            <img src='./pixel-perfect/colors-type.jpg' width='200'>
+        </td>
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Headers & Footers</a><br><br>
+            <img src='./pixel-perfect/headers-footers.jpg' width='200'>
         </td>
     </tr>
 </table>
