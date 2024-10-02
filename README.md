@@ -39,7 +39,7 @@
             <img src='./pixel-perfect/colors-type.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Headers & Footers</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/headers-&-footers.html'>Headers & Footers</a><br><br>
             <img src='./pixel-perfect/headers-footers.jpg' width='200'>
         </td>
     </tr>
