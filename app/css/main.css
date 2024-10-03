@@ -1312,6 +1312,9 @@ a {
   max-width: var(--container);
 }
 
+.template-uikt {
+  position: relative;
+}
 .template-uikt--dark {
   background-color: #f4f4f6;
 }
@@ -1321,6 +1324,7 @@ a {
   background-image: url("../img/templates/template-uikit/logo-bg.svg");
   background-position: 30px 30px;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .text-field {
@@ -3152,6 +3156,10 @@ a {
 }
 
 .headers-footers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3161,4 +3169,5 @@ a {
   flex-direction: column;
   padding: 140px 0;
   gap: 40px;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */
