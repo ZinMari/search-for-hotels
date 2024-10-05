@@ -1,6 +1,7 @@
 include ../logo/logo
 include ../menu-link/menu-link
 include ../subtitle/subtitle
+include ../subscription-text-field/subscription-text-field
 
 mixin footer
   footer.footer
@@ -50,7 +51,7 @@ mixin footer
           .footer__subscr
             +subtitle('Подписка')
             p.footer__description Получайте специальные предложения и новости сервиса
-            include ../subscription-text-field/subscription-text-field
+            +subscription-text-field
       .footer__footer
           .footer__container.container
             .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
