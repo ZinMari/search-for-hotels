@@ -1,10 +1,15 @@
 extends ../../templates/template-uikit/template-uikit
 include ../../components/header/header
+include ../../components/footer/footer
 
 block container
   - const backgroundDark = true;
 
 block content
   section.headers-footers
-    +header
-    +header('юлий цезарь')
+    .headers-footers__wrap
+      +header
+      +header('юлий цезарь')
+      +footer
+      .headers-footers__footer-mobile
+        +footer
