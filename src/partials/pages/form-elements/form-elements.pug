@@ -15,6 +15,7 @@ include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/comment/comment
 include ../../components/date-dropdown/date-dropdown
 include ../../components/rate-button/rate-button
+include ../../components/subscription-text-field/subscription-text-field
 
 
 block content
@@ -66,7 +67,8 @@ block content
           +date-dropdown(dateDropdownElement)
 
         .forms-elements__subscription-text-field
-          include ../../components/subscription-text-field/subscription-text-field
+          +subtitle('subscription text field')
+          +subscription-text-field
 
         .forms-elements__dropdown
           -
