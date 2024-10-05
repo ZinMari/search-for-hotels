@@ -1,14 +1,24 @@
 include ../button/button
 
-mixin dropdown({title, buttonText, elements, isOpen, hasButtons, subtitle=false})
-  - const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
+mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', subtitle=false, values= [2, 2, 0]})
+  -
+    const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
+    const elements = {
+      rooms: ['спальни', 'кровати', 'ванные комнаты'],
+      people: ['взрослые', 'дети', 'младенцы'],
+    }
+    const titles = {
+      rooms: 'Сколько комнат',
+      people: 'Сколько гостей'
+    }
 
   div(class= className)
     h3.dropdown__header= title
       if(subtitle)
         span.dropdown__subtitle= subtitle
     .dropdown__menu
-      button.dropdown__btn(aria-expanded="false")= buttonText
+      button.dropdown__btn(aria-expanded="false")
+        span #{titles[typeDropdown]}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="8"
@@ -16,14 +26,15 @@ mixin dropdown({title, buttonText, elements, isOpen, hasButtons, subtitle=false}
           path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z")
       .dropdown__body
         ul.dropdown__list
-          each element in elements
+          each element, index in elements[typeDropdown]
             li.dropdown__item
-              label.dropdown__label= element.name
+              label.dropdown__label
+                span #{element}
                 input.dropdown__input(
                   type='number',
-                  value= element.value,
-                  min= element.min,
-                  max= element.max disabled
+                  value= values[index],
+                  min= 0,
+                  max= 5
                 )
         if(hasButtons)
           .dropdown__buttons
