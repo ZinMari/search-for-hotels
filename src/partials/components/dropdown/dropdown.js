@@ -1,15 +1,27 @@
 const dropBtns = document.querySelectorAll('.dropdown__btn');
 const dropInputs = document.querySelectorAll('.dropdown__input');
 
-const dictionary = [
-  ['спальня', 'спальни', 'спален'],
-  ['кровать', 'кровати', 'кроватей'],
-  ['ванная комната', 'ванные комнаты', 'ванных комнат'],
-  ['гость', 'гостя', 'гостей'],
-  ['младенец', 'младенца', 'младенцев'],
-]
+const dictionary = {
+  'спальни': ['спальня', 'спальни', 'спален'],
+  'кровати': ['кровать', 'кровати', 'кроватей'],
+  'ванные комнаты': ['ванная комната', 'ванные комнаты', 'ванных комнат'],
+  'взрослые': ['гость', 'гостя', 'гостей'],
+  'младенцы': ['младенец', 'младенца', 'младенцев'],
+}
 
+function definitionOfDeclension(count){
+  let declension;
 
+  if(count == 1) {
+    declension = 0;
+  } else if(count >= 2 && count <= 4) {
+    declension = 1;
+  } else if(count == 0 || count >= 4) {
+    declension = 2;
+  }
+
+  return declension;
+}
 
 dropBtns.forEach(dropBtn => {
   dropBtn.addEventListener('click', function(){
@@ -18,12 +30,36 @@ dropBtns.forEach(dropBtn => {
   })
 })
 
-function setTitle(currentInput){
+function setTitle(currentInput, amount){
   const parent = currentInput.closest('.dropdown');
-  const title = $('.dropdown__btn span', parent).text();
+  const title = $('.dropdown__btn span', parent);
   const labels = parent.find('.dropdown__label');
 
-  console.log(currentInput.closest('.dropdown__label').find('span').text());
+  const values = {};
+
+  labels.each(function(index, elem){
+    const elemText = $('span', elem).text();
+
+    if(elemText === 'дети' || elemText === 'взрослые'){
+      values['взрослые'] =
+      'взрослые' in values
+      ? Number(values['взрослые']) + Number($('.dropdown__input', elem).val())
+      : Number($('.dropdown__input', elem).val());
+    } else {
+      values[elemText] = $('.dropdown__input', elem).val();
+    }
+  })
+
+  let text = [];
+
+  $.each(values, function(key, value){
+      if(+value !== 0) {
+        const declension = definitionOfDeclension(value);
+        text.push(`${value} ${dictionary[key][declension]}`)
+      }
+  })
+
+  title.text(text.length === 0 ? 'Выберете количество' : text.join(', '))
 }
 
 $('.dropdown__input').niceNumber({
