@@ -1,26 +1,30 @@
 .forms-elements {
-  padding: 140px;
+  padding: 143px 140px;
 
   &__container {
     display: grid;
     grid-template-columns: 320px 126px 320px 72px 320px;
-    margin-bottom: 97px;
-    height: 1330px;
   }
 
-  &__footer {
+  &__row {
+    grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: 320px 711px;
-    gap: 127px;
+    grid-template-columns: subgrid;
+
+    &--1 {
+      margin-bottom: 100px;
+    }
+
+    &--2 {
+      margin-bottom: 15px;
+    }
+
+    &--3 {
+
+    }
   }
 
   &__column {
-    display: grid;
-    align-content: start;
-
-    & > div {
-      align-self: start;
-    }
 
     &--left {
       grid-column: 1 / 2;
@@ -33,72 +37,48 @@
     &--right {
       grid-column: 5 / 6;
     }
+
   }
 
+  // ----- row--1 ----- //
   // ----- column left ----- //
   &__text-field {
-    margin-top: 3px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   &__text-field-focus {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
-  &__dropdown-guest {
-    margin-bottom: 23px;
-  }
-
-  &__subscription-text-field {
-    margin-bottom: 101px;
-    max-width: 267px;
+  &__dropdown-people {
+    margin-bottom: 24px;
   }
 
   &__masked-text-field {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   &__date-dropdown {
-    margin-bottom: 146px;
+    margin-bottom: 144px;
   }
 
-  &__dropdown {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 22px;
+  &__subscription-text-field {
     max-width: 266px;
   }
 
-  &__dropdown-open {
-    margin-bottom: 158px;
-    max-width: 266px;
-  }
-
-  &__expandable-checkbox-list {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 17px;
-    width: 266px;
-  }
-
-  &__expandable-checkbox-list-open {
-    width: 266px;
-  }
-
+ // ----- row--1 ----- //
   // ----- column center ----- //
-
   &__checkbox-buttons {
-    margin-top: 4px;
-    margin-bottom: 39px;
     max-width: 222px;
+    margin-bottom: 39px;
   }
 
   &__radio-buttons {
-    margin-bottom: 41px;
+    margin-bottom: 39px;
   }
 
   &__toggle {
-    margin-bottom: 31px;
+    margin-bottom: 43px;
   }
 
   &__like-button {
@@ -106,7 +86,7 @@
   }
 
   &__like-button-title {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   &__like-button-line {
@@ -114,33 +94,26 @@
     gap: 10px;
   }
 
-  &__rate-buttons {
-    margin-bottom: 517px;
-    max-width: 260px;
-  }
-
   &__rate-buttons-title {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   &__rate-buttons-container {
+    max-width: 260px;
     display: flex;
     justify-content: space-between;
   }
 
-  &__rich-checkbox-buttons {
-    max-width: 263px;
-  }
 
+   // ----- row--1 ----- //
   // ----- column right ----- //
   &__range-slider{
-    margin-top: 3px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     max-width: 266px;
   }
 
   &__buttons-title {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   &__buttons-container {
@@ -166,20 +139,76 @@
     height: 44px;
   }
 
-  &__bullet-list {
-    margin-top: 698px;
-    max-width: 263px;
+
+
+  // ----- row--2----- //
+  // ----- column left ----- //
+
+   &__dropdown {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+    max-width: 266px;
+    grid-column: 1 / 2;
   }
 
-  // ----- footer ----- //
+  &__dropdown-open {
+    margin-bottom: 158px;
+    max-width: 266px;
+    grid-column: 1 / 2;
+  }
+
+  // ----- row--2----- //
+  // ----- column center ----- //
+
+  &__dropdown-guest-zero {
+    grid-column: 3 / 4;
+  }
+
+  // ----- row--2----- //
+  // ----- column right ----- //
+
+  &__dropdown-guest {
+    grid-column: 5 / 6;
+  }
+
+  // ----- row--3----- //
+  // ----- column left ----- //
+  &__expandable-checkbox-list {
+    max-width: 266px;
+    position: relative;
+    z-index: 1;
+    top: -15px;
+  }
+
+  &__expandable-checkbox-list-open {
+    max-width: 266px;
+  }
+
+  // ----- row--3----- //
+  // ----- column center ----- //
+  &__rich-checkbox-buttons {
+  }
 
 
+  // ----- row--3----- //
+  // ----- column right ----- //
+  &__bullet-list {
+    max-width: 292px;
+  }
+
+
+  // ----- row--4----- //
+  // ----- column left ----- //
   &__icon-text-list {
     max-width: 277px;
     margin-left: 3px;
   }
 
+  // ----- row--4----- //
+  // ----- column center ----- //
   &__comment {
     margin-top: 7px;
   }
 }
+
