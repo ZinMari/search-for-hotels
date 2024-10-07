@@ -76,11 +76,6 @@ block content
               title: 'dropdown',
               subtitle: 'Default',
               buttonText: '2 спальни, 2 кровати...',
-              elements: [
-                {name: 'спальни', value: 2, min: 0, max: 5},
-                {name: 'кровати', value: 2, min: 0, max: 5},
-                {name: 'ванные комнаты', value: 0, min: 0, max: 5},
-              ],
               isOpen: false,
               hasButtons: false
             }
@@ -93,11 +88,6 @@ block content
               title: 'dropdown',
               subtitle: 'Default',
               buttonText: '2 спальни, 2 кровати...',
-              elements: [
-                {name: 'спальни', value: 2, min: 0, max: 5},
-                {name: 'кровати', value: 2, min: 0, max: 5},
-                {name: 'ванные комнаты', value: 0, min: 0, max: 5},
-              ],
               isOpen: true,
               hasButtons: false
             }
@@ -176,6 +166,21 @@ block content
             +rate-button(formElementsRateleft)
             +rate-button(formElementsRateRight)
 
+        .forms-elements__dropdown-guest-zero
+          -
+            const dropdownGuestZero = {
+              title: 'dropdown',
+              subtitle: 'Default',
+              buttonText: 'Сколько гостей',
+              isOpen: true,
+              hasButtons: true,
+              typeDropdown: 'people',
+              values: [0, 0, 0],
+            }
+          +dropdown(dropdownGuestZero)
+
+
+
         .forms-elements__rich-checkbox-buttons
           -
             const itemsRichBtns = [
@@ -215,6 +220,20 @@ block content
 
           .forms-elements__button--arrow
             +button('перейти к оплате', 'arrow')
+
+        .forms-elements__dropdown-guest
+          -
+            const dropdownGuest = {
+              title: 'dropdown',
+              subtitle: 'Default',
+              buttonText: '3 гостя',
+              isOpen: true,
+              hasButtons: true,
+              typeDropdown: 'people',
+              values: [2, 1, 0],
+            }
+
+          +dropdown(dropdownGuest)
 
         .forms-elements__bullet-list
             - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
