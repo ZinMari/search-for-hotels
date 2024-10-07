@@ -7,10 +7,6 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
       rooms: ['спальни', 'кровати', 'ванные комнаты'],
       people: ['взрослые', 'дети', 'младенцы'],
     }
-    const titles = {
-      rooms: 'Сколько комнат',
-      people: 'Сколько гостей'
-    }
 
   div(class= className)
     h3.dropdown__header= title
@@ -18,7 +14,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
         span.dropdown__subtitle= subtitle
     .dropdown__menu
       button.dropdown__btn(aria-expanded="false")
-        span #{titles[typeDropdown]}
+        span #{buttonText}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="8"
