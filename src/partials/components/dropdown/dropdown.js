@@ -1,5 +1,15 @@
 const dropBtns = document.querySelectorAll('.dropdown__btn');
 const dropInputs = document.querySelectorAll('.dropdown__input');
+const dropdowns = $('.dropdown');
+
+dropdowns.each(function(index, dropdown){
+  setButtonClear(dropdown)
+})
+
+function isEmptyValues(dropdown) {
+  const sum = Object.values(getData(dropdown)).reduce((a,b)=> Number(a) +  Number(b), 0);
+  return sum === 0;
+}
 
 const dictionary = {
   'спальни': ['спальня', 'спальни', 'спален'],
@@ -30,11 +40,20 @@ dropBtns.forEach(dropBtn => {
   })
 })
 
-function setTitle(currentInput, amount){
+function setButtonClear(currentInput){
   const parent = currentInput.closest('.dropdown');
-  const title = $('.dropdown__btn span', parent);
-  const labels = parent.find('.dropdown__label');
+  const buttonClear = $('.dropdown__clear button span', parent);
 
+  if(isEmptyValues(currentInput)) {
+    buttonClear.attr('hidden', true)
+  } else {
+    buttonClear.attr('hidden', false)
+  }
+}
+
+function getData(currentInput){
+  const parent = currentInput.closest('.dropdown');
+  const labels = $('.dropdown__label', parent);
   const values = {};
 
   labels.each(function(index, elem){
@@ -48,8 +67,14 @@ function setTitle(currentInput, amount){
     } else {
       values[elemText] = $('.dropdown__input', elem).val();
     }
-  })
+  });
 
+  return values;
+}
+
+function setTitle(elem, values){
+  const parent = elem.closest('.dropdown');
+  const title = $('.dropdown__btn span', parent);
   let text = [];
 
   $.each(values, function(key, value){
@@ -71,14 +96,18 @@ $('.dropdown__input').niceNumber({
       currentInput.next().addClass('nice-number__button--disabed')
     }
 
-    setTitle(currentInput)
+    setTitle(currentInput, getData(currentInput));
+    setButtonClear(currentInput)
   },
+
   onDecrement: function (currentInput, amount) {
     currentInput.next().removeClass('nice-number__button--disabed')
     if (amount == currentInput.attr('min')) {
       currentInput.prev().addClass('nice-number__button--disabed')
     }
-    setTitle(currentInput)
+
+    setTitle(currentInput, getData(currentInput));
+    setButtonClear(currentInput)
   },
 });
 
