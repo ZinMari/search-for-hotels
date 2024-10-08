@@ -1,6 +1,28 @@
 const dropBtns = document.querySelectorAll('.dropdown__btn');
 const dropInputs = document.querySelectorAll('.dropdown__input');
 const dropdowns = $('.dropdown');
+const dropClearBtns = $('.dropdown__clear button');
+
+
+dropClearBtns.each(function(index, btn){
+  btn.addEventListener('click', resetValues)
+})
+
+
+function resetValues(){
+  const parent = this.closest('.dropdown');
+  const inputs = $('.dropdown__input', parent);
+  const title = $('.dropdown__btn span', parent);
+
+  inputs.each((index, input)=>{
+    $(input).val('0');
+    $(input).prev().addClass('nice-number__button--disabed');
+  })
+
+  title.text('Выберете количество');
+  $('span', this).attr('hidden', true);
+}
+
 
 dropdowns.each(function(index, dropdown){
   setButtonClear(dropdown)
@@ -103,7 +125,7 @@ $('.dropdown__input').niceNumber({
   onDecrement: function (currentInput, amount) {
     currentInput.next().removeClass('nice-number__button--disabed')
     if (amount == currentInput.attr('min')) {
-      currentInput.prev().addClass('nice-number__button--disabed')
+      currentInput.prev().addClass('nice-number__button--disabed');
     }
 
     setTitle(currentInput, getData(currentInput));
