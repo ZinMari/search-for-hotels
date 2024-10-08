@@ -70,8 +70,8 @@
  // ----- row--1 ----- //
   // ----- column center ----- //
   &__checkbox-buttons {
-    max-width: 222px;
     margin-bottom: 39px;
+    max-width: 222px;
   }
 
   &__radio-buttons {
@@ -100,9 +100,9 @@
   }
 
   &__rate-buttons-container {
-    max-width: 260px;
     display: flex;
     justify-content: space-between;
+    max-width: 260px;
   }
 
 
@@ -148,15 +148,15 @@
    &__dropdown {
     position: relative;
     z-index: 1;
+    grid-column: 1 / 2;
     margin-bottom: 22px;
     max-width: 266px;
-    grid-column: 1 / 2;
   }
 
   &__dropdown-open {
+    grid-column: 1 / 2;
     margin-bottom: 158px;
     max-width: 266px;
-    grid-column: 1 / 2;
   }
 
   // ----- row--2----- //
@@ -176,21 +176,15 @@
   // ----- row--3----- //
   // ----- column left ----- //
   &__expandable-checkbox-list {
-    max-width: 266px;
     position: relative;
-    z-index: 1;
     top: -15px;
+    z-index: 1;
+    max-width: 266px;
   }
 
   &__expandable-checkbox-list-open {
     max-width: 266px;
   }
-
-  // ----- row--3----- //
-  // ----- column center ----- //
-  &__rich-checkbox-buttons {
-  }
-
 
   // ----- row--3----- //
   // ----- column right ----- //
