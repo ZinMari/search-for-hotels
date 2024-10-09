@@ -1,6 +1,8 @@
-mixin date-dropdown({titleStart, titleEnd, dateEndText='ДД.ММ.ГГГГ'})
+include ../datepicker/datepicker
+
+mixin date-dropdown({titleStart, titleEnd, identifier, type, dateEndText='ДД.ММ.ГГГГ'})
   .date-dropdown
-    input.date-dropdown__calendar
+    +datepicker(identifier)
     h3.date-dropdown__title= titleStart
     h3.date-dropdown__title= titleEnd
     button.date-dropdown__btn(data-value="start")
