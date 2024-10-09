@@ -4,6 +4,7 @@ include ../../components/find-rooms/find-rooms
 include ../../components/login/login
 include ../../components/reservation/reservation
 include ../../components/room-card/room-card
+include ../../components/datepicker/datepicker
 
 
 block container
@@ -18,6 +19,7 @@ block content
         +reservation
 
       .cards__calendar
+        +datepicker({identifier: 'calendar_static'})
       .cards__registration
         +registration
       .cards__login
