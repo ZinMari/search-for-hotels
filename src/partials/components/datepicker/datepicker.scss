@@ -154,3 +154,16 @@
 .air-datepicker-button:hover {
   background: transparent;
 }
+
+.date-calendar {
+  @include visually-hidden;
+
+  &__dropdown{
+    margin-top: 58px;
+  }
+
+  &__filter {
+    margin-top: 58px;
+    min-height: 200px;
+  }
+}
