@@ -1,9 +1,15 @@
 include ./partials/pages/form-elements/form-elements
 
 //- extends ./partials/templates/template-uikit/template-uikit
+//- include ./partials/components/date-dropdown/date-dropdown
+//- include ./partials/components/filter-date-dropdown/filter-date-dropdown
+//- include ./partials/components/datepicker/datepicker
 
 //- block content
-//-   include ./partials/components/subscription-text-field/subscription-text-field
+//-   +date-dropdown({titleStart: '111111111', titleEnd: 'sssssss', identifier: 'calendar_1'})
+//-   +date-dropdown({titleStart: '111111111', titleEnd: 'sssssss', identifier: 'calendar_2'})
+//-   +filter-date-dropdown({title: 'filter date dropdown', initialText: '19 авг - 23 авг', identifier: 'calendar_filter'})
+//-   +datepicker({identifier: 'calendar_static'})
 
 
 
