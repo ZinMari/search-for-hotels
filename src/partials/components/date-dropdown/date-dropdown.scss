@@ -9,10 +9,6 @@
     @include form-subtitle
   }
 
-  &__calendar {
-    @include visually-hidden;
-  }
-
   &__btn {
     display: flex;
     align-items: center;
