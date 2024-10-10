@@ -86,7 +86,6 @@ calendarInputs.forEach(calendar=> {
     options = Object.assign({}, commonCalendarOptions, dropdownCalendarOptions)
   } else if (typeCalendar === 'filter') {
     options = Object.assign({}, commonCalendarOptions, filterCalendarOptions)
-    console.log(options)
   } else if (typeCalendar === 'static') {
     options = Object.assign({}, commonCalendarOptions, staticCalendarOptions)
   }
