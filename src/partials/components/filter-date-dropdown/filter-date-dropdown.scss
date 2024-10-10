@@ -23,7 +23,6 @@
     text-align-last: left;
     color: var(--color-dark-75);
     background-color: var(--color-light);
-    cursor: pointer;
   }
 
   &__btn {
@@ -33,5 +32,17 @@
     width: 44px;
     background-color: var(--color-light);
     cursor: pointer;
+
+
+    &:hover svg {
+      transform: scale(1.3);
+      transition: var(--transit);
+
+      path {
+        fill: var(--color-dark-75);
+        transition: var(--transit);
+        fill-opacity: 1;
+      }
+    }
   }
 }
