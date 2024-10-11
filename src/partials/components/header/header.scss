@@ -1,8 +1,11 @@
 .header {
+  position: fixed;
   padding: 15px 0;
   height: 70px;
   box-shadow: 0 10px 20px 0 rgba(31, 32, 65, 0.05);
   background: var(--color-light);
+  z-index: 500;
+  width: 100%;
 
   &__container {
     display: flex;
