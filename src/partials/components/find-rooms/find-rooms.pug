@@ -8,7 +8,7 @@ mixin find-rooms
       h2.find-rooms__title Найдём номера под ваши пожелания
 
       .find-rooms__date
-        -const dateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд'}
+        - const dateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд', identifier: 'calendar_start'}
         +date-dropdown(dateDropdown)
 
       .find-rooms__guests
