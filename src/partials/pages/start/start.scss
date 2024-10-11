@@ -1,0 +1,45 @@
+.start {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+
+  &__slide {
+    height: 900px;
+    img {
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 15px;
+    max-width: var(--container);
+    margin: auto;
+    align-items: end;
+  }
+
+  &__form {
+    max-width: 380px;
+    margin-bottom: 387px;
+  }
+
+  &__description {
+    max-width: 290px;
+    text-align: right;
+    justify-self: end;
+    font: var(--text);
+    color: var(--color-dark-75);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+}
