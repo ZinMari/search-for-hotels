@@ -1,0 +1,14 @@
+extends ../template-main/template-main
+include ../../components/header/header
+include ../../components/footer/footer
+
+
+block page
+  div.content
+    div.content__header
+      +header
+    main.content__content
+      block content
+    div.content__footer
+      +footer
+
