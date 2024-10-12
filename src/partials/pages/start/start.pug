@@ -1,21 +1,17 @@
 extends ../../templates/template-page/template-page
 include ../../components/find-rooms/find-rooms
+include ../../components/background-slider/background-slider
 
 
 block content
   section.start
     - const images = ['../img/main-slider/main-slider-1.jpg', '../img/main-slider/main-slider-2.jpg', '../img/main-slider/main-slider-3.jpg',];
-    
-      .start__slider.glide
-        .start__track.glide__track(data-glide-el="track")
-          ul.start__slides.glide__slides
-            each img in images
-              li.start__slide.glide__slide
-                img(src= img, alt="Изображение номера отеля")
-      .start__content
-        .start__form
-          +find-rooms
-        .start__description
-          |Лучшие номера для вашей работы, отдыха и просто вдохновения
+    - const heightBlock = 900;
+    +background-slider({images: images, sliderHeight: heightBlock})
+    .start__content
+      .start__form
+        +find-rooms
+      .start__description
+        |Лучшие номера для вашей работы, отдыха и просто вдохновения
 
 
