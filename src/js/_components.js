@@ -7,4 +7,5 @@ import '../partials/components/datepicker/datepicker.js';
 import '../partials/components/text-field/text-field.js';
 import '../partials/components/date-dropdown/date-dropdown.js';
 import '../partials/components/room-card/room-card.js';
-import '../partials/pages/start/start.js';
+import '../partials/components/background-slider/background-slider.js';
+s
