@@ -8,6 +8,11 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: $screen) {
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
   }
 
   &__header {
@@ -15,8 +20,9 @@
   }
 
   &__info {
-    margin-right: 40px;
-    max-width: 260px;
+    margin-right: auto;
+    padding-right: 10px;
+    max-width: 283px;
   }
 
   &__logo {
@@ -33,6 +39,8 @@
     display: grid;
     flex-grow: 1;
     grid-template-columns: repeat(3, 1fr);
+    min-width: 475px;
+    max-width: 600px;
   }
 
   &__subtitle {
@@ -54,6 +62,10 @@
     line-height: 1.7;
     color: var(--color-dark-75);
     gap: 17px;
+
+    @media(max-width: $screen) {
+      flex-wrap: wrap;
+    }
   }
 
   &__footer {
@@ -71,7 +83,7 @@
 }
 
 
-@container (max-width: 768px) {
+@container (max-width: 787px) {
   .footer {
     &__container {
       flex-direction: column;
