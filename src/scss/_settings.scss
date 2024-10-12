@@ -11,6 +11,10 @@
   scroll-behavior: smooth;
 }
 
+.page--menu-open {
+  overflow: hidden;
+}
+
 .page__body {
   margin: 0;
   min-width: 360px;
