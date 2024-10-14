@@ -1,8 +1,3 @@
-const expandableBtns = document.querySelectorAll('.expandable-checkbox-list__btn');
-
-expandableBtns.forEach(btn => {
-  btn.addEventListener('click', function(){
-    this.ariaExpanded = this.ariaExpanded === 'false' ? true : false;
-    this.closest('.expandable-checkbox-list').classList.toggle('expandable-checkbox-list--open');
-  })
+$('.expandable-checkbox-list__btn').on('click', function(){
+  $(this).closest('.expandable-checkbox-list').toggleClass('expandable-checkbox-list--open');
 })
