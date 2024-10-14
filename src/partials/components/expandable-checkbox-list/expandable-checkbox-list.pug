@@ -2,11 +2,10 @@ include ../checkbox/checkbox
 
 mixin expandable-checkbox-list(title, checkboxList, isOpen= false)
   - let className = 'expandable-checkbox-list';
-  - const ariaExpanded = isOpen
   - if(isOpen) className = `${className} ${className}--open`;
 
   div(class= className)
-    button.expandable-checkbox-list__btn(aria-expanded=ariaExpanded)= title
+    button.expandable-checkbox-list__btn= title
       svg.expandable-checkbox-list__svg(xmlns="http://www.w3.org/2000/svg"
               width="12"
               height="8"
