@@ -1,11 +1,6 @@
 .start {
-  position: relative;
-  overflow: hidden;
-  height: 900px;
 
   &__content {
-    position: absolute;
-    inset: 0;
     display: grid;
     align-items: end;
     grid-template-columns: repeat(2, 1fr);

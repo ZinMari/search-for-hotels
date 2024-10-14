@@ -1,13 +1,11 @@
 extends ../../templates/template-page/template-page
 include ../../components/find-rooms/find-rooms
-include ../../components/background-slider/background-slider
 
 
 block content
   section.start
     - const images = ['../img/pages/start/main-slider-1.jpg', '../img/pages/start/main-slider-2.jpg', '../img/pages/start/main-slider-3.jpg',];
     - const heightBlock = 900;
-    +background-slider({images: images, sliderHeight: heightBlock})
     .start__content
       .start__form
         +find-rooms

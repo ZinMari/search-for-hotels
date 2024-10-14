@@ -1,7 +1,0 @@
-mixin background-slider({images, sliderHeight})
-  .background-slider.glide
-    .background-slider__track.glide__track(data-glide-el="track")
-      ul.background-slider__slides.glide__slides
-        each img in images
-          li.background-slider__slide.glide__slide(style= `--heightBlock: ${sliderHeight}px`)
-            img(src= img, alt="Изображение красивой комнаты")
