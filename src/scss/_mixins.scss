@@ -16,6 +16,10 @@
   padding: 40px 30px 30px;
   box-shadow: var(--card-box-shadow);
   background-color: var(--color-light);
+
+  @media(max-width: $smart) {
+    padding: 25px 20px 20px;
+  }
 }
 
 @mixin visually-hidden {
