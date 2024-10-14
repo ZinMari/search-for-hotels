@@ -6,12 +6,18 @@
     left: 0;
     top: 0;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
     padding: 140px 0;
     width: 100%;
     min-height: 1350px;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
+  }
+
+  &__header,
+  &__header-login {
+    transform: rotate(0);
+    height: 70px;
   }
 
   &__footer-mobile {

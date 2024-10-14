@@ -8,8 +8,10 @@ block container
 block content
   section.headers-footers
     .headers-footers__wrap
-      +header
-      +header('юлий цезарь')
+      .headers-footers__header
+        +header
+      .headers-footers__header-login
+        +header('юлий цезарь')
       +footer
       .headers-footers__footer-mobile
         +footer
