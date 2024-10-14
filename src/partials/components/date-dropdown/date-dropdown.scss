@@ -5,6 +5,10 @@
   max-width: 100%;
   gap: 5px 20px;
 
+  @media(max-width: $smart) {
+    gap: 5px;
+  }
+
   &__title {
     @include form-subtitle
   }
@@ -16,11 +20,20 @@
     border: 1px solid var(--color-dark-25);
     border-radius: var(--bd-radius);
     padding: 0 15px;
-    width: 150px;
+    max-width: 150px;
     height: 44px;
     font: var(--text);
     color: var(--color-dark-75);
     background-color: var(--color-light);
     cursor: pointer;
+
+    span {
+      padding-right: 15px;
+    }
+
+    @media(max-width: $smart) {
+      max-width: 100%;
+      padding: 0 10px;
+    }
   }
 }
