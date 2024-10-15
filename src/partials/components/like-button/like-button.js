@@ -1,9 +1,6 @@
-const likeBtns = document.querySelectorAll('.like-button___btn');
+const likeBtns = $('.like-button___btn');
 
-likeBtns.forEach(elem => {
-  elem.addEventListener('click', ()=>{
-    elem.classList.toggle('like-button___btn--like');
-    elem.classList.contains('like-button___btn--like') ? elem.textContent++ : elem.textContent--
-
+likeBtns.on('click', function(){
+    this.classList.toggle('like-button___btn--like');
+    this.classList.contains('like-button___btn--like') ? this.textContent++ : this.textContent--
   })
-})
