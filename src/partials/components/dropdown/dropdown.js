@@ -1,12 +1,10 @@
-const dropBtns = document.querySelectorAll('.dropdown__btn');
-const dropInputs = document.querySelectorAll('.dropdown__input');
+const dropBtns = $('.dropdown__btn');
+const dropInputs = $('.dropdown__input');
 const dropdowns = $('.dropdown');
 const dropClearBtns = $('.dropdown__clear button');
 
 
-dropClearBtns.each(function(index, btn){
-  btn.addEventListener('click', resetValues)
-})
+dropClearBtns.on('click', resetValues);
 
 
 function resetValues(){
@@ -24,8 +22,8 @@ function resetValues(){
 }
 
 
-dropdowns.each(function(index, dropdown){
-  setButtonClear(dropdown)
+dropdowns.each(function(){
+  setButtonClear(this)
 })
 
 function isEmptyValues(dropdown) {
@@ -55,16 +53,13 @@ function definitionOfDeclension(count){
   return declension;
 }
 
-dropBtns.forEach(dropBtn => {
-  dropBtn.addEventListener('click', function(){
-    this.ariaExpanded = this.ariaExpanded === 'false' ? true : false;
+dropBtns.on('click', function(){
     this.closest('.dropdown').classList.toggle('dropdown--open');
-  })
 })
 
 function setButtonClear(currentInput){
   const parent = currentInput.closest('.dropdown');
-  const buttonClear = $('.dropdown__clear button span', parent);
+  const buttonClear = $('.dropdown__clear span', parent);
 
   if(isEmptyValues(currentInput)) {
     buttonClear.attr('hidden', true)
@@ -133,13 +128,13 @@ $('.dropdown__input').niceNumber({
   },
 });
 
-dropInputs.forEach(dropInput => {
-  switch (dropInput.value) {
-    case dropInput.min:
-      dropInput.previousElementSibling.classList.add('nice-number__button--disabed')
+dropInputs.each(function(){
+  switch (this.value) {
+    case this.min:
+      this.previousElementSibling.classList.add('nice-number__button--disabed')
       break;
-    case dropInput.max:
-      dropInput.nextElementSibling.classList.add('nice-number__button--disabed')
+    case this.max:
+      this.nextElementSibling.classList.add('nice-number__button--disabed')
       break;
   }
 })
