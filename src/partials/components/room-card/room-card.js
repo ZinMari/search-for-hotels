@@ -1,8 +1,8 @@
 import Glide from '@glidejs/glide'
 
-const glides = document.querySelectorAll('.glide');
+const glides = $('.glide');
 
-glides.forEach(elem => {
-  new Glide(elem).mount();
+glides.each(function(){
+  new Glide(this).mount();
 })
 
