@@ -1,0 +1,69 @@
+extends ../../templates/template-page/template-page
+include ../../components/reservation/reservation
+include ../../components/icon-text-list/icon-text-list
+include ../../components/comment/comment
+include ../../components/bullet-list/bullet-list
+
+
+block content
+  section.room-details
+    .room-details__photos
+      .room-details__photo.room-details__photo--big
+        img(src="../img/888/1.jpg", alt="Фото большой кровати в номере")
+      .room-details__photo
+        img(src="../img/888/2.jpg", alt="Фото маленькой кровати в номере")
+      .room-details__photo
+        img(src="../img/888/3.jpg", alt="Фото окна в номере")
+    .room-details__details.container
+      .room-details__info
+        .room-details__room-info
+          h2.room-details__subtitle Сведения о номере
+          .room-details__room-info-list
+            -
+              const detaisIconElems = [
+                {src_icon: '../img/components/icon-text-list/comfort.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'},
+                {src_icon: '../img/components/icon-text-list/ease.svg', title: 'Удобство', description: 'Окно в каждой из спален'},
+                {src_icon: '../img/components/icon-text-list/cozy.svg', title: 'Уют', description: 'Номер оснащён камином'},
+              ]
+            +icon-text-list(detaisIconElems)
+        .room-details__impressions
+          h2.room-details__subtitle Впечатления от номера
+          .room-details__impressions-content
+            .room-details__impressions-diagram
+            ul.room-details__impressions-list
+              li.room-details__impressions-item Великолепно
+              li.room-details__impressions-item Хорошо
+              li.room-details__impressions-item Удовлетворительно
+              li.room-details__impressions-item Разочарован
+        .room-details__reviews
+          h2.room-details__subtitle Отзывы посетителей номера
+          .room-details__reviews-cooments
+            -
+              const person_1 = {
+                imgPath: "../img/components/comment/ava.webp",
+                name: "Мурад Сарафанов",
+                date: "5 дней назад",
+                countLike: 12,
+                isLike: true,
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+              }
+
+              const person_2 = {
+                imgPath: "../img/components/comment/ava.webp",
+                name: "Патрисия Стёклышкова",
+                date: "Неделю назад",
+                countLike: 2,
+                isLike: false,
+                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+              }
+            +comment(person_1)
+            +comment(person_2)
+        .room-details__rools
+          h2.room-details__subtitle Правила
+          - const roomDetailsRuls = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+            +bullet-list('Правила', roomDetailsRuls)
+        .room-details__cancellation
+          h2.room-details__subtitle Отмена
+          p.room-details__cancellation-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .room-details__reserve
+        +reservation
