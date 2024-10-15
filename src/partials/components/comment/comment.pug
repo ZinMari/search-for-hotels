@@ -8,5 +8,5 @@ mixin comment({imgPath, name, date, countLike, isLike, text})
       p.comment__name= name
       p.comment__time= date
     .comment__like
-      +like-button({countLike: 12, isLike: true})
+      +like-button({countLike: countLike, isLike: isLike})
     p.comment__text= text
