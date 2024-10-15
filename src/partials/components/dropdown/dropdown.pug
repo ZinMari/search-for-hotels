@@ -13,7 +13,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
       if(subtitle)
         span.dropdown__subtitle= subtitle
     .dropdown__menu
-      button.dropdown__btn(aria-expanded="false")
+      button.dropdown__btn
         span #{buttonText}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
