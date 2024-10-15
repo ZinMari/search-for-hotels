@@ -1,7 +1,7 @@
 import AirDatepicker from 'air-datepicker';
 
-const calendarInputs = document.querySelectorAll('.date-calendar');
-const activateCalendarBtns = document.querySelectorAll('button[data-identifier]');
+const calendarInputs = $('.date-calendar');
+const activateCalendarBtns = $('button[data-identifier]');
 
 const applyBtn = {
   content: 'Применить',
@@ -13,13 +13,13 @@ const applyBtn = {
       const startDate = dp.selectedDates[0].toLocaleString('ru', templateDate);
       const endDate = dp.selectedDates[1].toLocaleString('ru', templateDate);
 
-      const showDateBtns = document.querySelectorAll(`button[data-identifier=${identifierCalendar}]`)
-      showDateBtns.forEach(btn=>{
-        if(btn.dataset.value === "start") {
-          btn.firstElementChild.textContent = startDate;
+      const showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
+      showDateBtns.each(function(){
+        if(this.dataset.value === "start") {
+          this.firstElementChild.textContent = startDate;
         } else {
           if(dp.selectedDates[1]) {
-            btn.firstElementChild.textContent = endDate;
+            this.firstElementChild.textContent = endDate;
           }
         }
       })
@@ -32,12 +32,9 @@ const clearBtn = {
   className: 'clearBtn',
   onClick: (dp) => {
     const identifierCalendar = dp.$el.dataset.identifier;
-    const showDateBtns = document.querySelectorAll(`button[data-identifier=${identifierCalendar}]`)
+    const showDateBtns = $(`button[data-identifier=${identifierCalendar}] span`)
     dp.clear();
-
-    showDateBtns.forEach(btn => {
-      btn.firstElementChild.textContent = 'ДД.ММ.ГГГГ'
-    })
+    showDateBtns.text('ДД.ММ.ГГГГ');
   }
 }
 
@@ -75,13 +72,11 @@ const filterCalendarOptions = {
   altField: document.querySelector('.filter-date-dropdown__input'),
 }
 
-//проинициализируем календари и соберем их в массив
 const calendarObjects = [];
 
-calendarInputs.forEach(calendar=> {
+calendarInputs.each(function(){
   let options;
-  const typeCalendar = calendar.dataset.typecalendar;
-
+  const typeCalendar = this.dataset.typecalendar;
   if(typeCalendar === 'dropdown'){
     options = Object.assign({}, commonCalendarOptions, dropdownCalendarOptions)
   } else if (typeCalendar === 'filter') {
@@ -89,12 +84,10 @@ calendarInputs.forEach(calendar=> {
   } else if (typeCalendar === 'static') {
     options = Object.assign({}, commonCalendarOptions, staticCalendarOptions)
   }
-  const calendarElement = new AirDatepicker(calendar, options);
+  const calendarElement = new AirDatepicker(this, options);
   calendarObjects.push(calendarElement)
 })
 
-
-//по клику на кнопку открывается соответсвующий календарь
 function showCalendar() {
   for(let calendar of calendarObjects) {
     if(calendar) {
@@ -109,10 +102,4 @@ function showCalendar() {
   }
 }
 
-activateCalendarBtns.forEach(btn => {
-  btn.addEventListener('click', showCalendar)
-})
-
-
-
-
+activateCalendarBtns.on('click', showCalendar);
