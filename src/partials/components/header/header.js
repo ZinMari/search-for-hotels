@@ -1,11 +1,9 @@
-const burgerBtn = document.querySelector('.header__burger');
-const headerMenu = document.querySelector('.header__menu');
+const burgerBtn = $('.header__burger');
+const headerMenu = $('.header__menu');
 
-burgerBtn.addEventListener('click', ()=>{
-  burgerBtn.classList.toggle('header__burger--open');
-  burgerBtn.firstElementChild.classList.toggle('header__burger-line--open');
-  headerMenu.classList.toggle('header__menu--open');
-  document.documentElement.classList.toggle('page--menu-open');
+burgerBtn.on('click', function(){
+  burgerBtn.toggleClass('header__burger--open');
+  burgerBtn.children().toggleClass('header__burger-line--open');
+  headerMenu.toggleClass('header__menu--open');
+  $('html').toggleClass('page--menu-open');
 })
-
-
