@@ -3,17 +3,17 @@
   padding-bottom: 56px;
 
   &__photos {
-    max-width: 100%;
-    height: 485px;
-    margin-bottom: 70px;
     display: grid;
     grid-template-columns: 68% 32%;
     grid-template-rows: repeat(2, 50%);
+    margin-bottom: 70px;
+    height: 485px;
+    max-width: 100%;
 
     @media(max-width: $min-tab) {
-      height: auto;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 200px);
+      height: auto;
     }
   }
 
@@ -43,6 +43,10 @@
     display: flex;
     justify-content: space-between;
     gap: 70px;
+
+    @media(max-width: $tabl){
+      gap: 10px;
+    }
 
     @media(max-width: $min-tab){
       flex-direction: column-reverse;
@@ -86,25 +90,28 @@
     line-height: 1.7;
 
     &::before {
-      position: absolute;
       content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      left: 0;
-      top: 50%;
       transform: translateY(-50%);
     }
 
     &:nth-child(1)::before {
       background-image: linear-gradient(#ffe39c, #ffba9c);
     }
+
     &:nth-child(2)::before {
       background-image: linear-gradient(#6fcf97, #6fcf97);
     }
+
     &:nth-child(3)::before {
       background-image: linear-gradient(#bc9cff, #8ba4f9);
     }
+
     &:nth-child(4)::before {
       background-image: linear-gradient(#909090, #3d4975);
     }
@@ -112,21 +119,21 @@
 
   &__impressions-value {
     position: absolute;
-    top: 37%;
     left: 26%;
+    top: 37%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 24px;
-    color: var(--color-purple);
     line-height: 1.2;
+    color: var(--color-purple);
 
     span {
       font-size: 12px;
-      color: inherit;
       text-transform: uppercase;
+      color: inherit;
     }
   }
 
@@ -154,6 +161,7 @@
   }
 
   &__reserve {
+    flex-shrink: 0;
     margin: 0 auto;
     width: 380px;
 
