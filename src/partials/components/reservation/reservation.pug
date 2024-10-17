@@ -16,7 +16,7 @@ mixin reservation
 
         +number-and-cost(reservationHeader)
       .reservation__date-dropdown
-        - const reservationDateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд'}
+        - const reservationDateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд', identifier: 'calendar_reserv'}
         +date-dropdown(reservationDateDropdown)
       .reservation__guest
         -
