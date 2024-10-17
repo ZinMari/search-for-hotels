@@ -1,6 +1,7 @@
-mixin bullet-list(title, items)
+mixin bullet-list({items, title=''})
   .bullet-list
-    h3.bullet-list__title= title
+    if title
+      h3.bullet-list__title= title
     ul.bullet-list__list
 
       each val in items

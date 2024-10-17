@@ -242,7 +242,7 @@ block content
         .forms-elements__column.forms-elements__column--right
           .forms-elements__bullet-list
             - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-            +bullet-list('bullet list', items)
+            +bullet-list({title: 'bullet list', items: items})
 
       .forms-elements__row.forms-elements__row--4
         .forms-elements__icon-text-list
