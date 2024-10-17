@@ -43,14 +43,24 @@
     display: flex;
     justify-content: space-between;
     gap: 70px;
+
+    @media(max-width: $min-tab){
+      flex-direction: column-reverse;
+    }
   }
 
   &__info {
-    flex-grow: 1;
     display: grid;
+    flex-grow: 1;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
     row-gap: 12px;
+
+    @media(max-width: $tabl) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__room-info {
@@ -133,6 +143,10 @@
 
   &__rools {
     max-width: 264px;
+
+    @media(max-width: $min-tab){
+      max-width: 100%;
+    }
   }
 
   &__cancellation-description {
@@ -140,6 +154,11 @@
   }
 
   &__reserve {
-    min-width: 380px;
+    margin: 0 auto;
+    width: 380px;
+
+    @media(max-width: $smart){
+      max-width: 100%;
+    }
   }
 }
