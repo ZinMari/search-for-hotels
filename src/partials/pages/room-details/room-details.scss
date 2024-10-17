@@ -1,4 +1,6 @@
 .room-details {
+  border-bottom: 1px solid var(--color-dark-5);
+  padding-bottom: 56px;
 
   &__photos {
     max-width: 100%;
@@ -39,8 +41,8 @@
 
   &__details {
     display: flex;
-    gap: 70px;
     justify-content: space-between;
+    gap: 70px;
   }
 
   &__info {
@@ -51,17 +53,21 @@
     row-gap: 12px;
   }
 
+  &__room-info {
+    max-width: 279px;
+  }
+
   &__impressions-content {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 317px;
   }
 
   &__impressions-diagram {
-    width: 121px;
-    height: 121px;
-  }
-
-  &__impressions-list {
-
+    position: relative;
+    top: -15px;
+    width: 135px;
   }
 
   &__impressions-item {
@@ -84,13 +90,33 @@
       background-image: linear-gradient(#ffe39c, #ffba9c);
     }
     &:nth-child(2)::before {
-      background-image: linear-gradient(#6fcf97, #66d2ea);
+      background-image: linear-gradient(#6fcf97, #6fcf97);
     }
     &:nth-child(3)::before {
       background-image: linear-gradient(#bc9cff, #8ba4f9);
     }
     &:nth-child(4)::before {
       background-image: linear-gradient(#909090, #3d4975);
+    }
+  }
+
+  &__impressions-value {
+    position: absolute;
+    top: 37%;
+    left: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-purple);
+    line-height: 1.2;
+
+    span {
+      font-size: 12px;
+      color: inherit;
+      text-transform: uppercase;
     }
   }
 
@@ -103,5 +129,17 @@
     display: flex;
     flex-direction: column;
     gap: 19px;
+  }
+
+  &__rools {
+    max-width: 264px;
+  }
+
+  &__cancellation-description {
+    color: var(--color-dark-75);
+  }
+
+  &__reserve {
+    min-width: 380px;
   }
 }

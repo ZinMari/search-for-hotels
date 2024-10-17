@@ -30,6 +30,10 @@ block content
           h2.room-details__subtitle Впечатления от номера
           .room-details__impressions-content
             .room-details__impressions-diagram
+              canvas#diagram
+              p.room-details__impressions-value
+                |260
+                span голосов
             ul.room-details__impressions-list
               li.room-details__impressions-item Великолепно
               li.room-details__impressions-item Хорошо
@@ -40,7 +44,7 @@ block content
           .room-details__reviews-cooments
             -
               const person_1 = {
-                imgPath: "../img/components/comment/ava.webp",
+                imgPath: "../img/avatars/ava_1.jpg",
                 name: "Мурад Сарафанов",
                 date: "5 дней назад",
                 countLike: 12,
@@ -49,7 +53,7 @@ block content
               }
 
               const person_2 = {
-                imgPath: "../img/components/comment/ava.webp",
+                imgPath: "../img/avatars/ava_2.jpg",
                 name: "Патрисия Стёклышкова",
                 date: "Неделю назад",
                 countLike: 2,
@@ -61,7 +65,7 @@ block content
         .room-details__rools
           h2.room-details__subtitle Правила
           - const roomDetailsRuls = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-            +bullet-list('Правила', roomDetailsRuls)
+            +bullet-list({items: roomDetailsRuls})
         .room-details__cancellation
           h2.room-details__subtitle Отмена
           p.room-details__cancellation-description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
