@@ -1,13 +1,15 @@
 .start {
+  background-image: url('../img/index-background/main-slider-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  background-position: center;
 
   &__content {
+    min-height: 830px;
     display: grid;
     align-items: end;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    margin: auto;
-    padding: 0 15px;
-    max-width: var(--container);
 
     @media(max-width: $smart){
       grid-template-columns: 100%;
@@ -15,12 +17,11 @@
   }
 
   &__form {
-    margin-bottom: 387px;
     max-width: 380px;
+    margin-bottom: 386px;
 
     @media(max-width: $smart){
       place-self: center;
-      margin-bottom: 0;
       max-width: 100%;
     }
   }
