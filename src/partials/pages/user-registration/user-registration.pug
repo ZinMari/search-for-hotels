@@ -1,7 +1,8 @@
 extends ../../templates/template-page/template-page
+include ../../components/registration/registration
 
 
 block content
   section.user-registration
-    - const images = ['../img/registration-sign-in-background/slide-1.jpg', '../img/registration-sign-in-background/slide-2.jpg'];
-    - const heightBlock = 753;
+    .user-registration__form
+      +registration
