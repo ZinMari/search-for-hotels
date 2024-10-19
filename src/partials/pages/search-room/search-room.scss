@@ -1,0 +1,20 @@
+.search-room {
+  &__wrapp {
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 23% 5% 72%;
+  }
+
+  &__settings {
+    border: 1px solid #000;
+    grid-column: 1 / 2;
+  }
+
+
+  &__rooms {
+    border: 1px solid #ff0000;
+    grid-column: 3 / 4;
+  }
+}
