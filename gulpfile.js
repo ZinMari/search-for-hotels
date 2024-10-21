@@ -34,7 +34,7 @@ const watcher = () => {
   });
 
   gulp.watch([app.paths.srcScss, `${app.paths.base.src}/**/*.scss`], styles);
-  gulp.watch([`${app.paths.srcPartialsFolder}/components/**/*.js`, app.paths.srcFullJs], scripts);
+  gulp.watch([`${app.paths.srcPartialsFolder}/components/**/*.js`, app.paths.srcFullJs, `${app.paths.srcPartialsFolder}/pages/**/*.js`], scripts);
   gulp.watch(`${app.paths.srcPartialsFolder}/*.pug`, pug);
   gulp.watch(`${app.paths.base.src}/**/*.pug`, pug);
   gulp.watch(`${app.paths.resourcesFolder}/**`, resources);
