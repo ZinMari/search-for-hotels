@@ -6,3 +6,4 @@ import '../partials/components/datepicker/datepicker.js';
 import '../partials/components/room-card/room-card.js';
 import '../partials/components/header/header.js';
 import '../partials/pages/room-details/room-details.js';
+import '../partials/pages/search-room/search-room.js';
