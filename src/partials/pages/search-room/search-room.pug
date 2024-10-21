@@ -1,11 +1,302 @@
 extends ../../templates/template-page/template-page
+include ../../components/filter-date-dropdown/filter-date-dropdown
+include ../../components/dropdown/dropdown
+include ../../components/range-slider/range-slider
+include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../components/expandable-checkbox-list/expandable-checkbox-list
+include ../../components/room-card/room-card
 
 
 block content
   section.search-room.container
     .search-room__wrapp
       .search-room__settings
-        |w
-      .search-room__rooms
-        |w
+        .search-room__dates-of-stay
+          +filter-date-dropdown({title: 'даты пребывания в отеле', initialText: '19 авг - 23 авг', identifier: 'search-room'})
+        .search-room__guests
+          -
+            const guestSettings = {
+              title: 'гости',
+              buttonText: '3 гостя, 1 младенец',
+              isOpen: false,
+              hasButtons: false,
+              typeDropdown: 'people',
+              values: [3, 0, 1],
+            }
+          +dropdown(guestSettings)
+        .search-room__price-range
+          .search-room__price-range-slider
+            -
+              const costsDiapazon = {
+                title: 'диапазон цены',
+                min: "550", max: "15350",
+                start: "5000", end: "10000"
+              }
+            +range-slider(costsDiapazon)
+          p.search-room__price-range-description
+            |Стоимость за сутки пребывания в номере
+        .search-room__house-rules
+          -
+            const houseRules = [
+              {text: 'Можно курить', isChecked: false},
+              {text: 'Можно с питомцами', isChecked: true},
+              {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true},
+            ]
+          +checkbox-btns('правила дома', houseRules)
+        .search-room__availability
+          -
+            const availability = [
+              {title: 'Широкий коридор', description: 'Ширина коридоров в номере<br>не менее 91 см.', isChecked: false},
+              {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.', isChecked: false},
+            ]
 
+          +rich-checkbox-btns('доступность', availability)
+        .search-room__amenities
+          -
+            const amenities = {
+              title: 'удобства номера',
+              buttonText: '2 спальни, 2 кровати...',
+              isOpen: false,
+              hasButtons: false
+            }
+          +dropdown(amenities)
+        .search-room__additional-amenities
+          -
+            const additionalAmenities = [
+              { text: 'Завтрак',
+                isChecked: false
+              },
+              { text: 'Письменный стол',
+                isChecked: true
+              },
+              { text: 'Стул для кормления',
+                isChecked: true
+              },
+              { text: 'Кроватка',
+                isChecked: true
+              },
+              { text: 'Телевизор',
+                isChecked: false
+              },
+              { text: 'Шампунь',
+                isChecked: false
+              },
+            ]
+          +expandable-checkbox-list('дополнительные удобства', additionalAmenities, false)
+      .search-room__rooms
+        h1.search-room__title Номера, которые мы для вас подобрали
+        .search-room__rooms-wrapp
+          -
+            const rooms = {
+              'room-888': {
+                images: [
+                  "../img/888/1-sm.jpg",
+                  "../img/888/1-sm.jpg",
+                  "../img/888/1-sm.jpg",
+                  "../img/888/1-sm.jpg"
+                ],
+                info: {
+                  number: 888,
+                  nuberType: 'люкс',
+                  price: '9 990',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 5
+                },
+                reviews: 145,
+              },
+              'room-840': {
+                images: [
+                    "../img/rooms/840.jpg",
+                    "../img/rooms/840.jpg",
+                    "../img/rooms/840.jpg",
+                    "../img/rooms/840.jpg"
+                ],
+                info: {
+                  number: 840,
+                  price: '9 990',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 4
+                },
+                reviews: 65,
+              },
+              'room-980': {
+                images: [
+                  "../img/rooms/980.jpg",
+                  "../img/rooms/980.jpg",
+                  "../img/rooms/980.jpg",
+                  "../img/rooms/980.jpg"
+                ],
+                info: {
+                  number: 980,
+                  nuberType: 'люкс',
+                  price: '8 500',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 3
+                },
+                reviews: 35,
+              },
+              'room-856': {
+                images: [
+                  "../img/rooms/856.jpg",
+                  "../img/rooms/856.jpg",
+                  "../img/rooms/856.jpg",
+                  "../img/rooms/856.jpg"
+                ],
+                info: {
+                  number: 856,
+                  price: '7 300',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 5
+                },
+                reviews: 19,
+              },
+              'room-740': {
+                images: [
+                  "../img/rooms/740.jpg",
+                  "../img/rooms/740.jpg",
+                  "../img/rooms/740.jpg",
+                  "../img/rooms/740.jpg"
+                ],
+                info: {
+                  number: 740,
+                  price: '6 000',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 4
+                },
+                reviews: 44,
+              },
+              'room-982': {
+                images: [
+                  "../img/rooms/982.jpg",
+                  "../img/rooms/982.jpg",
+                  "../img/rooms/982.jpg",
+                  "../img/rooms/982.jpg"
+                ],
+                info: {
+                  number: 982,
+                  price: '5 800',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 3
+                },
+                reviews: 56,
+              },
+              'room-678': {
+                images: [
+                  "../img/rooms/678.jpg",
+                  "../img/rooms/678.jpg",
+                  "../img/rooms/678.jpg",
+                  "../img/rooms/678.jpg"
+                ],
+                info: {
+                  number: 678,
+                  price: '5 500',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 5
+                },
+                reviews: 45,
+              },
+              'room-450': {
+                images: [
+                  "../img/rooms/450.jpg",
+                  "../img/rooms/450.jpg",
+                  "../img/rooms/450.jpg",
+                  "../img/rooms/450.jpg"
+                ],
+                info: {
+                  number: 450,
+                  price: '5 300',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 4
+                },
+                reviews: 39,
+              },
+              'room-350': {
+                images: [
+                  "../img/rooms/350.jpg",
+                  "../img/rooms/350.jpg",
+                  "../img/rooms/350.jpg",
+                  "../img/rooms/350.jpg"
+                ],
+                info: {
+                  number: 350,
+                  price: '5 000',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 3
+                },
+                reviews: 77,
+              },
+              'room-666': {
+                images: [
+                  "../img/rooms/666.jpg",
+                  "../img/rooms/666.jpg",
+                  "../img/rooms/666.jpg",
+                  "../img/rooms/666.jpg"
+                ],
+                info: {
+                  number: 666,
+                  price: '5 000',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 5
+                },
+                reviews: 25,
+              },
+              'room-444': {
+                images: [
+                  "../img/rooms/444.jpg",
+                  "../img/rooms/444.jpg",
+                  "../img/rooms/444.jpg",
+                  "../img/rooms/444.jpg"
+                ],
+                info: {
+                  number: 444,
+                  price: '5 000',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 3
+                },
+                reviews: 15,
+              },
+              'room-352': {
+                images: [
+                  "../img/rooms/352.jpg",
+                  "../img/rooms/352.jpg",
+                  "../img/rooms/352.jpg",
+                  "../img/rooms/352.jpg"
+                ],
+                info: {
+                  number: 352,
+                  price: '5 000',
+                  isMiniVariant: true,
+                },
+                starValue: {
+                  numValueCheck: 3
+                },
+                reviews: 55,
+              },
+            }
+
+          each room in rooms
+            .search-room__room
+              +room-card(room)
