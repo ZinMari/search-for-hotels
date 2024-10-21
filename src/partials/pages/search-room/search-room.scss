@@ -52,10 +52,41 @@
     grid-column: 3 / 4;
   }
 
-  &__rooms-wrapp {
+  &__rooms-elements {
     display: grid;
     grid-template-columns: repeat(auto-fit, 270px);
+    margin-bottom: 40px;
     gap: 20px 12px;
   }
 
+  &__rooms-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.pagination {
+  &__numbers {
+    display: flex;
+    cursor: pointer;
+    gap: 20px;
+  }
+
+  &__num-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font: var(--sub-title-light);
+    color: var(--color-dark-50);
+
+    &--active {
+      font-weight: 700;
+      color: var(--color-light);
+      background-image: var(--color-gradient);
+    }
+  }
 }
