@@ -26,9 +26,9 @@ mixin login
 
           +text-field(inputPassword)
       .login__form-btn
-        +button('войти', 'arrow')
+        +button({text: 'войти', style: 'arrow'})
 
     .login__create
       span.login__text Нет аккаунта на Toxin?
       .login__create-btn
-        +button('создать', 'border')
+        +button({text: 'создать', style: 'border'})

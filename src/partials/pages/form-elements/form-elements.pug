@@ -137,19 +137,19 @@ block content
 
           .forms-elements__buttons-container
             .forms-elements__button-mini
-              +button('click me', 'fill')
-              +button('click me', 'fill', true)
+              +button({text: 'click me', style: 'fill'})
+              +button({text: 'click me', style: 'fill', isDisabled: true})
 
             .forms-elements__button-mini
-              +button('click me', 'border')
-              +button('click me', 'border', true)
+              +button({text: 'click me', style: 'border'})
+              +button({text: 'click me', style: 'border', isDisabled: true})
 
             .forms-elements__button-text
-              +button('click me', 'text')
-              +button('click me', 'text', true)
+              +button({text: 'click me', style: 'text'})
+              +button({text: 'click me', style: 'text', isDisabled: true})
 
             .forms-elements__button--arrow
-              +button('перейти к оплате', 'arrow')
+              +button({text: 'перейти к оплате', style: 'arrow'})
 
       .forms-elements__row.forms-elements__row--2
         .forms-elements__column.forms-elements__column--left

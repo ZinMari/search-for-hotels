@@ -35,6 +35,6 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
         if(hasButtons)
           .dropdown__buttons
             .dropdown__clear
-              +button('очистить', 'text')
+              +button({text: 'очистить', style: 'text'})
             .dropdown__apply
-              +button('применить', 'text')
+              +button({text: 'применить', style: 'text'})
