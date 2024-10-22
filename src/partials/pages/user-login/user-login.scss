@@ -1,0 +1,15 @@
+.user-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 702px;
+  background-image: url('../img/registration-sign-in-background/slide-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  background-position: bottom;
+
+  &__form {
+    width: 380px;
+  }
+}

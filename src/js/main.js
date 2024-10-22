@@ -8,7 +8,7 @@ import './_components.js';
 (function backgroundSlider(){
   const indexPageSection = document.querySelector('.start');
   const registrationPageSection = document.querySelector('.user-registration');
-  // const signInPageSection = document.querySelector('.start');
+  const signInPageSection = document.querySelector('.user-login');
 
   const sliderIndex = ['../img/index-background/main-slider-1.jpg', '../img/index-background/main-slider-2.jpg', '../img/index-background/main-slider-3.jpg'];
   const sliderRegistrationSignIn = ['../img/registration-sign-in-background/slide-1.jpg', '../img/registration-sign-in-background/slide-2.jpg'];
@@ -27,5 +27,5 @@ import './_components.js';
 
   if(indexPageSection)slider(indexPageSection, sliderIndex)
   if(registrationPageSection)slider(registrationPageSection, sliderRegistrationSignIn)
-  // if(signInPageSection)slider(signInPageSection, sliderIndex)
+  if(signInPageSection)slider(signInPageSection, sliderIndex)
 })()
