@@ -70,23 +70,38 @@
   &__numbers {
     display: flex;
     cursor: pointer;
-    gap: 20px;
   }
 
   &__num-element {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     font: var(--sub-title-light);
     color: var(--color-dark-50);
+    transition: var(--transit);
 
     &--active {
       font-weight: 700;
       color: var(--color-light);
       background-image: var(--color-gradient);
+      transition: var(--transit);
+    }
+  }
+
+  &__btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: var(--color-gradient-green);
+    cursor: pointer;
+
+    &--first {
+      transform: scaleX(-1);
     }
   }
 }

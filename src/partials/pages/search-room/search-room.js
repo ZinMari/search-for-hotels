@@ -1,59 +1,95 @@
-// const paginate = ()=> {
-//   const roomCards = Array.from(document.querySelectorAll('.search-room__room'));
-//   const roomCardsContainer = document.querySelector('.search-room__rooms-elements');
-//   const pagination = document.querySelector('.search-room__rooms-pagination');
-//   const cardsCount = 11;
-//   let currentPage = 1;
+const paginate = ()=> {
+  const roomCards = Array.from(document.querySelectorAll('.search-room__room'));
+  const roomCardsContainer = document.querySelector('.search-room__rooms-elements');
+  const paginationPanel = document.querySelector('.search-room__rooms-pagination');
+  const paginationNumList = paginationPanel.querySelector('.pagination__numbers');
+  const startArrowBtn = paginationPanel.querySelector('.pagination__btn--first');
+  const endArrowBtn = paginationPanel.querySelector('.pagination__btn--last');
 
-//   const renderCards = (cards, container, numberOfCards, page) => {
-//     roomCardsContainer.innerHTML = '';
+  const cardsCount = 11;
+  const nuberLastPage = Math.ceil(roomCards.length / cardsCount);
+  let currentPage = 1;
 
-//     const firstCardsIndex = numberOfCards * page - numberOfCards;
-//     const lastCardsIndex = firstCardsIndex + numberOfCards;
-//     const cardsOnPage = roomCards.slice(firstCardsIndex, lastCardsIndex);
+  function sliceCards(cardsCount, currentPage){
+    roomCardsContainer.innerHTML = '';
+    const firstCardsIndex = cardsCount * currentPage - cardsCount;
+    const lastCardsIndex = firstCardsIndex + cardsCount;
+    const cardsOnPage = roomCards.slice(firstCardsIndex, lastCardsIndex);
+    return cardsOnPage;
+  }
 
-//     roomCardsContainer.append(...cardsOnPage)
-//   }
+  function createBtnPagination(currentPage){
+    const startBtn = currentPage == 1 ? 1 : currentPage - 1;
 
-//   const renderPagination = (cards, numberOfCards) => {
-//     const pagesCount = Math.ceil(cards.length / numberOfCards);
-//     const paginationNumbersContainer = document.querySelector('.pagination__numbers');
+    paginationNumList.innerHTML = '';
 
-//     for(let i = currentPage; i < currentPage+3; i++) {
-//       const btn = renderPaginationBtn(i);
-//       paginationNumbersContainer.append(btn)
-//     }
-//   }
+    for(let i = startBtn; i < startBtn+3 && i <= nuberLastPage; i++){
+      let li = document.createElement('li');
+      li.classList.add('pagination__num-element', 'pagination__num-element--number');
+      li.textContent = i;
+      if(i == currentPage){
+        li.classList.add('pagination__num-element--active');
+      }
+      paginationNumList.append(li)
+    }
 
-//   const renderPaginationBtn = (page) => {
-//     const li = document.createElement('li');
-//     li.classList.add('pagination__num-element')
-//     li.textContent = page;
+    createEllipses(startBtn, nuberLastPage)
+    showArrowBtns(currentPage, nuberLastPage)
+  }
 
-//     if(currentPage === page) {
-//       li.classList.add('pagination__num-element--active')
-//     }
-//     return li;
-//   }
+  function showArrowBtns(currentPage, nuberLastPage){
+    if(currentPage != 1) {
+      startArrowBtn.hidden = false;
+    } else {
+      startArrowBtn.hidden = true;
+    }
 
-//   const updatePagination = () => {
-//     pagination.addEventListener('click', (e)=> {
-//       if(!e.target.closest('.pagination__num-element')) {
-//         return;
-//       } else {
-//         currentPage = e.target.textContent;
-//         renderCards(roomCards, roomCardsContainer, cardsCount, currentPage);
+    if(currentPage == nuberLastPage) {
+      endArrowBtn.hidden = true;
+    } else {
+      endArrowBtn.hidden = false;
+    }
+  }
 
-//         let currentLi = document.querySelector('.pagination__num-element--active');
-//         currentLi.classList.remove('pagination__num-element--active');
-//         e.target.classList.add('pagination__num-element--active');
-//       }
-//     })
-//   }
+  function createEllipses(startBtn, nuberLastPage) {
+    const ellipses = document.createElement('li');
+    ellipses.classList.add('pagination__num-element', 'pagination__num-element--ellipses');
+    ellipses.textContent = '...';
 
-//   renderCards(roomCards, roomCardsContainer, cardsCount, currentPage);
-//   renderPagination(roomCards, cardsCount);
-//   updatePagination();
-// }
+    if(startBtn != 1) {
+      paginationNumList.insertAdjacentElement('afterbegin', ellipses);
+    }
+    if(currentPage != nuberLastPage) {
+      paginationNumList.insertAdjacentElement('beforeend', ellipses.cloneNode(true));
+    }
+  }
 
-// paginate()
+  function createPagination(cardsCount, currentPage){
+    roomCardsContainer.append(...sliceCards(cardsCount, currentPage));
+    createBtnPagination(currentPage);
+  }
+
+  paginationNumList.addEventListener('click', (e)=>{
+    const btn = e.target;
+
+    if(!btn.closest('.pagination__num-element--number')) {
+      return;
+    }
+    currentPage = btn.textContent;
+
+    createPagination(cardsCount, currentPage);
+  })
+
+  startArrowBtn.addEventListener('click', ()=> {
+    currentPage = 1;
+    createPagination(cardsCount, currentPage);
+  })
+
+  endArrowBtn.addEventListener('click', ()=> {
+    currentPage = nuberLastPage;
+    createPagination(cardsCount, currentPage);
+  })
+
+  createPagination(cardsCount, currentPage);
+}
+paginate()
