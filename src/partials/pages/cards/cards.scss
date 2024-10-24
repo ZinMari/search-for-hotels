@@ -2,8 +2,19 @@
   padding: 150px 140px;
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(3, 380px);
+    display: flex;
+    justify-content: space-between;
     gap: 40px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    gap: 40px;
+
+    &--mini {
+      width: 320px;
+    }
   }
 }
