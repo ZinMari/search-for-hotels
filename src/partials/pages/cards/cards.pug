@@ -13,61 +13,58 @@ block container
 block content
   section.cards
     .cards__container
-      .cards__search
-        +find-rooms({})
-      .cards__reservation
-        +reservation
-
-      .cards__calendar
-        +datepicker({identifier: 'calendar_static'})
-      .cards__registration
-        +registration
-      .cards__login
-        +login
-      .cards__room
-        -
-          const roomCard888 = {
-            images: [
-              "../img/888/1-sm.jpg",
-              "../img/888/1-sm.jpg",
-              "../img/888/1-sm.jpg",
-              "../img/888/1-sm.jpg"
-            ],
-            info: {
-              number: 888,
-              nuberType: 'люкс',
-              price: '9 990',
-              isMiniVariant: true,
-            },
-            starValue: {
-              name: 'room-card',
-              numValueCheck: 5
-            },
-            reviews: 145,
-          }
-        +room-card(roomCard888)
-      .cards__room
-        -
-          const roomCard840 = {
-            images: [
-              "../img/rooms/840.jpg",
-              "../img/rooms/840.jpg",
-              "../img/rooms/840.jpg",
-              "../img/rooms/840.jpg"
-            ],
-            info: {
-              number: 840,
-              price: '9 990',
-              isMiniVariant: true,
-            },
-            starValue: {
-              name: 'room-card',
-              numValueCheck: 4
-            },
-            reviews: 65,
-          }
-        +room-card(roomCard840)
-
-
-
-
+      .cards__column
+        .cards__search
+          +find-rooms({})
+        .cards__registration
+          +registration
+      .cards__column
+        .cards__reservation
+          +reservation
+        .cards__login
+          +login
+      .cards__column.cards__column--mini
+        .cards__calendar
+          +datepicker({identifier: 'calendar_static'})
+        .cards__room
+          -
+            const roomCard888 = {
+              images: [
+                    "../img/888/1-sm.jpg",
+                    "../img/888/1-sm.jpg",
+                    "../img/888/1-sm.jpg",
+                    "../img/888/1-sm.jpg"
+                  ],
+              info: {
+                number: 888,
+                nuberType: 'люкс',
+                price: '9 990',
+                isMiniVariant: true,
+              },
+              starValue: {
+                numValueCheck: 5
+              },
+              reviews: 145,
+            }
+          +room-card(roomCard888)
+        .cards__room
+          -
+            const roomCard840 = {
+              images: [
+                "../img/rooms/840.jpg",
+                "../img/rooms/840.jpg",
+                "../img/rooms/840.jpg",
+                "../img/rooms/840.jpg"
+              ],
+              info: {
+                number: 840,
+                price: '9 990',
+                isMiniVariant: true,
+              },
+              starValue: {
+                name: 'room-card',
+                numValueCheck: 4
+              },
+              reviews: 65,
+            }
+          +room-card(roomCard840)
