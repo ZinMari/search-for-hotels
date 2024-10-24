@@ -55,18 +55,23 @@
   &__rooms-elements {
     display: grid;
     grid-template-columns: repeat(auto-fit, 270px);
-    margin-bottom: 40px;
+    margin-bottom: 44px;
     gap: 20px 12px;
-  }
-
-  &__rooms-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
   }
 }
 
 .pagination {
+  margin-left: -12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &__btns-panel {
+    display: flex;
+  }
+
   &__numbers {
     display: flex;
     cursor: pointer;
@@ -94,14 +99,19 @@
 
   &__btn {
     border: none;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     background-image: var(--color-gradient-green);
     cursor: pointer;
 
     &--first {
       transform: scaleX(-1);
+    }
+
+    &__info {
+      font: var(--sub-title-light);
+      color: var(--color-dark-75);
     }
   }
 }

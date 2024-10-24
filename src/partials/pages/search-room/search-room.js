@@ -5,8 +5,9 @@ const paginate = ()=> {
   const paginationNumList = paginationPanel.querySelector('.pagination__numbers');
   const startArrowBtn = paginationPanel.querySelector('.pagination__btn--first');
   const endArrowBtn = paginationPanel.querySelector('.pagination__btn--last');
+  const paginationInfo = paginationPanel.querySelector('.pagination__info span');
 
-  const cardsCount = 11;
+  const cardsCount = 12;
   const nuberLastPage = Math.ceil(roomCards.length / cardsCount);
   let currentPage = 1;
 
@@ -15,6 +16,8 @@ const paginate = ()=> {
     const firstCardsIndex = cardsCount * currentPage - cardsCount;
     const lastCardsIndex = firstCardsIndex + cardsCount;
     const cardsOnPage = roomCards.slice(firstCardsIndex, lastCardsIndex);
+    paginationInfo.textContent = `${firstCardsIndex+1} - ${lastCardsIndex} `
+
     return cardsOnPage;
   }
 
@@ -35,20 +38,28 @@ const paginate = ()=> {
 
     createEllipses(startBtn, nuberLastPage)
     showArrowBtns(currentPage, nuberLastPage)
+    showlinkOnFirstPageAndLastPage(currentPage, nuberLastPage)
+  }
+
+  function showlinkOnFirstPageAndLastPage(currentPage, nuberLastPage){
+    if(currentPage > 2) {
+      let li = document.createElement('li');
+      li.classList.add('pagination__num-element', 'pagination__num-element--number');
+      li.textContent = 1;
+      paginationNumList.prepend(li)
+    }
+
+    if(currentPage < nuberLastPage - 1) {
+      let li = document.createElement('li');
+      li.classList.add('pagination__num-element', 'pagination__num-element--number');
+      li.textContent = nuberLastPage;
+      paginationNumList.append(li)
+    }
   }
 
   function showArrowBtns(currentPage, nuberLastPage){
-    if(currentPage != 1) {
-      startArrowBtn.hidden = false;
-    } else {
-      startArrowBtn.hidden = true;
-    }
-
-    if(currentPage == nuberLastPage) {
-      endArrowBtn.hidden = true;
-    } else {
-      endArrowBtn.hidden = false;
-    }
+      startArrowBtn.hidden = (currentPage == 1);
+      endArrowBtn.hidden = (currentPage == nuberLastPage);
   }
 
   function createEllipses(startBtn, nuberLastPage) {
@@ -59,7 +70,7 @@ const paginate = ()=> {
     if(startBtn != 1) {
       paginationNumList.insertAdjacentElement('afterbegin', ellipses);
     }
-    if(currentPage != nuberLastPage) {
+    if(currentPage < nuberLastPage - 1) {
       paginationNumList.insertAdjacentElement('beforeend', ellipses.cloneNode(true));
     }
   }
@@ -81,15 +92,13 @@ const paginate = ()=> {
   })
 
   startArrowBtn.addEventListener('click', ()=> {
-    currentPage = 1;
-    createPagination(cardsCount, currentPage);
+    createPagination(cardsCount, --currentPage);
   })
 
   endArrowBtn.addEventListener('click', ()=> {
-    currentPage = nuberLastPage;
-    createPagination(cardsCount, currentPage);
+    createPagination(cardsCount, ++currentPage);
   })
-
   createPagination(cardsCount, currentPage);
 }
+
 paginate()
