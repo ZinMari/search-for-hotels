@@ -5,6 +5,10 @@
   padding: 0;
   max-width: 270px;
 
+  @media(max-width: $smart) {
+    padding: 0;
+  }
+
   &__slider {
     max-width: 100%;
 

@@ -1,9 +1,13 @@
 .search-room {
   &__wrapp {
     display: grid;
-    grid-template-columns: minmax(250px, 23%) minmax(15px, 5%) minmax(270px, 72%);
+    grid-template-columns: minmax(235px, 23%) minmax(15px, 5%) minmax(270px, 72%);
     padding-top: 30px;
     padding-bottom: 70px;
+
+    @media(max-width: $smart) {
+      display: block;
+    }
   }
 
   &__settings {
@@ -54,6 +58,7 @@
 
   &__rooms-elements {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, 270px);
     margin-bottom: 44px;
     gap: 20px 12px;
