@@ -17,6 +17,7 @@ include ../../components/date-dropdown/date-dropdown
 include ../../components/rate-button/rate-button
 include ../../components/subscription-text-field/subscription-text-field
 include ../../components/filter-date-dropdown/filter-date-dropdown
+include ../../components/pagination/pagination
 
 
 block content
@@ -150,6 +151,10 @@ block content
 
             .forms-elements__button--arrow
               +button({text: 'перейти к оплате', style: 'arrow'})
+
+          .forms-elements__pagination
+            +subtitle('pagination')
+            +pagination('test')
 
       .forms-elements__row.forms-elements__row--2
         .forms-elements__column.forms-elements__column--left

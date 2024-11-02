@@ -125,6 +125,7 @@
   &__buttons-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 37px;
     gap: 30px;
   }
 
@@ -145,6 +146,11 @@
     height: 44px;
   }
 
+  &__pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
 
   // ----- row--2----- //
