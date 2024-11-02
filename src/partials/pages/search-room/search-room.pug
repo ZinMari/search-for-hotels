@@ -6,6 +6,7 @@ include ../../components/checkbox-buttons/checkbox-buttons
 include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/room-card/room-card
+include ../../components/pagination/pagination
 
 
 block content
@@ -322,16 +323,6 @@ block content
               each room in rooms
                 li.search-room__room
                   +room-card(room)
+          div.search-room__rooms-pagination
+            +pagination
 
-          div.search-room__rooms-pagination.pagination
-            div.pagination__btns-panel
-              button.pagination__btn.pagination__btn--first
-                svg(width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg")
-                  path(d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
-              ul.pagination__numbers
-              button.pagination__btn.pagination__btn--last
-                svg(width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg")
-                  path(d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
-            p.pagination__info
-              span 1 – 12
-              | из 100+ вариантов аренды
