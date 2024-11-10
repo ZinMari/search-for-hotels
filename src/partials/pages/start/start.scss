@@ -1,15 +1,15 @@
 .start {
   background-image: url('../img/index-background/main-slider-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 1s;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 1s;
 
   &__content {
-    min-height: 830px;
     display: grid;
     align-items: end;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 830px;
 
     @media(max-width: $smart){
       grid-template-columns: 100%;
@@ -17,8 +17,8 @@
   }
 
   &__form {
-    max-width: 380px;
     margin-bottom: 386px;
+    max-width: 380px;
 
     @media(max-width: $smart){
       place-self: center;

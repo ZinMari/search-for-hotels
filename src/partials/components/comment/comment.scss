@@ -1,23 +1,22 @@
 .comment {
-  max-width: 100%;
   display: grid;
   grid-template-columns: 48px 1fr;
+  max-width: 100%;
   font: var(--text);
   color: var(--color-dark-75);
-  column-gap: 10px;
-  row-gap: 12px;
+  gap: 12px 10px;
 
   &__img {
     display: block;
-    width: 48px;
-    height: 48px;
     border: 2px solid var(--color-light);
     border-radius: 50%;
+    width: 48px;
+    height: 48px;
 
 
     img {
-      max-width: 100%;
       border-radius: 50%;
+      max-width: 100%;
       object-fit: cover;
     }
   }

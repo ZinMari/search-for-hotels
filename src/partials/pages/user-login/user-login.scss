@@ -1,13 +1,13 @@
 .user-login {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 702px;
   background-image: url('../img/registration-sign-in-background/slide-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 1s;
   background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 1s;
 
   &__form {
     width: 380px;

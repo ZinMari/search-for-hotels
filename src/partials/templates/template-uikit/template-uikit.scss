@@ -7,10 +7,10 @@
 
   &__container {
     margin: 0 auto;
+    min-height: 100vh;
     max-width: 1440px;
     background-image: url("../img/templates/template-uikit/logo-bg.svg");
     background-position: 30px 30px;
     background-repeat: no-repeat;
-    min-height: 100vh;
   }
 }
