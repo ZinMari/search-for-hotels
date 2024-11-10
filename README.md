@@ -1,29 +1,35 @@
-# ✴︎ Сайт про гостиничные номера
+# Toxin
+Поиск гостиничных номеров.
 
-Проект находится в разработке.
+## Начало работы
+Для начала работы склонируйте все содержимое репозитория `git clone https://github.com/MarieZin/search-for-hotels.git` Затем запустите команду `npm i`, которая установит все необходимые зависимости. Далее доступны следующие команды:
+- `npm run stylelint` — команда, запускающая проверку всех scss-файлов на соответствие stylelint.
+- `npm run code` — команда, запускающая проверку всех файлов на соответствие editorconfig.
+- `npm run dev` — запуск проекта в режиме разработки.
+- `npm run build` — запуск продакшн-версии проекта. В эту команду также включена проверка stylelint и editorconfig, и если файлы не соответствуют правилам - проект не соберется.
+- `npm run zip` — команда соберет проект в zip-архив.
 
-## ✴︎ Тут используется :
+## Тут используется:
 - PUG
-- Компоненая архитектура
+- Компонентная архитектура
 - jQuery
 - SCSS
 - Gulp
 - Webpack
 - Pixel Perfect
 
-## ✴︎ Библиотеки:
-
+## Библиотеки:
 - [jQuery Validation ](https://jqueryvalidation.org/)
 - [jQuery Nice Number](https://www.npmjs.com/package/jquery.nice-number)
 - [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeslider/index.html)
 - [Inputmask](https://robinherbots.github.io/Inputmask/)
 - [Air Datepicker](https://air-datepicker.com/ru)
 
-## ✴︎ Макет сайта :
+## Макет сайта:
 - [В Figma](https://www.figma.com/design/7W5R6uxAk0vCVzFZcPVegk/Untitled?t=UA9JdK1Lq5xzQqtc-0)
 
 
-## ✴︎ Частично готовые страницы :
+## Готовые страницы:
 <table>
     <tr valign="top">
         <td>
@@ -43,10 +49,28 @@
             <img src='./pixel-perfect/headers-footers.jpg' width='200'>
         </td>
     </tr>
+    <tr valign="top">
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Landing page</a><br><br>
+            <img src='./pixel-perfect/landing-page.jpg' width='200'>
+        </td>
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/cards.html'>Search room/Filter</a><br><br>
+            <img src='./pixel-perfect/search-room-filter.jpg' width='200'>
+        </td>
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Room details</a><br><br>
+            <img src='./pixel-perfect/room-details.jpg' width='200'>
+        </td>
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/headers-&-footers.html'>Registration</a><br><br>
+            <img src='./pixel-perfect/registration.jpg' width='200'>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td>
+            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Sign in</a><br><br>
+            <img src='./pixel-perfect/sign-in.jpg' width='200'>
+        </td>
+    </tr>
 </table>
-
-
-
-
-
-
