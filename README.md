@@ -1,4 +1,4 @@
-# Toxin
+# [Toxin](https://mariezin.github.io/search-for-hotels/)
 Поиск гостиничных номеров.
 
 ## Начало работы
@@ -33,43 +33,43 @@
 <table>
     <tr valign="top">
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Form Elements</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/form-elements.html'>Form Elements</a><br><br>
             <img src='./pixel-perfect/form-elements.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/cards.html'>Cards</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/cards.html'>Cards</a><br><br>
             <img src='./pixel-perfect/cards.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Colors & Type</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/colors-type.html'>Colors & Type</a><br><br>
             <img src='./pixel-perfect/colors-type.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/headers-&-footers.html'>Headers & Footers</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/headers-footers.html'>Headers & Footers</a><br><br>
             <img src='./pixel-perfect/headers-footers.jpg' width='200'>
         </td>
     </tr>
     <tr valign="top">
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Landing page</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/index.html'>Landing page</a><br><br>
             <img src='./pixel-perfect/landing-page.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/cards.html'>Search room/Filter</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/search-room.html'>Search room/Filter</a><br><br>
             <img src='./pixel-perfect/search-room-filter.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/colors-&-type.html'>Room details</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/room-details.html'>Room details</a><br><br>
             <img src='./pixel-perfect/room-details.jpg' width='200'>
         </td>
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/headers-&-footers.html'>Registration</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/user-registration.html'>Registration</a><br><br>
             <img src='./pixel-perfect/registration.jpg' width='200'>
         </td>
     </tr>
     <tr valign="top">
         <td>
-            <a href='https://mariezin.github.io/search-for-hotels/app/pages/form-elements.html'>Sign in</a><br><br>
+            <a href='https://mariezin.github.io/search-for-hotels/user-login.html'>Sign in</a><br><br>
             <img src='./pixel-perfect/sign-in.jpg' width='200'>
         </td>
     </tr>
