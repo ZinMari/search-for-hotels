@@ -76,35 +76,140 @@
           </header>
         </div>
         <main class="content__content">
-          <section class="start">
-            <div class="start__content container">
-              <div class="start__form">
-                <div class="find-rooms">
-                  <div class="find-rooms__wrap">
-                    <h2 class="find-rooms__title">Найдём номера под ваши пожелания</h2>
-                    <div class="find-rooms__date">
+          <section class="room-details">
+            <div class="room-details__photos">
+              <div class="room-details__photo room-details__photo--big"><img src="../img/888/1.jpg" alt="Фото большой кровати в номере"></div>
+              <div class="room-details__photo"><img src="../img/888/2.jpg" alt="Фото маленькой кровати в номере"></div>
+              <div class="room-details__photo"><img src="../img/888/3.jpg" alt="Фото окна в номере"></div>
+            </div>
+            <div class="room-details__details container">
+              <div class="room-details__info">
+                <div class="room-details__room-info">
+                  <h2 class="room-details__subtitle">Сведения о номере</h2>
+                  <div class="room-details__room-info-list">
+                    <ul class="icon-text-list">
+                      <li class="icon-text-list__item">
+                        <div class="icon-text-list__img"><img src="../img/components/icon-text-list/comfort.svg"/></div>
+                        <div class="icon-text-list__text">
+                          <h4 class="icon-text-list__title">Комфорт</h4>
+                          <p class="icon-text-list__description">Шумопоглощающие стены</p>
+                        </div>
+                      </li>
+                      <li class="icon-text-list__item">
+                        <div class="icon-text-list__img"><img src="../img/components/icon-text-list/ease.svg"/></div>
+                        <div class="icon-text-list__text">
+                          <h4 class="icon-text-list__title">Удобство</h4>
+                          <p class="icon-text-list__description">Окно в каждой из спален</p>
+                        </div>
+                      </li>
+                      <li class="icon-text-list__item">
+                        <div class="icon-text-list__img"><img src="../img/components/icon-text-list/cozy.svg"/></div>
+                        <div class="icon-text-list__text">
+                          <h4 class="icon-text-list__title">Уют</h4>
+                          <p class="icon-text-list__description">Номер оснащён камином</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="room-details__impressions">
+                  <h2 class="room-details__subtitle">Впечатления от номера</h2>
+                  <div class="room-details__impressions-content">
+                    <div class="room-details__impressions-diagram">
+                      <canvas id="diagram"></canvas>
+                      <p class="room-details__impressions-value">260<span>голосов</span></p>
+                    </div>
+                    <ul class="room-details__impressions-list">
+                      <li class="room-details__impressions-item">Великолепно</li>
+                      <li class="room-details__impressions-item">Хорошо</li>
+                      <li class="room-details__impressions-item">Удовлетворительно</li>
+                      <li class="room-details__impressions-item">Разочарован</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="room-details__reviews">
+                  <h2 class="room-details__subtitle">Отзывы посетителей номера</h2>
+                  <div class="room-details__reviews-cooments">
+                    <div class="comment">
+                      <div class="comment__img"><img src="../img/avatars/ava_1.jpg" alt="Фото комментатора"/></div>
+                      <div class="comment__title">
+                        <p class="comment__name">Мурад Сарафанов</p>
+                        <p class="comment__time">5 дней назад</p>
+                      </div>
+                      <div class="comment__like">
+                        <div class="like-button">
+                          <div class="like-button___container">
+                            <button class="like-button___btn like-button___btn--like">12</button>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                    </div>
+                    <div class="comment">
+                      <div class="comment__img"><img src="../img/avatars/ava_2.jpg" alt="Фото комментатора"/></div>
+                      <div class="comment__title">
+                        <p class="comment__name">Патрисия Стёклышкова</p>
+                        <p class="comment__time">Неделю назад</p>
+                      </div>
+                      <div class="comment__like">
+                        <div class="like-button">
+                          <div class="like-button___container">
+                            <button class="like-button___btn">2</button>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="room-details__rools">
+                  <h2 class="room-details__subtitle">Правила</h2>
+                  <div class="bullet-list">
+                    <ul class="bullet-list__list">
+                      <li class="bullet-list__item">Нельзя с питомцами</li>
+                      <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+                      <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="room-details__cancellation">
+                  <h2 class="room-details__subtitle">Отмена</h2>
+                  <p class="room-details__cancellation-description">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+                </div>
+              </div>
+              <div class="room-details__reserve">
+                <div class="reservation">
+                  <div class="reservation__wrapp">
+                    <div class="reservation__header">
+                      <div class="number-and-cost">
+                        <div class="number-and-cost__number"><span class="number-and-cost__symbol">№</span><span class="number-and-cost__number-room">888</span><span class="number-and-cost__type-room">люкс</span>
+                        </div>
+                        <div class="number-and-cost__cost"><span class="number-and-cost__price">9 990₽</span><span class="number-and-cost__in-what-time">в сутки</span></div>
+                      </div>
+                    </div>
+                    <div class="reservation__date-dropdown">
                       <div class="date-dropdown">
-                        <input class="date-calendar calendar_start" data-typeCalendar="dropdown" data-identifier="calendar_start"/>
+                        <input class="date-calendar calendar_reserv" data-typeCalendar="dropdown" data-identifier="calendar_reserv"/>
                         <h3 class="date-dropdown__title">прибытие</h3>
                         <h3 class="date-dropdown__title">выезд</h3>
-                        <button class="date-dropdown__btn" data-value="start" data-identifier="calendar_start"><span>ДД.ММ.ГГГГ</span>
+                        <button class="date-dropdown__btn" data-value="start" data-identifier="calendar_reserv"><span>ДД.ММ.ГГГГ</span>
                           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
                           </svg>
                         </button>
-                        <button class="date-dropdown__btn" data-value="end" data-identifier="calendar_start"><span>ДД.ММ.ГГГГ</span>
+                        <button class="date-dropdown__btn" data-value="end" data-identifier="calendar_reserv"><span>ДД.ММ.ГГГГ</span>
                           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
                           </svg>
                         </button>
                       </div>
                     </div>
-                    <div class="find-rooms__guests">
+                    <div class="reservation__guest">
                       <div class="dropdown">
                         <h3 class="dropdown__header">гости
                         </h3>
                         <div class="dropdown__menu">
-                          <button class="dropdown__btn"><span>Сколько гостей</span>
+                          <button class="dropdown__btn"><span>3 гостя</span>
                             <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
                               <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
                             </svg>
@@ -137,12 +242,49 @@
                         </div>
                       </div>
                     </div>
-                    <div class="find-rooms__btn"><a class="btn btn__arrow" href="../pages/search-room.html"><span>подобрать номер</span></a>
+                    <table class="reservation__info">
+                      <tbody>
+                        <tr>
+                          <td>9 990₽ х 4 суток</td>
+                          <td></td>
+                          <td>39 960₽</td>
+                        </tr>
+                        <tr>
+                          <td>Сбор за услуги: скидка 2 179₽</td>
+                          <td>
+                            <div class="reservation__tooltip"><span class="tooltip">
+                                <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"></circle>
+                                    <path d="M9.25463 14.5576V8.10162H11.1266V14.5576H9.25463ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.58562 11.3546 5.82562 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8226 7.10162 10.5426 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"></path>
+                                  </svg>
+                                </button><span class="tooltip__txt" role="tooltip" id="some_id">info</span></span>
+                            </div>
+                          </td>
+                          <td>0₽</td>
+                        </tr>
+                        <tr>
+                          <td>Сбор за дополнительные услуги</td>
+                          <td>
+                            <div class="reservation__tooltip"><span class="tooltip">
+                                <button class="tooltip__btn" aria-labelledby="warn-tooltip">
+                                  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"></circle>
+                                    <path d="M9.25463 14.5576V8.10162H11.1266V14.5576H9.25463ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.58562 11.3546 5.82562 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8226 7.10162 10.5426 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"></path>
+                                  </svg>
+                                </button><span class="tooltip__txt" role="tooltip" id="some_id">info</span></span>
+                            </div>
+                          </td>
+                          <td>300₽</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="reservation__total"><span class="reservation__name-sum">Итого</span><span class="reservation__sum">38 081₽</span></div>
+                    <div class="reservation__button"><a class="btn btn__arrow" href="#"><span>забронировать</span></a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="start__description">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
             </div>
           </section>
         </main>
