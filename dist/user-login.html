@@ -10,7 +10,7 @@
   <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./css/vendor.css">
   <link rel="stylesheet" href="./css/main.css">
-  <script defer src="../js/main.js"></script>
+  <script defer src="./js/main.js"></script>
   <body class="page__body">
     <div class="site-container">
       <div class="content">
@@ -76,73 +76,31 @@
           </header>
         </div>
         <main class="content__content">
-          <section class="start">
-            <div class="start__content container">
-              <div class="start__form">
-                <div class="find-rooms">
-                  <div class="find-rooms__wrap">
-                    <h2 class="find-rooms__title">Найдём номера под ваши пожелания</h2>
-                    <div class="find-rooms__date">
-                      <div class="date-dropdown">
-                        <input class="date-calendar calendar_start" data-typeCalendar="dropdown" data-identifier="calendar_start"/>
-                        <h3 class="date-dropdown__title">прибытие</h3>
-                        <h3 class="date-dropdown__title">выезд</h3>
-                        <button class="date-dropdown__btn" data-value="start" data-identifier="calendar_start"><span>ДД.ММ.ГГГГ</span>
-                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
-                          </svg>
-                        </button>
-                        <button class="date-dropdown__btn" data-value="end" data-identifier="calendar_start"><span>ДД.ММ.ГГГГ</span>
-                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
-                          </svg>
-                        </button>
+          <section class="user-login">
+            <div class="user-login__form">
+              <div class="login">
+                <h2 class="login__title">Войти</h2>
+                <form class="login__form" action="#">
+                  <div class="login__inputs">
+                    <div class="login__input">
+                      <div class="text-field">
+                        <input class="text-field__input" id="loginEmail" value="" placeholder="Email"/>
                       </div>
                     </div>
-                    <div class="find-rooms__guests">
-                      <div class="dropdown">
-                        <h3 class="dropdown__header">гости
-                        </h3>
-                        <div class="dropdown__menu">
-                          <button class="dropdown__btn"><span>Сколько гостей</span>
-                            <svg class="dropdown__svg" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8">
-                              <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z"></path>
-                            </svg>
-                          </button>
-                          <div class="dropdown__body">
-                            <ul class="dropdown__list">
-                              <li class="dropdown__item">
-                                <label class="dropdown__label"><span>спальни</span>
-                                  <input class="dropdown__input" type="number" value="2" min="0" max="5"/>
-                                </label>
-                              </li>
-                              <li class="dropdown__item">
-                                <label class="dropdown__label"><span>кровати</span>
-                                  <input class="dropdown__input" type="number" value="2" min="0" max="5"/>
-                                </label>
-                              </li>
-                              <li class="dropdown__item">
-                                <label class="dropdown__label"><span>ванные комнаты</span>
-                                  <input class="dropdown__input" type="number" value="0" min="0" max="5"/>
-                                </label>
-                              </li>
-                            </ul>
-                            <div class="dropdown__buttons">
-                              <div class="dropdown__clear"><a class="btn btn__text" href="#"><span>очистить</span></a>
-                              </div>
-                              <div class="dropdown__apply"><a class="btn btn__text" href="#"><span>применить</span></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="login__input">
+                      <div class="text-field">
+                        <input class="text-field__input" id="loginPassword" value="" placeholder="Пароль"/>
                       </div>
                     </div>
-                    <div class="find-rooms__btn"><a class="btn btn__arrow" href="./search-room.html"><span>подобрать номер</span></a>
-                    </div>
+                  </div>
+                  <div class="login__form-btn"><a class="btn btn__arrow" href="#"><span>войти</span></a>
+                  </div>
+                </form>
+                <div class="login__create"><span class="login__text">Нет аккаунта на Toxin?</span>
+                  <div class="login__create-btn"><a class="btn btn__border" href="./user-registration.html"><span>создать</span></a>
                   </div>
                 </div>
               </div>
-              <div class="start__description">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
             </div>
           </section>
         </main>
