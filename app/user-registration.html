@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#111111">
   <title>TOXIN</title>
   <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/vendor.css">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="./css/vendor.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script defer src="../js/main.js"></script>
   <body class="page__body">
     <div class="site-container">
@@ -65,9 +65,9 @@
                   </ul>
                 </nav>
                 <div class="header__btns">
-                  <div class="header__login"><a class="btn btn__border" href="../pages/user-login.html"><span>войти</span></a>
+                  <div class="header__login"><a class="btn btn__border" href="./user-login.html"><span>войти</span></a>
                   </div>
-                  <div class="header__registration"><a class="btn btn__fill" href="../pages/user-registration.html"><span>зарегистрироваться</span></a>
+                  <div class="header__registration"><a class="btn btn__fill" href="./user-registration.html"><span>зарегистрироваться</span></a>
                   </div>
                 </div>
               </div>
@@ -76,28 +76,77 @@
           </header>
         </div>
         <main class="content__content">
-          <section class="user-login">
-            <div class="user-login__form">
-              <div class="login">
-                <h2 class="login__title">Войти</h2>
-                <form class="login__form" action="#">
-                  <div class="login__inputs">
-                    <div class="login__input">
+          <section class="user-registration">
+            <div class="user-registration__form">
+              <div class="registration">
+                <h2 class="registration__title">Регистрация аккаунта</h2>
+                <form class="registration__form">
+                  <div class="registration__group">
+                    <div class="registration__item">
                       <div class="text-field">
-                        <input class="text-field__input" id="loginEmail" value="" placeholder="Email"/>
+                        <input class="text-field__input" id="userName" value="" placeholder="Имя"/>
                       </div>
                     </div>
-                    <div class="login__input">
+                    <div class="registration__item">
                       <div class="text-field">
-                        <input class="text-field__input" id="loginPassword" value="" placeholder="Пароль"/>
+                        <input class="text-field__input" id="userSurName" value="" placeholder="Фамилия"/>
+                      </div>
+                    </div>
+                    <div class="registration__item">
+                      <div class="radio">
+                        <div class="radio__container">
+                          <label class="radio__btn">
+                            <input class="radio__input" type="radio" name="genders" checked="checked"/><span class="radio__span">Мужчина</span>
+                          </label>
+                          <label class="radio__btn">
+                            <input class="radio__input" type="radio" name="genders"/><span class="radio__span">Женщина</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="login__form-btn"><a class="btn btn__arrow" href="#"><span>войти</span></a>
+                  <div class="registration__group">
+                    <div class="registration__subtitle">
+                      <h3 class="subtitle">дата рождения</h3>
+                    </div>
+                    <div class="registration__item">
+                      <div class="text-field">
+                        <input class="text-field__input" id="userBirth" value="" placeholder="ДД.ММ.ГГГГ"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__group">
+                    <div class="registration__subtitle">
+                      <h3 class="subtitle">данные для входа в сервис</h3>
+                    </div>
+                    <div class="registration__item">
+                      <div class="text-field">
+                        <input class="text-field__input" id="userEmail" value="" placeholder="Email"/>
+                      </div>
+                    </div>
+                    <div class="registration__item">
+                      <div class="text-field">
+                        <input class="text-field__input" id="userPassword" value="" placeholder="Пароль"/>
+                      </div>
+                    </div>
+                    <div class="registration__item">
+                      <div class="toggle">
+                        <ul class="toggle__container">
+                          <li class="toggle__item">
+                            <label class="toggle__label">
+                              <input class="toggle__input" type="checkbox"/><span class="toggle__display"></span>Получать спецпредложения
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__goToPay"><a class="btn btn__arrow" href="#"><span>перейти к оплате</span></a>
                   </div>
                 </form>
-                <div class="login__create"><span class="login__text">Нет аккаунта на Toxin?</span>
-                  <div class="login__create-btn"><a class="btn btn__border" href="../pages/user-registration.html"><span>создать</span></a>
+                <div class="registration__signIn">
+                  <div class="registration__text">Уже есть аккаунт на Toxin</div>
+                  <div class="registration__enter"><a class="btn btn__border" href="./user-login.html"><span>войти</span></a>
                   </div>
                 </div>
               </div>
