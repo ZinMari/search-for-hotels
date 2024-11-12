@@ -27,7 +27,6 @@ const watcher = () => {
   browserSync.init({
     server: {
       baseDir: `${app.paths.base.build}`,
-      index: './pages/index.html'
     },
     notify: false,
     port: 3000,

@@ -14,6 +14,6 @@ export const pug = () => {
     //   locale: ['ru', 'en-US']
     // }))
     .pipe(rename({dirname: ''}))
-    .pipe(app.gulp.dest(`${app.paths.base.build}/pages`))
+    .pipe(app.gulp.dest(app.paths.base.build))
     .pipe(browserSync.stream());
 };
