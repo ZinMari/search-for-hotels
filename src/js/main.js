@@ -10,8 +10,8 @@ import './_components.js';
   const registrationPageSection = document.querySelector('.user-registration');
   const signInPageSection = document.querySelector('.user-login');
 
-  const sliderIndex = ['../img/index-background/main-slider-1.jpg', '../img/index-background/main-slider-2.jpg', '../img/index-background/main-slider-3.jpg'];
-  const sliderRegistrationSignIn = ['../img/registration-sign-in-background/slide-1.jpg', '../img/registration-sign-in-background/slide-2.jpg'];
+  const sliderIndex = ['./img/index-background/main-slider-1.jpg', './img/index-background/main-slider-2.jpg', './img/index-background/main-slider-3.jpg'];
+  const sliderRegistrationSignIn = ['./img/registration-sign-in-background/slide-1.jpg', './img/registration-sign-in-background/slide-2.jpg'];
 
 
 
