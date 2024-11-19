@@ -97,6 +97,7 @@
 
   &__like-button-line {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
