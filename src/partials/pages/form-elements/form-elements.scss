@@ -158,16 +158,18 @@
 
    &__dropdown {
     position: relative;
-    z-index: 1;
+    z-index: 20;
     grid-column: 1 / 2;
     margin-bottom: 22px;
     max-width: 266px;
   }
 
   &__dropdown-open {
+    position: relative;
     grid-column: 1 / 2;
     margin-bottom: 158px;
     max-width: 266px;
+    z-index: 10;
   }
 
   // ----- row--2----- //
