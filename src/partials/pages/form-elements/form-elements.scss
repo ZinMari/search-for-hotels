@@ -191,11 +191,13 @@
   &__expandable-checkbox-list {
     position: relative;
     top: -15px;
-    z-index: 1;
+    z-index: 20;
     max-width: 266px;
   }
 
   &__expandable-checkbox-list-open {
+    position: relative;
+    z-index: 10;
     max-width: 266px;
   }
 
