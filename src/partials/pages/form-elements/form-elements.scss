@@ -108,6 +108,7 @@
   &__rate-buttons-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 260px;
   }
 
