@@ -1,7 +1,7 @@
 include ../checkbox/checkbox
 
 mixin expandable-checkbox-list(title, checkboxList, isOpen= false)
-  - let className = 'expandable-checkbox-list';
+  - let className = "expandable-checkbox-list";
   - if(isOpen) className = `${className} ${className}--open`;
 
   div(class= className)

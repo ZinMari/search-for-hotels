@@ -3,11 +3,11 @@ mixin rate-button({name, numValueCheck})
     .rate-button__group
       -
         const rateButtons = [
-          {value: 1, ariaLabel: 'Ужасно'},
-          {value: 2, ariaLabel: 'Сносно'},
-          {value: 3, ariaLabel: 'Нормально'},
-          {value: 4, ariaLabel: 'Хорошо'},
-          {value: 5, ariaLabel: 'Супер'},
+          {value: 1, ariaLabel: "Ужасно"},
+          {value: 2, ariaLabel: "Сносно"},
+          {value: 3, ariaLabel: "Нормально"},
+          {value: 4, ariaLabel: "Хорошо"},
+          {value: 5, ariaLabel: "Супер"},
         ]
 
       each elem in rateButtons
@@ -15,4 +15,4 @@ mixin rate-button({name, numValueCheck})
 
         if numValueCheck == elem.value
           - isCheck = true;
-        input.rate-button__star(name= name value= elem.value aria-label= elem.ariaLabel type='radio' checked= isCheck)
+        input.rate-button__star(name= name value= elem.value aria-label= elem.ariaLabel type="radio" checked= isCheck)

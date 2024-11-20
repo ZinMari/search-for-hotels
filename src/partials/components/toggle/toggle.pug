@@ -6,6 +6,6 @@ mixin toggle(elements, title= false)
       each elem in elements
         li.toggle__item
           label.toggle__label
-            input.toggle__input(type='checkbox', checked= elem.isChecked)
+            input.toggle__input(type="checkbox", checked= elem.isChecked)
             span.toggle__display
             |#{elem.description}

@@ -21,9 +21,9 @@ block content
           .room-details__room-info-list
             -
               const detaisIconElems = [
-                {src_icon: './img/components/icon-text-list/comfort.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'},
-                {src_icon: './img/components/icon-text-list/ease.svg', title: 'Удобство', description: 'Окно в каждой из спален'},
-                {src_icon: './img/components/icon-text-list/cozy.svg', title: 'Уют', description: 'Номер оснащён камином'},
+                {src_icon: "./img/components/icon-text-list/comfort.svg", title: "Комфорт", description: "Шумопоглощающие стены"},
+                {src_icon: "./img/components/icon-text-list/ease.svg", title: "Удобство", description: "Окно в каждой из спален"},
+                {src_icon: "./img/components/icon-text-list/cozy.svg", title: "Уют", description: "Номер оснащён камином"},
               ]
             +icon-text-list(detaisIconElems)
         .room-details__impressions
@@ -49,7 +49,7 @@ block content
                 date: "5 дней назад",
                 countLike: 12,
                 isLike: true,
-                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
               }
 
               const person_2 = {
@@ -58,13 +58,13 @@ block content
                 date: "Неделю назад",
                 countLike: 2,
                 isLike: false,
-                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
               }
             +comment(person_1)
             +comment(person_2)
         .room-details__rools
           h2.room-details__subtitle Правила
-          - const roomDetailsRuls = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
+          - const roomDetailsRuls = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
             +bullet-list({items: roomDetailsRuls})
         .room-details__cancellation
           h2.room-details__subtitle Отмена

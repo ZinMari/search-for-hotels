@@ -28,11 +28,11 @@ block content
           .forms-elements__text-field
             -
               const textField = {
-                title: 'Text Field',
-                id: 'textField',
-                typeInput: 'text',
-                subtitle: 'Default',
-                placeholder: 'Email'
+                title: "Text Field",
+                id: "textField",
+                typeInput: "text",
+                subtitle: "Default",
+                placeholder: "Email"
               }
 
             +text-field(textField)
@@ -40,10 +40,10 @@ block content
           .forms-elements__text-field-focus
             -
               const textFieldFocus = {
-                title: 'Text Field',
-                id: 'textFieldFocus',
-                typeInput: 'text',
-                subtitle: 'Hover / Focus',
+                title: "Text Field",
+                id: "textFieldFocus",
+                typeInput: "text",
+                subtitle: "Hover / Focus",
                 value: "This is pretty awesome",
                 autofocus: true,
               }
@@ -51,29 +51,29 @@ block content
             +text-field(textFieldFocus)
 
           .forms-elements__dropdown-people
-            - const dropGuestData = {title: 'dropdown', buttonText: 'Сколько гостей', elements: []}
+            - const dropGuestData = {title: "dropdown", buttonText: "Сколько гостей", elements: []}
             +dropdown(dropGuestData)
 
           .forms-elements__masked-text-field
             -
               const maskedTextField = {
-                title: 'masked text field',
-                id: 'maskedTextField',
-                typeInput: 'date',
-                placeholder: 'ДД.ММ.ГГГГ'
+                title: "masked text field",
+                id: "maskedTextField",
+                typeInput: "date",
+                placeholder: "ДД.ММ.ГГГГ"
               }
 
             +text-field(maskedTextField)
 
           .forms-elements__date-dropdown
-            - const dateDropdownElement = {titleStart: 'date dropdown', titleEnd: 'date dropdown', dateEndText:'19.08.2019', identifier: 'calendar_1'}
+            - const dateDropdownElement = {titleStart: "date dropdown", titleEnd: "date dropdown", dateEndText:"19.08.2019", identifier: "calendar_1"}
             +date-dropdown(dateDropdownElement)
 
           .forms-elements__filter-date-dropdown
-            +filter-date-dropdown({title: 'filter date dropdown', initialText: '19 авг - 23 авг', identifier: 'calendar_filter'})
+            +filter-date-dropdown({title: "filter date dropdown", initialText: "19 авг - 23 авг", identifier: "calendar_filter"})
 
           .forms-elements__subscription-text-field
-            +subtitle('subscription text field')
+            +subtitle("subscription text field")
             +subscription-text-field
 
         .forms-elements__column.forms-elements__column--center
@@ -81,44 +81,44 @@ block content
           .forms-elements__checkbox-buttons
             -
               const btns = [
-                {text: 'Можно курить', isChecked: false},
-                {text: 'Можно с питомцами', isChecked: true},
-                {text: 'Можно пригласить гостей (до 10 человек)', isChecked: true},
+                {text: "Можно курить", isChecked: false},
+                {text: "Можно с питомцами", isChecked: true},
+                {text: "Можно пригласить гостей (до 10 человек)", isChecked: true},
               ]
 
-            +checkbox-btns('Checkbox Buttons', btns)
+            +checkbox-btns("Checkbox Buttons", btns)
 
           .forms-elements__radio-buttons
             -
               const radioElem = {
-                name: 'formElementsRadio',
-                radios: [{text: 'Мужчина', isChecked: true}, {text: 'Женщина', isChecked: false}],
-                title: 'Radio Buttons',
+                name: "formElementsRadio",
+                radios: [{text: "Мужчина", isChecked: true}, {text: "Женщина", isChecked: false}],
+                title: "Radio Buttons",
               }
             +radioButtons(radioElem)
 
           .forms-elements__toggle
             -
               const toggleElems = [
-                {description: 'Получать спецпредложения', isChecked: true},
-                {description: 'Получать спецпредложения', isChecked: false},
+                {description: "Получать спецпредложения", isChecked: true},
+                {description: "Получать спецпредложения", isChecked: false},
               ]
 
-            +toggle(toggleElems, 'toggle')
+            +toggle(toggleElems, "toggle")
 
           .forms-elements__like-button
             .forms-elements__like-button-title
-              +subtitle('like button')
+              +subtitle("like button")
             .forms-elements__like-button-line
               +like-button({countLike: 2, isLike: false})
               +like-button({countLike: 12, isLike: true})
 
           .forms-elements__rate-buttons
             .forms-elements__rate-buttons-title
-              +subtitle('rate button')
+              +subtitle("rate button")
             .forms-elements__rate-buttons-container
-              - const formElementsRateleft = {name: 'formElementsRateleft', numValueCheck: 4}
-              - const formElementsRateRight = {name: 'formElementsRateRight', numValueCheck: 5}
+              - const formElementsRateleft = {name: "formElementsRateleft", numValueCheck: 4}
+              - const formElementsRateRight = {name: "formElementsRateRight", numValueCheck: 5}
               +rate-button(formElementsRateleft)
               +rate-button(formElementsRateRight)
 
@@ -127,43 +127,43 @@ block content
           .forms-elements__range-slider
             -
               const rangeSlider = {
-                title: 'Range Slider',
+                title: "Range Slider",
                 min: "550", max: "15350",
                 start: "5000", end: "10000"
               }
             +range-slider(rangeSlider)
 
           .forms-elements__buttons-title
-            +subtitle('buttons')
+            +subtitle("buttons")
 
           .forms-elements__buttons-container
             .forms-elements__button-mini
-              +button({text: 'click me', style: 'fill'})
-              +button({text: 'click me', style: 'fill', isDisabled: true})
+              +button({text: "click me", style: "fill"})
+              +button({text: "click me", style: "fill", isDisabled: true})
 
             .forms-elements__button-mini
-              +button({text: 'click me', style: 'border'})
-              +button({text: 'click me', style: 'border', isDisabled: true})
+              +button({text: "click me", style: "border"})
+              +button({text: "click me", style: "border", isDisabled: true})
 
             .forms-elements__button-text
-              +button({text: 'click me', style: 'text'})
-              +button({text: 'click me', style: 'text', isDisabled: true})
+              +button({text: "click me", style: "text"})
+              +button({text: "click me", style: "text", isDisabled: true})
 
             .forms-elements__button--arrow
-              +button({text: 'перейти к оплате', style: 'arrow'})
+              +button({text: "перейти к оплате", style: "arrow"})
 
           .forms-elements__pagination
-            +subtitle('pagination')
-            +pagination('test')
+            +subtitle("pagination")
+            +pagination("test")
 
       .forms-elements__row.forms-elements__row--2
         .forms-elements__column.forms-elements__column--left
           .forms-elements__dropdown
             -
               const dropdownData = {
-                title: 'dropdown',
-                subtitle: 'Default',
-                buttonText: '2 спальни, 2 кровати...',
+                title: "dropdown",
+                subtitle: "Default",
+                buttonText: "2 спальни, 2 кровати...",
                 isOpen: false,
                 hasButtons: false
               }
@@ -173,9 +173,9 @@ block content
           .forms-elements__dropdown-open
             -
               const dropdownDataOpen = {
-                title: 'dropdown',
-                subtitle: 'Default',
-                buttonText: '2 спальни, 2 кровати...',
+                title: "dropdown",
+                subtitle: "Default",
+                buttonText: "2 спальни, 2 кровати...",
                 isOpen: true,
                 hasButtons: false
               }
@@ -184,12 +184,12 @@ block content
           .forms-elements__dropdown-guest-zero
             -
               const dropdownGuestZero = {
-                title: 'dropdown',
-                subtitle: 'Default',
-                buttonText: 'Сколько гостей',
+                title: "dropdown",
+                subtitle: "Default",
+                buttonText: "Сколько гостей",
                 isOpen: true,
                 hasButtons: true,
-                typeDropdown: 'people',
+                typeDropdown: "people",
                 values: [0, 0, 0],
               }
             +dropdown(dropdownGuestZero)
@@ -197,12 +197,12 @@ block content
           .forms-elements__dropdown-guest
               -
                 const dropdownGuest = {
-                  title: 'dropdown',
-                  subtitle: 'Default',
-                  buttonText: '3 гостя',
+                  title: "dropdown",
+                  subtitle: "Default",
+                  buttonText: "3 гостя",
                   isOpen: true,
                   hasButtons: true,
-                  typeDropdown: 'people',
+                  typeDropdown: "people",
                   values: [2, 1, 0],
                 }
 
@@ -213,48 +213,48 @@ block content
           .forms-elements__expandable-checkbox-list
             -
               const checkboxList = [
-                { text: 'Завтрак',
+                { text: "Завтрак",
                   isChecked: false
                 },
-                { text: 'Письменный стол',
+                { text: "Письменный стол",
                   isChecked: true
                 },
-                { text: 'Стул для кормления',
+                { text: "Стул для кормления",
                   isChecked: true
                 },
-                { text: 'Кроватка',
+                { text: "Кроватка",
                   isChecked: true
                 },
-                { text: 'Телевизор',
+                { text: "Телевизор",
                   isChecked: false
                 },
-                { text: 'Шампунь',
+                { text: "Шампунь",
                   isChecked: false
                 },
               ]
-            +expandable-checkbox-list('expandable checkbox list', checkboxList, false)
+            +expandable-checkbox-list("expandable checkbox list", checkboxList, false)
           .forms-elements__expandable-checkbox-list-open
-            +expandable-checkbox-list('expandable checkbox list', checkboxList, true)
+            +expandable-checkbox-list("expandable checkbox list", checkboxList, true)
         .forms-elements__column.forms-elements__column--center
           .forms-elements__rich-checkbox-buttons
             -
               const itemsRichBtns = [
-                {title: 'Широкий коридор', description: 'Ширина коридоров в номере<br>не менее 91 см.', isChecked: false},
-                {title: 'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.', isChecked: false},
+                {title: "Широкий коридор", description: "Ширина коридоров в номере<br>не менее 91 см.", isChecked: false},
+                {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", isChecked: false},
               ]
 
-            +rich-checkbox-btns('rich Checkbox Buttons', itemsRichBtns)
+            +rich-checkbox-btns("rich Checkbox Buttons", itemsRichBtns)
         .forms-elements__column.forms-elements__column--right
           .forms-elements__bullet-list
-            - const items = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']
-            +bullet-list({title: 'bullet list', items: items})
+            - const items = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+            +bullet-list({title: "bullet list", items: items})
 
       .forms-elements__row.forms-elements__row--4
         .forms-elements__icon-text-list
           -
             const iconArr = [
-              {src_icon: './img/components/icon-text-list/comfort.svg', title: 'Комфорт', description: 'Шумопоглощающие стены'},
-              {src_icon: './img/components/icon-text-list/ease.svg', title: 'Удобство', description: 'Окно в каждой из спален'},
+              {src_icon: "./img/components/icon-text-list/comfort.svg", title: "Комфорт", description: "Шумопоглощающие стены"},
+              {src_icon: "./img/components/icon-text-list/ease.svg", title: "Удобство", description: "Окно в каждой из спален"},
             ]
 
           +icon-text-list(iconArr)
@@ -266,7 +266,7 @@ block content
               date: "5 дней назад",
               countLike: 12,
               isLike: true,
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+              text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
             }
 
           +comment(commentItem)

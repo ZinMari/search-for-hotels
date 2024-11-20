@@ -10,25 +10,25 @@ mixin login
         .login__input
           -
             const inputEmail = {
-              id: 'loginEmail',
-              typeInput: 'email',
-              placeholder: 'Email',
+              id: "loginEmail",
+              typeInput: "email",
+              placeholder: "Email",
             }
 
           +text-field(inputEmail)
         .login__input
           -
             const inputPassword = {
-              id: 'loginPassword',
-              typeInput: 'password',
-              placeholder: 'Пароль',
+              id: "loginPassword",
+              typeInput: "password",
+              placeholder: "Пароль",
             }
 
           +text-field(inputPassword)
       .login__form-btn
-        +button({text: 'войти', style: 'arrow'})
+        +button({text: "войти", style: "arrow"})
 
     .login__create
       span.login__text Нет аккаунта на Toxin?
       .login__create-btn
-        +button({text: 'создать', style: 'border', link: './user-registration.html'})
+        +button({text: "создать", style: "border", link: "./user-registration.html"})

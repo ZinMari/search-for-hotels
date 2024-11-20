@@ -1,6 +1,6 @@
-mixin menu-link({text, arrow= '', href=''})
-  - const hrefValue = href ? href : '#'
-  a(class= 'menu-link', href= hrefValue)
+mixin menu-link({text, arrow= "", href=""})
+  - const hrefValue = href ? href : "#"
+  a(class= "menu-link", href= hrefValue)
     | #{text}
     if arrow
       svg.menu-link__arrow(width="12"

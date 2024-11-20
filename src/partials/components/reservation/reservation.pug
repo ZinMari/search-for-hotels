@@ -9,24 +9,24 @@ mixin reservation
         -
           const reservationHeader = {
             number: 888,
-            nuberType: 'люкс',
-            price: '9 990',
+            nuberType: "люкс",
+            price: "9 990",
             isMiniVariant: false,
           }
 
         +number-and-cost(reservationHeader)
       .reservation__date-dropdown
-        - const reservationDateDropdown = {titleStart: 'прибытие', titleEnd: 'выезд', identifier: 'calendar_reserv'}
+        - const reservationDateDropdown = {titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_reserv"}
         +date-dropdown(reservationDateDropdown)
       .reservation__guest
         -
           const guestDropdownItem = {
-            title: 'гости',
-            buttonText: '3 гостя',
+            title: "гости",
+            buttonText: "3 гостя",
             elements: [
-              {name: 'взрослые', value: 0, min: 0, max: 5},
-              {name: 'дети', value: 0, min: 0, max: 5},
-              {name: 'младенцы', value: 0, min: 0, max: 5},
+              {name: "взрослые", value: 0, min: 0, max: 5},
+              {name: "дети", value: 0, min: 0, max: 5},
+              {name: "младенцы", value: 0, min: 0, max: 5},
             ],
             isOpen: false,
             hasButtons: true
@@ -43,16 +43,16 @@ mixin reservation
             td Сбор за услуги: скидка 2 179₽
             td
               .reservation__tooltip
-                +tooltip('info')
+                +tooltip("info")
             td 0₽
           tr
             td Сбор за дополнительные услуги
             td
               .reservation__tooltip
-                +tooltip('info')
+                +tooltip("info")
             td 300₽
       .reservation__total
         span.reservation__name-sum Итого
         span.reservation__sum 38 081₽
       .reservation__button
-        +button({text: 'забронировать', style: 'arrow'})
+        +button({text: "забронировать", style: "arrow"})

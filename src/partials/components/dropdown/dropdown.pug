@@ -1,11 +1,11 @@
 include ../button/button
 
-mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', subtitle=false, values= [2, 2, 0]})
+mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", subtitle=false, values= [2, 2, 0]})
   -
-    const className = isOpen ? 'dropdown dropdown--open' : 'dropdown'
+    const className = isOpen ? "dropdown dropdown--open" : "dropdown"
     const elements = {
-      rooms: ['спальни', 'кровати', 'ванные комнаты'],
-      people: ['взрослые', 'дети', 'младенцы'],
+      rooms: ["спальни", "кровати", "ванные комнаты"],
+      people: ["взрослые", "дети", "младенцы"],
     }
 
   div(class= className)
@@ -27,7 +27,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
               label.dropdown__label
                 span #{element}
                 input.dropdown__input(
-                  type='number',
+                  type="number",
                   value= values[index],
                   min= 0,
                   max= 5
@@ -35,6 +35,6 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= 'rooms', su
         if(hasButtons)
           .dropdown__buttons
             .dropdown__clear
-              +button({text: 'очистить', style: 'text'})
+              +button({text: "очистить", style: "text"})
             .dropdown__apply
-              +button({text: 'применить', style: 'text'})
+              +button({text: "применить", style: "text"})
