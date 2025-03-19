@@ -5,7 +5,7 @@ mixin rich-checkbox-btns(title, elems)
     h3.rich-checkbox-btns__title= title
     ul.rich-checkbox-btns__list
 
-      each elem of elems
+      each elem in elems
         li.rich-checkbox-btns__item
           +checkbox(elem.title, elem.isChecked)
           p.rich-checkbox-btns__description!= elem.description

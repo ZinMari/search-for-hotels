@@ -1,3 +1,5 @@
+@use "../../../scss/mixins";
+
 .radio {
   &__title {
     margin-bottom: 16px;
@@ -18,7 +20,7 @@
   }
 
   &__input {
-    @include visually-hidden;
+    @include mixins.visually-hidden;
 
     opacity: 0;
 

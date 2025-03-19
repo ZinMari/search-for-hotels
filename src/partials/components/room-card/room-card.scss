@@ -1,11 +1,16 @@
+@use "../../../scss/mixins";
+@use "../../../scss/vars";
+
 .room-card {
-  @include form-style;
+  @include mixins.form-style;
 
-  overflow: hidden;
-  padding: 0;
-  max-width: 270px;
-
-  @media(max-width: $smart) {
+  & {
+    overflow: hidden;
+    padding: 0;
+    max-width: 270px;
+  }
+  
+  @media(max-width: vars.$smart) {
     padding: 0;
   }
 

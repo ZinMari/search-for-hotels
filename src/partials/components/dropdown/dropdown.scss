@@ -1,9 +1,11 @@
+@use "../../../scss/mixins";
+
 .dropdown {
   max-width: 100%;
   transition: var(--transit);
 
   &__header {
-    @include form-subtitle;
+    @include mixins.form-subtitle;;;
 
     display: flex;
     justify-content: space-between;
@@ -37,7 +39,7 @@
   }
 
   &__body {
-    @include form-subtitle;
+    @include mixins.form-subtitle;;;
 
     position: absolute;
     left: 0;
@@ -114,7 +116,7 @@
 }
 
 .nice-number input {
-  @include form-subtitle;
+  @include mixins.form-subtitle;;;
 
   border: none;
   max-width: 20px;

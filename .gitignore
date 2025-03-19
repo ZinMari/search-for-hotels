@@ -1,5 +1,5 @@
 /node_modules
-/app
+/build
 /.vscode
 package-lock.json
 **/Thumbs.db

@@ -1,5 +1,7 @@
+@use "../../../scss/vars";
+
 .start {
-  background-image: url('../img/index-background/main-slider-1.jpg');
+  background-image: url('../resources/img/index-background/main-slider-1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +13,7 @@
     grid-template-columns: repeat(2, 1fr);
     min-height: 830px;
 
-    @media(max-width: $smart){
+    @media(max-width: vars.$smart){
       grid-template-columns: 100%;
     }
   }
@@ -20,7 +22,7 @@
     margin-bottom: 386px;
     max-width: 380px;
 
-    @media(max-width: $smart){
+    @media(max-width: vars.$smart){
       place-self: center;
       max-width: 100%;
     }

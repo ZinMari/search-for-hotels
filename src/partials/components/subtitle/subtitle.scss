@@ -1,5 +1,7 @@
+@use "../../../scss/mixins";
+
 .subtitle {
-  @include form-subtitle;
+  @include mixins.form-subtitle;;;
 
   line-height: 1.8;
 }

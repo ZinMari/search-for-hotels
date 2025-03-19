@@ -1,3 +1,5 @@
+@use "vars";
+
 @mixin form-subtitle {
   font: var(--sub-title);
   text-transform: uppercase;
@@ -17,7 +19,7 @@
   box-shadow: var(--card-box-shadow);
   background-color: var(--color-light);
 
-  @media(max-width: $smart) {
+  @media(max-width: vars.$smart) {
     padding: 25px 20px 20px;
   }
 }

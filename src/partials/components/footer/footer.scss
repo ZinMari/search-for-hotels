@@ -1,3 +1,5 @@
+@use "../../../scss/vars";
+
 .footer {
   &__wrap {
     box-shadow: 0 10px 20px 0 rgba(31, 32, 65, 0.05);
@@ -9,7 +11,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media(max-width: $screen) {
+    @media(max-width: vars.$screen) {
       flex-wrap: wrap;
       row-gap: 30px;
     }
@@ -63,7 +65,7 @@
     color: var(--color-dark-75);
     gap: 17px;
 
-    @media(max-width: $screen) {
+    @media(max-width: vars.$screen) {
       flex-wrap: wrap;
     }
   }

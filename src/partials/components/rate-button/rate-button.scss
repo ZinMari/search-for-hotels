@@ -9,7 +9,7 @@
     margin: 2px;
     width: calc(var(--star-width) * var(--star-count) + var(--star-offset) * var(--star-offset-count));
     height: 20px;
-    background-image: url('../img/components/rate-button/star-empty.svg');
+    background-image: url('../partials/components/rate-button/star-empty.svg');
     background-size: 20px auto;
     background-repeat: space;
   }
@@ -28,11 +28,11 @@
 
     &:checked,
     &:hover{
-      background-image: url('../img/components/rate-button/star.svg');
+      background-image: url('../partials/components/rate-button/star.svg');
     }
 
     &:hover ~ .rate-button__star {
-      background-image: url('../img/components/rate-button/star-empty.svg');
+      background-image: url('../partials/components/rate-button/star-empty.svg');
     }
 
     &:nth-of-type(1) {

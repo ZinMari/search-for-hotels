@@ -1,3 +1,5 @@
+@use "../../../scss/mixins";
+
 .expandable-checkbox-list {
   --height-btn: 45px;
 
@@ -5,7 +7,7 @@
   max-width: 100%;
 
   &__btn {
-    @include form-subtitle;
+    @include mixins.form-subtitle;;;
 
     display: flex;
     align-items: center;

@@ -1,6 +1,8 @@
+@use "../../../scss/mixins";
+
 .bullet-list {
   &__title {
-    @include form-subtitle;
+    @include mixins.form-subtitle;
 
     padding-bottom: 14px;
   }

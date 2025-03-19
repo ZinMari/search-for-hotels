@@ -1,3 +1,5 @@
+@use "../../../scss/mixins";
+
 .text-field {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include form-subtitle
+    @include mixins.form-subtitle;;
   }
 
   &__subtitle {

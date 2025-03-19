@@ -1,8 +1,10 @@
+@use "../../../scss/mixins";
+
 .registration {
-  @include form-style;
+  @include mixins.form-style;
 
   &__title {
-    @include title;
+    @include mixins.title;
 
     margin-bottom: 20px;
   }

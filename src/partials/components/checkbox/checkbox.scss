@@ -1,10 +1,12 @@
+@use "../../../scss/mixins";
+
 .checkbox {
   display: inline-flex;
   line-height: 1.47;
   gap: 10px;
 
   &__input {
-    @include visually-hidden;
+    @include mixins.visually-hidden;
 
     &:checked + .checkbox__box::after {
       opacity: 1;
@@ -28,7 +30,7 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      background-image: url('../img/components/checkbox/check_arrow.svg');
+      background-image: url('../partials/components/checkbox/check_arrow.svg');
       background-position: 50%;
       background-repeat: no-repeat;
       opacity: 0;

@@ -1,10 +1,15 @@
-.login {
-  @include form-style;
+@use "../../../scss/mixins";
 
-  max-width: 100%px;
+.login {
+  @include mixins.form-style;
+
+  & {
+    max-width: 100%px;
+  }
+  
 
   &__title{
-    @include title;
+    @include mixins.title;
 
     margin-bottom: 20px;
   }

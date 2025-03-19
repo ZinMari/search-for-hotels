@@ -1,64 +1,64 @@
 // подключения библиотек
-@import './vendor/reset';
-@import '../../node_modules/jquery.nice-number/dist/jquery.nice-number';
-@import '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
-@import '../../node_modules/air-datepicker/air-datepicker';
-@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@use 'vendor/reset';
+@use '../../node_modules/jquery.nice-number/dist/jquery.nice-number';
+@use '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
+@use '../../node_modules/air-datepicker/air-datepicker';
+@use '../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 
 // базовые подключения
-@import 'vars';
-@import 'fonts';
-@import 'settings';
-@import 'mixins';
+@use 'vars';
+@use 'fonts';
+@use 'settings';
+@use 'mixins';
 
 // подключение шаблонов
-@import '../partials/templates/template-uikit/template-uikit';
-@import '../partials/templates/template-page/template-page';
+@use '../partials/templates/template-uikit/template-uikit';
+@use '../partials/templates/template-page/template-page';
 
 // подключение компонентов
-@import '../partials/components/text-field/text-field';
-@import '../partials/components/icon-text-list/icon-text-list';
-@import '../partials/components/dropdown/dropdown';
-@import '../partials/components/radio-buttons/radio-buttons';
-@import '../partials/components/subscription-text-field/subscription-text-field';
-@import '../partials/components/bullet-list/bullet-list';
-@import '../partials/components/checkbox/checkbox';
-@import '../partials/components/checkbox-buttons/checkbox-buttons';
-@import '../partials/components/rich-checkbox-buttons/rich-checkbox-buttons';
-@import '../partials/components/rate-button/rate-button';
-@import '../partials/components/toggle/toggle';
-@import '../partials/components/like-button/like-button';
-@import '../partials/components/range-slider/range-slider';
-@import '../partials/components/button/button';
-@import '../partials/components/subtitle/subtitle';
-@import '../partials/components/expandable-checkbox-list/expandable-checkbox-list';
-@import '../partials/components/comment/comment';
-@import '../partials/components/datepicker/datepicker';
-@import '../partials/components/registration/registration';
-@import '../partials/components/date-dropdown/date-dropdown';
-@import '../partials/components/find-rooms/find-rooms';
-@import '../partials/components/login/login';
-@import '../partials/components/tooltip/tooltip';
-@import '../partials/components/reservation/reservation';
-@import '../partials/components/room-card/room-card';
-@import '../partials/components/number-and-cost/number-and-cost';
-@import '../partials/components/header/header';
-@import '../partials/components/menu-link/menu-link';
-@import '../partials/components/footer/footer';
-@import '../partials/components/filter-date-dropdown/filter-date-dropdown';
-@import '../partials/components/pagination/pagination';
+@use '../partials/components/text-field/text-field';
+@use '../partials/components/icon-text-list/icon-text-list';
+@use '../partials/components/dropdown/dropdown';
+@use '../partials/components/radio-buttons/radio-buttons';
+@use '../partials/components/subscription-text-field/subscription-text-field';
+@use '../partials/components/bullet-list/bullet-list';
+@use '../partials/components/checkbox/checkbox';
+@use '../partials/components/checkbox-buttons/checkbox-buttons';
+@use '../partials/components/rich-checkbox-buttons/rich-checkbox-buttons';
+@use '../partials/components/rate-button/rate-button';
+@use '../partials/components/toggle/toggle';
+@use '../partials/components/like-button/like-button';
+@use '../partials/components/range-slider/range-slider';
+@use '../partials/components/button/button';
+@use '../partials/components/subtitle/subtitle';
+@use '../partials/components/expandable-checkbox-list/expandable-checkbox-list';
+@use '../partials/components/comment/comment';
+@use '../partials/components/datepicker/datepicker';
+@use '../partials/components/registration/registration';
+@use '../partials/components/date-dropdown/date-dropdown';
+@use '../partials/components/find-rooms/find-rooms';
+@use '../partials/components/login/login';
+@use '../partials/components/tooltip/tooltip';
+@use '../partials/components/reservation/reservation';
+@use '../partials/components/room-card/room-card';
+@use '../partials/components/number-and-cost/number-and-cost';
+@use '../partials/components/header/header';
+@use '../partials/components/menu-link/menu-link';
+@use '../partials/components/footer/footer';
+@use '../partials/components/filter-date-dropdown/filter-date-dropdown';
+@use '../partials/components/pagination/pagination';
 
 
 // подключение страниц
-@import '../partials/pages/colors-type/colors-type';
-@import '../partials/pages/form-elements/form-elements';
-@import '../partials/pages/cards/cards';
-@import '../partials/pages/headers-footers/headers-footers';
-@import '../partials/pages/index/index';
-@import '../partials/pages/user-registration/user-registration';
-@import '../partials/pages/room-details/room-details';
-@import '../partials/pages/search-room/search-room';
-@import '../partials/pages/user-login/user-login';
+@use '../partials/pages/colors-type/colors-type';
+@use '../partials/pages/form-elements/form-elements';
+@use '../partials/pages/cards/cards';
+@use '../partials/pages/headers-footers/headers-footers';
+@use '../partials/pages/index/index';
+@use '../partials/pages/user-registration/user-registration';
+@use '../partials/pages/room-details/room-details';
+@use '../partials/pages/search-room/search-room';
+@use '../partials/pages/user-login/user-login';
 
 
 

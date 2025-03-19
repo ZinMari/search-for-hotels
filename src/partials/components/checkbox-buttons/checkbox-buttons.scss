@@ -1,6 +1,8 @@
+@use "../../../scss/mixins";
+
 .checkbox-btns {
   &__title {
-    @include form-subtitle;
+    @include mixins.form-subtitle;;;
 
     margin-bottom: 16px;
   }

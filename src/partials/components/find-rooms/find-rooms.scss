@@ -1,5 +1,7 @@
+@use "../../../scss/mixins";
+
 .find-rooms {
-  @include form-style;
+  @include mixins.form-style;
 
   &__wrap {
     display: flex;
@@ -8,7 +10,7 @@
   }
 
   &__title {
-    @include title;
+    @include mixins.title;
   }
 
   &__btn {
