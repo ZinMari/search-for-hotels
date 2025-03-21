@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import { BuildOptions } from './types/types';
 import path from 'path';
 
@@ -34,6 +35,20 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',
         chunkFilename: 'css/[name].[contenthash:8].css',
+      }),
+      new FaviconsWebpackPlugin({
+        logo: './src/resources/favicon.png',
+        mode: 'webapp',
+        devMode: 'webapp',
+        prefix: 'assets/favicons/',
+        cache: true,
+        inject: htmlPlugin => {
+          return true
+        },
+        favicons: {
+          background: '#fff',
+          theme_color: '#333'
+        }
       }),
     );
   }
