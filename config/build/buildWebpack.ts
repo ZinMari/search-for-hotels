@@ -23,5 +23,8 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
     resolve: buildResolvers(options),
     devtool: isDev && 'inline-source-map',
     devServer: buildDevServer(options),
+    performance: {
+      maxAssetSize: 1000000,
+    },
   };
 }
