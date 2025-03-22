@@ -5,16 +5,6 @@ import { BuildOptions } from './types/types';
 export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   const isDev = options.mode === 'development';
 
-  const imagesLoader = {
-    test: /\.(png|svg|jpg|jpeg|gif)$/i,
-    type: 'asset/resource',
-  }
-
-  const fontsLoader = {
-    test: /\.(woff|woff2|eot|ttf|otf)$/i,
-    type: 'asset/resource',
-  }
-
   const scssLoader = {
     test: /\.s[ac]ss$/i,
     use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -31,5 +21,5 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
     loader: 'pug-loader',
   };
 
-  return [tsLoader, fontsLoader, pugLoader, scssLoader, imagesLoader,];
+  return [tsLoader, pugLoader, scssLoader];
 }
