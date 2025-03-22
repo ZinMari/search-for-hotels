@@ -3,6 +3,7 @@ import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import CopyPlugin from "copy-webpack-plugin";
 import { BuildOptions } from './types/types';
 import path from 'path';
 
@@ -19,6 +20,11 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
     new HtmlWebpackPlugin({ template: paths.searchRoom, filename: 'search-room.html' }),
     new HtmlWebpackPlugin({ template: paths.userLogin, filename: 'user-login.html' }),
     new HtmlWebpackPlugin({ template: paths.userRegistration, filename: 'user-registration.html' }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/**/*.{png,svg,jpg,jpeg,gif}",  to: "img/[name][ext]"},
+      ],
+    }),
   ];
 
   if (isDev) {
@@ -36,20 +42,20 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
         filename: 'css/[name].[contenthash:8].css',
         chunkFilename: 'css/[name].[contenthash:8].css',
       }),
-      new FaviconsWebpackPlugin({
-        logo: './src/resources/favicon.png',
-        mode: 'webapp',
-        devMode: 'webapp',
-        prefix: 'assets/favicons/',
-        cache: true,
-        inject: htmlPlugin => {
-          return true
-        },
-        favicons: {
-          background: '#fff',
-          theme_color: '#333'
-        }
-      }),
+      // new FaviconsWebpackPlugin({
+      //   logo: './src/resources/favicon.png',
+      //   mode: 'webapp',
+      //   devMode: 'webapp',
+      //   prefix: 'assets/favicons/',
+      //   cache: true,
+      //   inject: htmlPlugin => {
+      //     return true
+      //   },
+      //   favicons: {
+      //     background: '#fff',
+      //     theme_color: '#333'
+      //   }
+      // }),
     );
   }
   return plugins;
