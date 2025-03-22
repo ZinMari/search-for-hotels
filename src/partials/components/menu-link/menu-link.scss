@@ -6,6 +6,10 @@
   color: var(--color-dark-50);
   transition: var(--transit);
   gap: 6px;
+  
+  &__arrow {
+    transition: var(--transit);
+  }
 
   &:hover {
     color: var(--color-dark-100);
@@ -14,9 +18,5 @@
       transform: rotate(180deg);
       transition: var(--transit);
     }
-  }
-
-  &__arrow {
-    transition: var(--transit);
   }
 }

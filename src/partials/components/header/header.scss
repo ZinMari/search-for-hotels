@@ -8,7 +8,7 @@
   padding: 15px 0;
   width: 100%;
   height: var(--height);
-  box-shadow: 0 10px 20px 0 rgba(31, 32, 65, 0.05);
+  box-shadow: 0 10px 20px 0 rgb(31 32 65 / 5%);
   background: var(--color-light);
 
   &__container {
@@ -88,6 +88,18 @@
       display: block;
     }
 
+    &__burger-line {
+      top: 50%;
+      display: block;
+      transform: translateY(-50%);
+      transition: opacity .3s ease-in-out;
+  
+      &--open {
+        opacity: 0;
+        transition: var(--transit);
+      }
+    }
+
     &::before,
     &::after,
     .header__burger-line {
@@ -118,18 +130,6 @@
         top: 50%;
         transform: rotate(45deg);
       }
-    }
-  }
-
-  &__burger-line {
-    top: 50%;
-    display: block;
-    transform: translateY(-50%);
-    transition: opacity .3s ease-in-out;
-
-    &--open {
-      opacity: 0;
-      transition: var(--transit);
     }
   }
 }

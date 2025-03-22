@@ -122,10 +122,10 @@
 }
 
 .air-datepicker-cell.-day-.-focus- span,
-.air-datepicker-cell.-day-.-selected-.-range-from- span,
-.air-datepicker-cell.-day-.-selected-.-range-to- span,
+.air-datepicker-cell.-day-.-range-to- span,
 .air-datepicker-cell.-day-.-range-from- span,
-.air-datepicker-cell.-day-.-range-to- span{
+.air-datepicker-cell.-day-.-selected-.-range-from- span,
+.air-datepicker-cell.-day-.-selected-.-range-to- span{
   font-weight: 700;
   color: var(--color-light);
   background: var(--color-gradient);

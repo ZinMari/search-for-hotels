@@ -3,16 +3,16 @@
   --container: 1190px;
 
   // colors
-  --color-dark-100: rgba(31, 32, 65, 1);
-  --color-dark-75: rgba(31, 32, 65, .75);
-  --color-dark-50: rgba(31, 32, 65, .5);
-  --color-dark-25: rgba(31, 32, 65, .25);
-  --color-dark-5: rgba(31, 32, 65, .05);
-  --color-dark-1: rgba(31, 32, 65, .1);
+  --color-dark-100: rgb(31 32 65 / 100%);
+  --color-dark-75: rgb(31 32 65 / 75%);
+  --color-dark-50: rgb(31 32 65 / 50%);
+  --color-dark-25: rgb(31 32 65 / 25%);
+  --color-dark-5: rgb(31 32 65 / 5%);
+  --color-dark-1: rgb(31 32 65 / 10%);
   --color-purple: #bc9Cff;
   --color-green: #6fcf97;
   --color-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  --color-gradient-opacity: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+  --color-gradient-opacity: linear-gradient(180deg, rgb(188 156 255 / 50%) 0%, rgb(139 164 249 / 50%) 100%);
   --color-gradient-green: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   --color-light: #fff;
   --color-error: #d82020;
@@ -20,7 +20,7 @@
   // other
   --bd-radius: 4px;
   --transit: .3s ease-in;
-  --card-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  --card-box-shadow: 0 0 25px 0 rgb(0 0 0 / 20%);
 
   // fonts
   --font-family: montserrat, arial, sans-serif;

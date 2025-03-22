@@ -19,24 +19,6 @@
     cursor: pointer;
   }
 
-  &__input {
-    @include mixins.visually-hidden;
-
-    opacity: 0;
-
-    &:checked + .radio__span {
-      color: var(--color-dark-75);
-    }
-
-    &:checked + .radio__span::after {
-      opacity: 1;
-    }
-
-    &:checked + .radio__span::before {
-      border-color: var(--color-purple);
-    }
-  }
-
   &__span {
     position: relative;
     display: flex;
@@ -69,5 +51,23 @@
     opacity: 0;
     transform: translateY(-50%);
     transition: var(--transit);
+  }
+
+  &__input {
+    @include mixins.visually-hidden;
+
+    opacity: 0;
+
+    &:checked + .radio__span {
+      color: var(--color-dark-75);
+    }
+
+    &:checked + .radio__span::after {
+      opacity: 1;
+    }
+
+    &:checked + .radio__span::before {
+      border-color: var(--color-purple);
+    }
   }
 }

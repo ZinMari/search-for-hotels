@@ -5,18 +5,6 @@
   line-height: 1.47;
   gap: 10px;
 
-  &__input {
-    @include mixins.visually-hidden;
-
-    &:checked + .checkbox__box::after {
-      opacity: 1;
-    }
-
-    &:checked + .checkbox__box {
-      border-color: var(--color-purple);
-    }
-  }
-
   &__box {
     flex-shrink: 0;
     border: 1px solid var(--color-dark-25);
@@ -38,4 +26,15 @@
     }
   }
 
+  &__input {
+    @include mixins.visually-hidden;
+
+    &:checked + .checkbox__box::after {
+      opacity: 1;
+    }
+
+    &:checked + .checkbox__box {
+      border-color: var(--color-purple);
+    }
+  }
 }

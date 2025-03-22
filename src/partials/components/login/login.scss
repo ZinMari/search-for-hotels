@@ -3,8 +3,9 @@
 .login {
   @include mixins.form-style;
 
+  /* stylelint-disable-next-line no-duplicate-selectors */
   & {
-    max-width: 100%px;
+    max-width: 100%;
   }
   
 

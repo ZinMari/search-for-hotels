@@ -3,6 +3,7 @@
 .reservation {
   @include mixins.form-style;
 
+  /* stylelint-disable-next-line no-duplicate-selectors */
   & {
     padding-top: 36px;
     max-width: 100%;
