@@ -13,13 +13,13 @@
   background: var(--color-gradient);
   cursor: pointer;
 
-  &:disabled {
+  &_disabled_true {
     cursor: auto;
   }
 
   &__fill {
     &:hover,
-    &:disabled {
+    &_disabled_true {
       color: var(--color-light);
       background: var(--color-gradient-opacity);
     }
@@ -38,7 +38,7 @@
     }
 
     &:hover,
-    &:disabled {
+    &_disabled_true {
       background: var(--color-gradient-opacity);
     }
   }
@@ -50,7 +50,7 @@
     background: transparent;
 
     &:hover,
-    &:disabled {
+    &_disabled_true {
       color: var(--color-dark-50);
     }
   }

@@ -10,7 +10,9 @@ mixin button({text, style, isDisabled= false, link="#"})
   -
     const classes = [
       `btn`,
-      `btn__${styles[style]}`
+      `btn__${styles[style]}`,
+      `btn_disabled_${isDisabled}`,
+      `btn__${styles[style]}_disabled_${isDisabled}`,
     ]
-  a(class= [...classes], disabled= isDisabled, href= link)
+  a(class= [...classes], href= link)
     span= text
