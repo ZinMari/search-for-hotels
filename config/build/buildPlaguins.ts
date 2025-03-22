@@ -22,7 +22,7 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
     new HtmlWebpackPlugin({ template: paths.userRegistration, filename: 'user-registration.html' }),
     new CopyPlugin({
       patterns: [
-        { from: "src/**/*.{png,svg,jpg,jpeg,gif}",  to: "img/[name][ext]"},
+        { from: "src/**/*.{png,svg,jpg,jpeg,gif}",  to: "assets/[name][ext]"},
       ],
     }),
   ];

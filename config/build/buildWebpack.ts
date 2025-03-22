@@ -15,6 +15,7 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
       path: paths.output,
       filename: 'bundle.[contenthash].js',
       clean: true,
+      assetModuleFilename: 'assets/[hash][ext][query]'
     },
     plugins: buildPlaguins(options),
     module: {
