@@ -9,11 +9,11 @@ block content
   section.room-details
     .room-details__photos
       .room-details__photo.room-details__photo--big
-        img(src="./img/888/1.jpg", alt="Фото большой кровати в номере")
+        img(src="./assets/1.jpg", alt="Фото большой кровати в номере")
       .room-details__photo
-        img(src="./img/888/2.jpg", alt="Фото маленькой кровати в номере")
+        img(src="./assets/2.jpg", alt="Фото маленькой кровати в номере")
       .room-details__photo
-        img(src="./img/888/3.jpg", alt="Фото окна в номере")
+        img(src="./assets/3.jpg", alt="Фото окна в номере")
     .room-details__details.container
       .room-details__info
         .room-details__room-info
@@ -21,9 +21,9 @@ block content
           .room-details__room-info-list
             -
               const detaisIconElems = [
-                {src_icon: "./img/components/icon-text-list/comfort.svg", title: "Комфорт", description: "Шумопоглощающие стены"},
-                {src_icon: "./img/components/icon-text-list/ease.svg", title: "Удобство", description: "Окно в каждой из спален"},
-                {src_icon: "./img/components/icon-text-list/cozy.svg", title: "Уют", description: "Номер оснащён камином"},
+                {src_icon: "./assets/comfort.svg", title: "Комфорт", description: "Шумопоглощающие стены"},
+                {src_icon: "./assets/ease.svg", title: "Удобство", description: "Окно в каждой из спален"},
+                {src_icon: "./assets/cozy.svg", title: "Уют", description: "Номер оснащён камином"},
               ]
             +icon-text-list(detaisIconElems)
         .room-details__impressions
@@ -44,7 +44,7 @@ block content
           .room-details__reviews-cooments
             -
               const person_1 = {
-                imgPath: "./img/avatars/ava_1.jpg",
+                imgPath: "./assets/ava_1.jpg",
                 name: "Мурад Сарафанов",
                 date: "5 дней назад",
                 countLike: 12,
@@ -53,7 +53,7 @@ block content
               }
 
               const person_2 = {
-                imgPath: "./img/avatars/ava_2.jpg",
+                imgPath: "./assets/ava_2.jpg",
                 name: "Патрисия Стёклышкова",
                 date: "Неделю назад",
                 countLike: 2,
