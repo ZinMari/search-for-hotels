@@ -10,15 +10,15 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
   const isDev = mode === 'development';
   const isProd = mode === 'production';
   const plugins: Configuration['plugins'] = [
-    new HtmlWebpackPlugin({ template: paths.index, filename: 'index.html' }),
-    new HtmlWebpackPlugin({ template: paths.cards, filename: 'cards.html' }),
-    new HtmlWebpackPlugin({ template: paths.colorsType, filename: 'colors-type.html' }),
-    new HtmlWebpackPlugin({ template: paths.formElements, filename: 'form-elements.html' }),
-    new HtmlWebpackPlugin({ template: paths.headersFooters, filename: 'headers-footers.html' }),
-    new HtmlWebpackPlugin({ template: paths.roomDetails, filename: 'room-details.html' }),
-    new HtmlWebpackPlugin({ template: paths.searchRoom, filename: 'search-room.html' }),
-    new HtmlWebpackPlugin({ template: paths.userLogin, filename: 'user-login.html' }),
-    new HtmlWebpackPlugin({ template: paths.userRegistration, filename: 'user-registration.html' }),
+    new HtmlWebpackPlugin({ template: paths.index, filename: 'index.html', title: 'Toxin' }),
+    new HtmlWebpackPlugin({ template: paths.cards, filename: 'cards.html', title: 'Cards' }),
+    new HtmlWebpackPlugin({ template: paths.colorsType, filename: 'colors-type.html', title: 'Colors Type'  }),
+    new HtmlWebpackPlugin({ template: paths.formElements, filename: 'form-elements.html', title: 'Form Elements'  }),
+    new HtmlWebpackPlugin({ template: paths.headersFooters, filename: 'headers-footers.html', title: 'Headers Footers' }),
+    new HtmlWebpackPlugin({ template: paths.roomDetails, filename: 'room-details.html', title: 'Room Details'  }),
+    new HtmlWebpackPlugin({ template: paths.searchRoom, filename: 'search-room.html', title: 'Search Room'   }),
+    new HtmlWebpackPlugin({ template: paths.userLogin, filename: 'user-login.html', title: 'User Login' }),
+    new HtmlWebpackPlugin({ template: paths.userRegistration, filename: 'user-registration.html', title: 'User Registration' }),
     new CopyPlugin({
       patterns: [
         { from: "src/**/*.{png,svg,jpg,jpeg,gif}",  to: "assets/[name][ext]"},

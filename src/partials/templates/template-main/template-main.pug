@@ -1,12 +1,14 @@
+- var title = htmlWebpackPlugin.options.title;
+
 doctype html
 html(lang="ru" class="page")
   head
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
-  link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
-  meta(http-equiv="X-UA-Compatible" content="ie=edge")
-  meta(name="theme-color" content="#111111")
-  title TOXIN
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="theme-color" content="#111111")
+    title= title
 
   body.page__body
     .site-container
