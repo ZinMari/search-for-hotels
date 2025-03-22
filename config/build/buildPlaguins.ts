@@ -5,7 +5,6 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import CopyPlugin from "copy-webpack-plugin";
 import { BuildOptions } from './types/types';
-import path from 'path';
 
 export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plugins'] {
   const isDev = mode === 'development';
