@@ -82,6 +82,10 @@
     display: flex;
     gap: 22px;
   }
+
+  &__social > * {
+    cursor: pointer;
+  }
 }
 
 
