@@ -1,5 +1,5 @@
 function updateInputs (data) {
-  $('.range-slider__values').html(`${data.from_pretty}₽ - ${data.to_pretty}₽`)
+  $('.range-slider__values').html(`${data.from}₽ - ${data.to}₽`)
 }
 
 $(".range-slider__slider").ionRangeSlider({

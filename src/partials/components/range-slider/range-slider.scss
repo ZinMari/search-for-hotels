@@ -12,7 +12,7 @@
   }
 
   &__title {
-    @include mixins.form-subtitle;;;
+    @include mixins.form-subtitle;
   }
 }
 
@@ -20,7 +20,7 @@
   height: 10px;
 }
 
-.irs-line {
+.irs--flat .irs-line {
   top: 0;
   border: 1px solid var(--color-dark-25);
   border-radius: 3px;
@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 
-.irs-slider{
+.irs--flat .irs-handle{
   top: -5px;
   border: 2px solid var(--color-light);
   border-radius: 50%;
@@ -39,9 +39,14 @@
   cursor: pointer;
 }
 
-.irs-bar {
+.irs--flat .irs-bar {
   top: 0;
   height: 6px;
   background: var(--color-gradient-green);
   cursor: pointer;
 }
+
+.irs--flat .irs-handle > i:first-child {
+  display: none;
+}
+
