@@ -1,5 +1,5 @@
 mixin menu-link({text, arrow= "", href=""})
-  - const hrefValue = href ? href : "#"
+  - const hrefValue = href ? href : "/mock-address/change-me"
   a(class= "menu-link", href= hrefValue)
     | #{text}
     if arrow
