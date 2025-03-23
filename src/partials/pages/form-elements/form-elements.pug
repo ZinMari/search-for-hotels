@@ -21,9 +21,9 @@ include ../../components/pagination/pagination
 
 
 block content
-  section.forms-elements
+  main.forms-elements
     .forms-elements__container
-      .forms-elements__row.forms-elements__row--1
+      section.forms-elements__row.forms-elements__row--1
         .forms-elements__column.forms-elements__column--left
           .forms-elements__text-field
             -
@@ -156,7 +156,7 @@ block content
             +subtitle("pagination")
             +pagination("test")
 
-      .forms-elements__row.forms-elements__row--2
+      section.forms-elements__row.forms-elements__row--2
         .forms-elements__column.forms-elements__column--left
           .forms-elements__dropdown
             -
@@ -208,7 +208,7 @@ block content
 
               +dropdown(dropdownGuest)
 
-      .forms-elements__row.forms-elements__row--3
+      section.forms-elements__row.forms-elements__row--3
         .forms-elements__column.forms-elements__column--left
           .forms-elements__expandable-checkbox-list
             -
@@ -249,7 +249,7 @@ block content
             - const items = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
             +bullet-list({title: "bullet list", items: items})
 
-      .forms-elements__row.forms-elements__row--4
+      section.forms-elements__row.forms-elements__row--4
         .forms-elements__icon-text-list
           -
             const iconArr = [

@@ -10,9 +10,9 @@ include ../../components/pagination/pagination
 
 
 block content
-  section.search-room.container
+  main.search-room.container
     .search-room__wrapp
-      .search-room__settings
+      section.search-room__settings
         .search-room__dates-of-stay
           +filter-date-dropdown({title: "даты пребывания в отеле", initialText: "19 авг - 23 авг", identifier: "search-room"})
         .search-room__guests
@@ -85,7 +85,7 @@ block content
               },
             ]
           +expandable-checkbox-list("дополнительные удобства", additionalAmenities, false)
-      .search-room__rooms
+      section.search-room__rooms
         h1.search-room__title Номера, которые мы для вас подобрали
         .search-room__rooms-wrapp
           ul.search-room__rooms-elements
