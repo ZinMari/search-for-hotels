@@ -5,5 +5,5 @@ mixin checkbox-btns(title, btns)
     h3.checkbox-btns__title= title
     ul.checkbox-btns__wrap
       each btn in btns
-        li
+        li.checkbox-btns__item
           +checkbox(btn.text, btn.isChecked)

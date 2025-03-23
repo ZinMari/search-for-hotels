@@ -6,8 +6,8 @@ mixin date-dropdown({titleStart, titleEnd, identifier, type, dateEndText="ДД.�
     h3.date-dropdown__title= titleStart
     h3.date-dropdown__title= titleEnd
     button.date-dropdown__btn(data-value="start" data-identifier= identifier)
-      span ДД.ММ.ГГГГ
-      svg(
+      span.date-dropdown__text ДД.ММ.ГГГГ
+      svg.date-dropdown__arrow(
         width="12"
         height="8"
         viewBox="0 0 12 8"
@@ -16,8 +16,8 @@ mixin date-dropdown({titleStart, titleEnd, identifier, type, dateEndText="ДД.�
       )
         path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5")
     button.date-dropdown__btn(data-value="end" data-identifier= identifier)
-      span= dateEndText
-      svg(
+      span.date-dropdown__text= dateEndText
+      svg.date-dropdown__arrow(
         width="12"
         height="8"
         viewBox="0 0 12 8"

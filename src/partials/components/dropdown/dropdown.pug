@@ -14,7 +14,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
         span.dropdown__subtitle= subtitle
     .dropdown__menu
       button.dropdown__btn
-        span #{buttonText}
+        span.dropdown__title #{buttonText}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
             height="8"
@@ -25,7 +25,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
           each element, index in elements[typeDropdown]
             li.dropdown__item
               label.dropdown__label
-                span #{element}
+                span.dropdown__label-title #{element}
                 input.dropdown__input(
                   type="number",
                   value= values[index],
