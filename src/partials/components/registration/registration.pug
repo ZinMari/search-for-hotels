@@ -8,7 +8,7 @@ include ../button/button
 mixin registration
   .registration
     h2.registration__title Регистрация аккаунта
-    form.registration__form
+    form.registration__form(action='user-login.html')
       .registration__group
         .registration__item
           - const userName = {id: "userName", typeInput: "text", placeholder: "Имя"}
