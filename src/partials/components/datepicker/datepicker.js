@@ -94,7 +94,8 @@ calendarInputs.each(function(){
   calendarObjects.push(calendarElement)
 })
 
-function showCalendar() {
+function showCalendar(e) {
+  e.preventDefault();
   for(let calendar of calendarObjects) {
     if(calendar) {
       if(calendar.$el.classList.contains(this.dataset.identifier)){
