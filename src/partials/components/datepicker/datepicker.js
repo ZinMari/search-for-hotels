@@ -1,7 +1,7 @@
 import AirDatepicker from 'air-datepicker';
 
-const calendarInputs = $('.js-date-calendar');
-const activateCalendarBtns = $('button[data-identifier]');
+const $calendarInputs = $('.js-date-calendar');
+const $activateCalendarBtns = $('button[data-identifier]');
 
 const handleApplyBtn = (datepicker) => {
   if(datepicker.selectedDates.length) {
@@ -10,9 +10,9 @@ const handleApplyBtn = (datepicker) => {
     const startDate = datepicker.selectedDates[0].toLocaleString('ru', templateDate);
     const endDate = datepicker.selectedDates[1].toLocaleString('ru', templateDate);
 
-    const showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
+    const $showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
 
-    showDateBtns.each(function(){
+    $showDateBtns.each(function(){
       if(this.dataset.value === "start") {
         this.firstElementChild.textContent = startDate;
       } else {
@@ -26,9 +26,9 @@ const handleApplyBtn = (datepicker) => {
 
 const handleClearBtn = (datepicker) => {
   const identifierCalendar = datepicker.$el.dataset.identifier;
-  const showDateBtns = $(`button[data-identifier=${identifierCalendar}] span`)
+  const $showDateBtns = $(`button[data-identifier=${identifierCalendar}] span`)
   datepicker.clear();
-  showDateBtns.text('ДД.ММ.ГГГГ');
+  $showDateBtns.text('ДД.ММ.ГГГГ');
 }
 
 const applyBtn = {
@@ -93,7 +93,7 @@ function defineCalendarOptions(typeCalendar){
 
 const calendarObjects = [];
 
-calendarInputs.each(function(){
+$calendarInputs.each(function(){
   const calendarElement = new AirDatepicker(this, defineCalendarOptions(this.dataset.typecalendar));
   calendarObjects.push(calendarElement)
 })
@@ -113,4 +113,4 @@ function showCalendar(e) {
   })
 }
 
-activateCalendarBtns.on('click', showCalendar);
+$activateCalendarBtns.on('click', showCalendar);

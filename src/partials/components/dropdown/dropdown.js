@@ -1,28 +1,28 @@
-const dropBtns = $('.js-dropdown__btn');
-const dropInputs = $('js-dropdown__input');
-const dropdowns = $('.js-dropdown');
-const dropClearBtns = $('.dropdown__clear button');
+const $dropBtns = $('.js-dropdown__btn');
+const $dropInputs = $('js-dropdown__input');
+const $dropdowns = $('.js-dropdown');
+const $dropClearBtns = $('.dropdown__clear button');
 
 
-dropClearBtns.on('click', resetValues);
+$dropClearBtns.on('click', resetValues);
 
 
 function resetValues(){
   const parent = this.closest('.js-dropdown');
-  const inputs = $('.js-dropdown__input', parent);
-  const title = $('.js-dropdown__btn span', parent);
+  const $inputs = $('.js-dropdown__input', parent);
+  const $title = $('.js-dropdown__btn span', parent);
 
-  inputs.each((index, input)=>{
+  $inputs.each((index, input)=>{
     $(input).val('0');
     $(input).prev().addClass('nice-number__button--disabed');
   })
 
-  title.text('Выберете количество');
+  $title.text('Выберете количество');
   $('span', this).attr('hidden', true);
 }
 
 
-dropdowns.each(function(){
+$dropdowns.each(function(){
   setButtonClear(this)
 })
 
@@ -55,28 +55,28 @@ function definitionOfDeclension(count){
 
 function handleDropBtnsClick (e){
   e.preventDefault();
-  this.closest('.js-dropdown').classList.toggle('dropdown--open');
+  e.currentTarget.closest('.js-dropdown').classList.toggle('dropdown--open');
 }
 
-dropBtns.on('click', handleDropBtnsClick)
+$dropBtns.on('click', handleDropBtnsClick)
 
 function setButtonClear(currentInput){
   const parent = currentInput.closest('.js-dropdown');
-  const buttonClear = $('.dropdown__clear span', parent);
+  const $buttonClear = $('.dropdown__clear span', parent);
 
   if(isEmptyValues(currentInput)) {
-    buttonClear.attr('hidden', true)
+    $buttonClear.attr('hidden', true)
   } else {
-    buttonClear.attr('hidden', false)
+    $buttonClear.attr('hidden', false)
   }
 }
 
 function getData(currentInput){
   const parent = currentInput.closest('.js-dropdown');
-  const labels = $('.dropdown__label', parent);
+  const $labels = $('.dropdown__label', parent);
   const values = {};
 
-  labels.each(function(index, elem){
+  $labels.each(function(index, elem){
     const elemText = $('span', elem).text();
 
     if(elemText === 'дети' || elemText === 'взрослые'){
@@ -94,7 +94,7 @@ function getData(currentInput){
 
 function setTitle(elem, values){
   const parent = elem.closest('.js-dropdown');
-  const title = $('.js-dropdown__btn span', parent);
+  const $title = $('.js-dropdown__btn span', parent);
   let text = [];
 
   $.each(values, function(key, value){
@@ -104,7 +104,7 @@ function setTitle(elem, values){
       }
   })
 
-  title.text(text.length === 0 ? 'Выберете количество' : text.join(', '))
+  $title.text(text.length === 0 ? 'Выберете количество' : text.join(', '))
 }
 
 $('.js-dropdown__input').niceNumber({
@@ -131,7 +131,7 @@ $('.js-dropdown__input').niceNumber({
   },
 });
 
-dropInputs.each(function(){
+$dropInputs.each(function(){
   switch (this.value) {
     case this.min:
       this.previousElementSibling.classList.add('nice-number__button--disabed')
