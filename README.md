@@ -29,7 +29,7 @@
 - [В Figma](https://www.figma.com/design/7W5R6uxAk0vCVzFZcPVegk/Untitled?t=UA9JdK1Lq5xzQqtc-0)
 
 
-## Готовые страницы:
+## Посмотерть страницы:
 <table>
     <tr valign="top">
         <td>
