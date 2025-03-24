@@ -100,7 +100,7 @@ calendarInputs.each(function(){
 
 function showCalendar(e) {
   e.preventDefault();
-  for(let calendar of calendarObjects) {
+  calendarObjects.forEach(calendar=>{
     if(calendar) {
       if(calendar.$el.classList.contains(this.dataset.identifier)){
         if(calendar.visible){
@@ -110,7 +110,7 @@ function showCalendar(e) {
         }
       }
     }
-  }
+  })
 }
 
 activateCalendarBtns.on('click', showCalendar);
