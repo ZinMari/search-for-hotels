@@ -24,16 +24,15 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
         { from: "src/**/*.{png,svg,jpg,jpeg,gif}",  to: "assets/[name][ext]"},
       ],
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    })
   ];
 
   if (isDev) {
-    plugins.push(
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
-    );
+    plugins.push()  
   }
   if (isProd) {
     plugins.push(
