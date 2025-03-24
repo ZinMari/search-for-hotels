@@ -4,7 +4,7 @@ const $dropdowns = $('.js-dropdown');
 const $dropClearBtns = $('.dropdown__clear button');
 
 
-$dropClearBtns.on('click', resetValues);
+$dropClearBtns.on('click.dropdown', resetValues);
 
 
 function resetValues(){
@@ -58,7 +58,7 @@ function handleDropBtnsClick (e){
   e.currentTarget.closest('.js-dropdown').classList.toggle('dropdown--open');
 }
 
-$dropBtns.on('click', handleDropBtnsClick)
+$dropBtns.on('click.dropdown', handleDropBtnsClick)
 
 function setButtonClear(currentInput){
   const parent = currentInput.closest('.js-dropdown');

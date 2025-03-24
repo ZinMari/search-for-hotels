@@ -113,4 +113,4 @@ function showCalendar(e) {
   })
 }
 
-$activateCalendarBtns.on('click', showCalendar);
+$activateCalendarBtns.on('click.datepicker', showCalendar);

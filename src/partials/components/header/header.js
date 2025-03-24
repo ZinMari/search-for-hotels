@@ -8,4 +8,4 @@ function handleBurgerClick(){
   $('html').toggleClass('page--menu-open');
 }
 
-$burgerBtn.on('click', handleBurgerClick)
+$burgerBtn.on('click.header', handleBurgerClick)
