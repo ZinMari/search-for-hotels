@@ -3,40 +3,44 @@ import AirDatepicker from 'air-datepicker';
 const calendarInputs = $('.date-calendar');
 const activateCalendarBtns = $('button[data-identifier]');
 
+const handleApplyBtn = (datepicker) => {
+  if(datepicker.selectedDates.length) {
+    const identifierCalendar = datepicker.$el.dataset.identifier;
+    const templateDate = {day: '2-digit', month: '2-digit', year: 'numeric'};
+    const startDate = datepicker.selectedDates[0].toLocaleString('ru', templateDate);
+    const endDate = datepicker.selectedDates[1].toLocaleString('ru', templateDate);
+
+    const showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
+
+    showDateBtns.each(function(){
+      if(this.dataset.value === "start") {
+        this.firstElementChild.textContent = startDate;
+      } else {
+        if(datepicker.selectedDates[1]) {
+          this.firstElementChild.textContent = endDate;
+        }
+      }
+    })
+  }
+}
+
+const handleClearBtn = (datepicker) => {
+  const identifierCalendar = datepicker.$el.dataset.identifier;
+  const showDateBtns = $(`button[data-identifier=${identifierCalendar}] span`)
+  datepicker.clear();
+  showDateBtns.text('ДД.ММ.ГГГГ');
+}
+
 const applyBtn = {
   content: 'Применить',
   className: 'applyBtn .date-dropdown__action-btn',
-  onClick: (dp) => {
-    if(dp.selectedDates.length) {
-      const identifierCalendar = dp.$el.dataset.identifier;
-      const templateDate = {day: '2-digit', month: '2-digit', year: 'numeric'};
-      const startDate = dp.selectedDates[0].toLocaleString('ru', templateDate);
-      const endDate = dp.selectedDates[1].toLocaleString('ru', templateDate);
-
-      const showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
-
-      showDateBtns.each(function(){
-        if(this.dataset.value === "start") {
-          this.firstElementChild.textContent = startDate;
-        } else {
-          if(dp.selectedDates[1]) {
-            this.firstElementChild.textContent = endDate;
-          }
-        }
-      })
-    }
-  }
+  onClick: handleApplyBtn
 }
 
 const clearBtn = {
   content: 'Очистить',
   className: 'clearBtn',
-  onClick: (dp) => {
-    const identifierCalendar = dp.$el.dataset.identifier;
-    const showDateBtns = $(`button[data-identifier=${identifierCalendar}] span`)
-    dp.clear();
-    showDateBtns.text('ДД.ММ.ГГГГ');
-  }
+  onClick: handleClearBtn
 }
 
 const commonCalendarOptions = {

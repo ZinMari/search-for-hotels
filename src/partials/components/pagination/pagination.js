@@ -1,5 +1,5 @@
 const paginate = ()=> {
-  const roomCards = Array.from(document.querySelectorAll('.search-room__room'));
+  const roomCards = [...document.querySelectorAll('.search-room__room')];
   const roomCardsContainer = document.querySelector('.search-room__rooms-elements');
 
   if(!roomCards.length) {

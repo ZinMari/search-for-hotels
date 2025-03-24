@@ -53,10 +53,12 @@ function definitionOfDeclension(count){
   return declension;
 }
 
-dropBtns.on('click', function(e){
+function handleDropBtnsClick (e){
   e.preventDefault();
   this.closest('.dropdown').classList.toggle('dropdown--open');
-})
+}
+
+dropBtns.on('click', handleDropBtnsClick)
 
 function setButtonClear(currentInput){
   const parent = currentInput.closest('.dropdown');
