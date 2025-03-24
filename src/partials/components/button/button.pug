@@ -1,4 +1,4 @@
-mixin button({text, style, isDisabled= false, link="/mock-address/change-me"})
+mixin button({text, style, isDisabled= false})
   -
     const styles = {
       fill: "fill",
@@ -14,5 +14,5 @@ mixin button({text, style, isDisabled= false, link="/mock-address/change-me"})
       `btn_disabled_${isDisabled}`,
       `btn__${styles[style]}_disabled_${isDisabled}`,
     ]
-  a(class= [...classes], href= link)
+  button(class= [...classes])
     span= text

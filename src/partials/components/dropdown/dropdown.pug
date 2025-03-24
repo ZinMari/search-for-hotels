@@ -8,7 +8,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
       people: ["взрослые", "дети", "младенцы"],
     }
 
-  article(class= className)
+  div(class= className)
     h3.dropdown__header= title
       if(subtitle)
         span.dropdown__subtitle= subtitle

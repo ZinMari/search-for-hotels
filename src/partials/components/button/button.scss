@@ -59,5 +59,9 @@
     background:
       url('../partials/components/button/arrow_forward.svg') no-repeat calc(100% - 13px) 50%,
       var(--color-gradient);
+
+      &:hover{
+        background: var(--color-gradient-opacity);
+    }
   }
 }

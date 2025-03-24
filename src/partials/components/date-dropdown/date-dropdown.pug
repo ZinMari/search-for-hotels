@@ -1,7 +1,7 @@
 include ../datepicker/datepicker
 
 mixin date-dropdown({titleStart, titleEnd, identifier, type, dateEndText="ДД.ММ.ГГГГ"})
-  article.date-dropdown
+  .date-dropdown
     +datepicker({identifier, typeCalendar: "dropdown"})
     h3.date-dropdown__title= titleStart
     h3.date-dropdown__title= titleEnd

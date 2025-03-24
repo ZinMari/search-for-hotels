@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown
 include ../dropdown/dropdown
 include ../button/button
 
-mixin find-rooms({linkForm="#"})
+mixin find-rooms({linkForm="empty-link"})
   .find-rooms
     .find-rooms__wrap
       h2.find-rooms__title Найдём номера под ваши пожелания
@@ -28,4 +28,4 @@ mixin find-rooms({linkForm="#"})
         +dropdown(dropdownItem)
 
       .find-rooms__btn
-        +button({text: "подобрать номер", style: "arrow", link: linkForm})
+        +button({text: "подобрать номер", style: "arrow"})

@@ -27,9 +27,9 @@ mixin header(username= false)
         else
           .header__btns
             .header__login
-              +button({text: "войти", style: "border", link: "./user-login.html"})
+              +button({text: "войти", style: "border"})
             .header__registration
-              +button({text: "зарегистрироваться", style: "fill", link: "./user-registration.html"})
+              +button({text: "зарегистрироваться", style: "fill"})
 
       button.header__burger
         span.header__burger-line
