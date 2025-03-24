@@ -43,17 +43,20 @@ const paginate = ()=> {
 
     createEllipses(startBtn, nuberLastPage)
     showArrowBtns(currentPage, nuberLastPage)
-    showlinkOnFirstPageAndLastPage(currentPage, nuberLastPage)
+    showlinkOnFirstPage(currentPage)
+    showlinkOnLastPage(currentPage, nuberLastPage)
   }
 
-  function showlinkOnFirstPageAndLastPage(currentPage, nuberLastPage){
+  function showlinkOnFirstPage(currentPage){
     if(currentPage > 2) {
       let li = document.createElement('li');
       li.classList.add('pagination__num-element', 'pagination__num-element--number');
       li.textContent = 1;
       paginationNumList.prepend(li)
     }
+  }
 
+  function showlinkOnLastPage(currentPage, nuberLastPage){
     if(currentPage < nuberLastPage - 1) {
       let li = document.createElement('li');
       li.classList.add('pagination__num-element', 'pagination__num-element--number');

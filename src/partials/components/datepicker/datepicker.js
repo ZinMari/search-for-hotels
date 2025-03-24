@@ -14,6 +14,7 @@ const applyBtn = {
       const endDate = dp.selectedDates[1].toLocaleString('ru', templateDate);
 
       const showDateBtns = $(`button[data-identifier=${identifierCalendar}]`)
+
       showDateBtns.each(function(){
         if(this.dataset.value === "start") {
           this.firstElementChild.textContent = startDate;
@@ -55,28 +56,26 @@ const commonCalendarOptions = {
   },
 };
 
-const staticCalendarOptions = {
-  inline: true,
-  buttons: [clearBtn, applyBtn],
-}
+function defineCalendarOptions(typeCalendar){
+  const staticCalendarOptions = {
+    inline: true,
+    buttons: [clearBtn, applyBtn],
+  }
+  
+  const dropdownCalendarOptions = {
+    buttons: [clearBtn, applyBtn],
+    classes: 'date-calendar__dropdown',
+  }
+  
+  const filterCalendarOptions = {
+    classes: 'date-calendar__filter',
+    multipleDatesSeparator: ' - ',
+    altFieldDateFormat: 'dd MMM',
+    altField: document.querySelector('.filter-date-dropdown__input'),
+  }
 
-const dropdownCalendarOptions = {
-  buttons: [clearBtn, applyBtn],
-  classes: 'date-calendar__dropdown',
-}
-
-const filterCalendarOptions = {
-  classes: 'date-calendar__filter',
-  multipleDatesSeparator: ' - ',
-  altFieldDateFormat: 'dd MMM',
-  altField: document.querySelector('.filter-date-dropdown__input'),
-}
-
-const calendarObjects = [];
-
-calendarInputs.each(function(){
   let options;
-  const typeCalendar = this.dataset.typecalendar;
+
   if(typeCalendar === 'dropdown'){
     options = Object.assign({}, commonCalendarOptions, dropdownCalendarOptions)
   } else if (typeCalendar === 'filter') {
@@ -84,7 +83,14 @@ calendarInputs.each(function(){
   } else if (typeCalendar === 'static') {
     options = Object.assign({}, commonCalendarOptions, staticCalendarOptions)
   }
-  const calendarElement = new AirDatepicker(this, options);
+
+  return options;
+}
+
+const calendarObjects = [];
+
+calendarInputs.each(function(){
+  const calendarElement = new AirDatepicker(this, defineCalendarOptions(this.dataset.typecalendar));
   calendarObjects.push(calendarElement)
 })
 
