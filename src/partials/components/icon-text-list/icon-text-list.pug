@@ -3,7 +3,7 @@ mixin icon-text-list(iconArr)
     each elem in iconArr
       li.icon-text-list__item
         .icon-text-list__img
-          img(src= elem.src_icon, alt= elem.alt)
+          img(src= elem.src_icon, alt= elem.title)
         .icon-text-list__text
           h4.icon-text-list__title= elem.title
           p.icon-text-list__description= elem.description
