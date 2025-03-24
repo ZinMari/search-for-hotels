@@ -8,7 +8,7 @@ mixin header(username= false)
       .header__logo
         +logo
 
-      .header__menu
+      .header__menu.js-header__menu
         nav.header__nav
           ul.header__list
             li.header__item
@@ -31,5 +31,5 @@ mixin header(username= false)
             .header__registration
               +button({text: "зарегистрироваться", style: "fill"})
 
-      button.header__burger
+      button.header__burger.js-header__burger
         span.header__burger-line

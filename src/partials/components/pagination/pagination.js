@@ -1,16 +1,16 @@
 const paginate = ()=> {
-  const roomCards = [...document.querySelectorAll('.search-room__room')];
-  const roomCardsContainer = document.querySelector('.search-room__rooms-elements');
+  const roomCards = [...document.querySelectorAll('.js-search-room__room')];
+  const roomCardsContainer = document.querySelector('.js-search-room__rooms-elements');
 
   if(!roomCards.length) {
     return;
   }
 
-  const paginationPanel = document.querySelector('.pagination');
-  const paginationNumList = paginationPanel.querySelector('.pagination__numbers');
-  const startArrowBtn = paginationPanel.querySelector('.pagination__btn--first');
-  const endArrowBtn = paginationPanel.querySelector('.pagination__btn--last');
-  const paginationInfo = paginationPanel.querySelector('.pagination__info span');
+  const paginationPanel = document.querySelector('.js-pagination');
+  const paginationNumList = paginationPanel.querySelector('.js-pagination__numbers');
+  const startArrowBtn = paginationPanel.querySelector('.js-pagination__btn--first');
+  const endArrowBtn = paginationPanel.querySelector('.js-pagination__btn--last');
+  const paginationInfo = paginationPanel.querySelector('.js-pagination__info span');
 
   const cardsCount = 12;
   const nuberLastPage = Math.ceil(roomCards.length / cardsCount);

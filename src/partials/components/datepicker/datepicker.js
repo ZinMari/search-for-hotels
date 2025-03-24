@@ -1,6 +1,6 @@
 import AirDatepicker from 'air-datepicker';
 
-const calendarInputs = $('.date-calendar');
+const calendarInputs = $('.js-date-calendar');
 const activateCalendarBtns = $('button[data-identifier]');
 
 const handleApplyBtn = (datepicker) => {
@@ -78,17 +78,17 @@ function defineCalendarOptions(typeCalendar){
     altField: document.querySelector('.filter-date-dropdown__input'),
   }
 
-  let options;
+  let calendarOptions;
 
   if(typeCalendar === 'dropdown'){
-    options = Object.assign({}, commonCalendarOptions, dropdownCalendarOptions)
+    calendarOptions = Object.assign({}, commonCalendarOptions, dropdownCalendarOptions)
   } else if (typeCalendar === 'filter') {
-    options = Object.assign({}, commonCalendarOptions, filterCalendarOptions)
+    calendarOptions = Object.assign({}, commonCalendarOptions, filterCalendarOptions)
   } else if (typeCalendar === 'static') {
-    options = Object.assign({}, commonCalendarOptions, staticCalendarOptions)
+    calendarOptions = Object.assign({}, commonCalendarOptions, staticCalendarOptions)
   }
 
-  return options;
+  return calendarOptions;
 }
 
 const calendarObjects = [];

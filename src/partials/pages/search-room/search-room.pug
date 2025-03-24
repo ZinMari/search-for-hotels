@@ -88,7 +88,7 @@ block content
       section.search-room__rooms
         h1.search-room__title Номера, которые мы для вас подобрали
         .search-room__rooms-wrapp
-          ul.search-room__rooms-elements
+          ul.search-room__rooms-elements.js-search-room__rooms-elements
             -
               const rooms = {
                 "room-888": {
@@ -321,7 +321,7 @@ block content
             while count >= 0
               - count -= 1;
               each room in rooms
-                li.search-room__room
+                li.search-room__room.js-search-room__room
                   +room-card(room)
           div.search-room__rooms-pagination
             +pagination

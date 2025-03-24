@@ -1,20 +1,20 @@
 mixin pagination(test= false)
-  div.pagination
+  div.pagination.js-pagination
     div.pagination__btns-panel
       if !test
-        button.pagination__btn.pagination__btn--first
+        button.pagination__btn.pagination__btn--first.js-pagination__btn--first
           svg.pagination__arrow(width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg")
             path(d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
-      ul.pagination__numbers
+      ul.pagination__numbers.js-pagination__numbers
         if test
           li.pagination__num-element.pagination__num-element--number.pagination__num-element--active 1
           li.pagination__num-element.pagination__num-element--number 2
           li.pagination__num-element.pagination__num-element--number 3
           li.pagination__num-element.pagination__num-element--ellipses ...
           li.pagination__num-element.pagination__num-element--number 15
-      button.pagination__btn.pagination__btn--last
+      button.pagination__btn.pagination__btn--last.js-pagination__btn--last
         svg.pagination__arrow(width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg")
           path(d="M9 0.426758L17.0156 8.44238L9 16.458L7.59375 15.0518L13.1719 9.42676H0.984375V7.45801H13.1719L7.59375 1.83301L9 0.426758Z" fill="white")
-    p.pagination__info
+    p.pagination__info.js-pagination__info
       span 1 – 12
       | из 100+ вариантов аренды

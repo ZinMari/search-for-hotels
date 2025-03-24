@@ -2,7 +2,7 @@ include ../button/button
 
 mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", subtitle=false, values= [2, 2, 0]})
   -
-    const className = isOpen ? "dropdown dropdown--open" : "dropdown"
+    const className = isOpen ? "dropdown js-dropdown dropdown--open" : "dropdown js-dropdown"
     const elements = {
       rooms: ["спальни", "кровати", "ванные комнаты"],
       people: ["взрослые", "дети", "младенцы"],
@@ -13,7 +13,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
       if(subtitle)
         span.dropdown__subtitle= subtitle
     .dropdown__menu
-      button.dropdown__btn
+      button.dropdown__btn.js-dropdown__btn
         span.dropdown__title #{buttonText}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
@@ -26,7 +26,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
             li.dropdown__item
               label.dropdown__label
                 span.dropdown__label-title #{element}
-                input.dropdown__input(
+                input.dropdown__input.js-dropdown__input(
                   type="number",
                   value= values[index],
                   min= 0,

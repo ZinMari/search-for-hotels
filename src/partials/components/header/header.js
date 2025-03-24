@@ -1,5 +1,5 @@
-const burgerBtn = $('.header__burger');
-const headerMenu = $('.header__menu');
+const burgerBtn = $('.js-header__burger');
+const headerMenu = $('.js-header__menu');
 
 function handleBurgerClick(){
   burgerBtn.toggleClass('header__burger--open');

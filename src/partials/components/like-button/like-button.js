@@ -1,8 +1,8 @@
-const likeBtns = $('.like-button___btn');
+const likeBtns = $('.js-like-button___btn');
 
-function handlelikeBtnsClick(){
-  this.classList.toggle('like-button___btn--like');
-  this.classList.contains('like-button___btn--like') ? this.textContent++ : this.textContent--
+function handlelikeBtnsClick(e){
+  e.currentTarget.classList.toggle('like-button___btn--like');
+  e.currentTarget.classList.contains('like-button___btn--like') ? this.textContent++ : this.textContent--
 }
 
 likeBtns.on('click', handlelikeBtnsClick)

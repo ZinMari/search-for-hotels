@@ -1,6 +1,6 @@
 mixin like-button({countLike, isLike})
   .like-button
     .like-button___container
-        - const btnClass = isLike ? "like-button___btn like-button___btn--like" : "like-button___btn"
+        - const btnClass = isLike ? "like-button___btn like-button___btn--like js-like-button___btn" : "like-button___btn js-like-button___btn"
         button(class= btnClass)= countLike
 
