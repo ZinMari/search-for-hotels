@@ -82,6 +82,10 @@
   }
 }
 
+.air-datepicker-global-container {
+  z-index: 1000;
+}
+
 .air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month-,
 .air-datepicker-cell.-day-.-disabled- {
   color: var(--color-dark-25);
