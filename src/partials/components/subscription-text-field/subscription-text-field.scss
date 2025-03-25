@@ -21,17 +21,17 @@
     border-radius: 0 var(--bd-radius) var(--bd-radius) 0;
     background: var(--color-light);
     cursor: pointer;
+  }
 
-    svg {
-      transition: var(--transit);
-    }
+  &__arrow {
+    width: 18px;
+    transition: var(--transit);
+    height: 18px;
 
     &:hover,
     &:focus {
-      svg {
-        transform: scale(1.3);
-        transition: var(--transit);
-      }
+      transform: scale(1.3);
+      transition: var(--transit);
     }
   }
 
