@@ -1,4 +1,4 @@
-@use "../../../scss/mixins";
+@use '../../../scss/mixins';
 
 .air-datepicker {
   border-radius: 4px;
@@ -23,13 +23,13 @@
     height: 100%;
   }
 
-  &-nav--action[data-action='prev']{
+  &-nav--action[data-action='prev'] {
     // background: url('../partials/components/datepicker/arrow_back.svg');
     background-position: 24% center;
     background-repeat: no-repeat;
   }
 
-  &-nav--action[data-action='next']{
+  &-nav--action[data-action='next'] {
     // background: url('../partials/components/datepicker/arrow_forward.svg');
     background-position: 76% center;
     background-repeat: no-repeat;
@@ -73,11 +73,11 @@
     color: var(--color-purple);
   }
 
-  .clearBtn span{
+  .clearBtn span {
     justify-content: start;
   }
 
-  .applyBtn span{
+  .applyBtn span {
     justify-content: end;
   }
 }
@@ -86,12 +86,14 @@
   z-index: 1000;
 }
 
-.air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month-,
+.air-datepicker-cell.-year-.-other-decade-,
+.air-datepicker-cell.-day-.-other-month-,
 .air-datepicker-cell.-day-.-disabled- {
   color: var(--color-dark-25);
 }
 
-.air-datepicker-cell.-year-.-other-decade-, .air-datepicker-cell.-day-.-other-month-.-focus-,
+.air-datepicker-cell.-year-.-other-decade-,
+.air-datepicker-cell.-day-.-other-month-.-focus-,
 .air-datepicker-cell.-day-.-disabled-.-focus- {
   background: transparent;
 }
@@ -129,7 +131,7 @@
 .air-datepicker-cell.-day-.-range-to- span,
 .air-datepicker-cell.-day-.-range-from- span,
 .air-datepicker-cell.-day-.-selected-.-range-from- span,
-.air-datepicker-cell.-day-.-selected-.-range-to- span{
+.air-datepicker-cell.-day-.-selected-.-range-to- span {
   font-weight: 700;
   color: var(--color-light);
   background: var(--color-gradient);
@@ -148,7 +150,7 @@
 
 .air-datepicker-cell.-day-.-selected-.-range-to-,
 .air-datepicker-cell.-day-.-focus-.-range-to-,
-.air-datepicker-cell.-day-.-range-to-  {
+.air-datepicker-cell.-day-.-range-to- {
   border-radius: 0 50% 50% 0;
   background: var(--color-gradient-opacity);
 }
@@ -164,7 +166,7 @@
 .date-calendar {
   @include mixins.visually-hidden;
 
-  &__dropdown{
+  &__dropdown {
     margin-top: 58px;
   }
 

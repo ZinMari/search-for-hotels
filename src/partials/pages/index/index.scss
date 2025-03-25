@@ -1,4 +1,4 @@
-@use "../../../scss/vars";
+@use '../../../scss/vars';
 
 .start {
   background-image: url('../resources/img/index-background/main-slider-1.jpg');
@@ -13,7 +13,7 @@
     grid-template-columns: repeat(2, 1fr);
     min-height: 830px;
 
-    @media(max-width: vars.$smart){
+    @media (max-width: vars.$smart) {
       grid-template-columns: 100%;
     }
   }
@@ -22,7 +22,7 @@
     margin-bottom: 386px;
     max-width: 380px;
 
-    @media(max-width: vars.$smart){
+    @media (max-width: vars.$smart) {
       place-self: center;
       max-width: 100%;
     }

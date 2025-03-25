@@ -1,4 +1,4 @@
-@use "../../../scss/vars";
+@use '../../../scss/vars';
 
 .room-details {
   border-bottom: 1px solid var(--color-dark-5);
@@ -12,7 +12,7 @@
     height: 485px;
     max-width: 100%;
 
-    @media(max-width: vars.$min-tab) {
+    @media (max-width: vars.$min-tab) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 200px);
       height: auto;
@@ -24,7 +24,7 @@
       grid-column: 1 / 2;
       grid-row: 1 / 3;
 
-      @media(max-width: vars.$min-tab) {
+      @media (max-width: vars.$min-tab) {
         grid-row: 1 / 2;
       }
     }
@@ -46,11 +46,11 @@
     justify-content: space-between;
     gap: 70px;
 
-    @media(max-width: vars.$tabl){
+    @media (max-width: vars.$tabl) {
       gap: 10px;
     }
 
-    @media(max-width: vars.$min-tab){
+    @media (max-width: vars.$min-tab) {
       flex-direction: column-reverse;
     }
   }
@@ -62,7 +62,7 @@
     grid-template-rows: auto;
     row-gap: 12px;
 
-    @media(max-width: vars.$tabl) {
+    @media (max-width: vars.$tabl) {
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -153,7 +153,7 @@
   &__rools {
     max-width: 264px;
 
-    @media(max-width: vars.$min-tab){
+    @media (max-width: vars.$min-tab) {
       max-width: 100%;
     }
   }
@@ -167,7 +167,7 @@
     margin: 0 auto;
     width: 380px;
 
-    @media(max-width: vars.$smart){
+    @media (max-width: vars.$smart) {
       max-width: 100%;
     }
   }

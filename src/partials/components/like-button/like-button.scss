@@ -1,8 +1,8 @@
-@use "../../../scss/mixins";
+@use '../../../scss/mixins';
 
 .like-button {
   &__title {
-    @include mixins.form-subtitle;;;
+    @include mixins.form-subtitle;
 
     margin-bottom: 16px;
   }

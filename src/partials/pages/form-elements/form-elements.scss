@@ -38,7 +38,6 @@
     &--right {
       grid-column: 5 / 6;
     }
-
   }
 
   // ----- row--1 ----- //
@@ -72,7 +71,7 @@
     max-width: 266px;
   }
 
- // ----- row--1 ----- //
+  // ----- row--1 ----- //
   // ----- column center ----- //
   &__checkbox-buttons {
     margin-bottom: 39px;
@@ -112,10 +111,9 @@
     max-width: 260px;
   }
 
-
-   // ----- row--1 ----- //
+  // ----- row--1 ----- //
   // ----- column right ----- //
-  &__range-slider{
+  &__range-slider {
     margin-bottom: 38px;
     max-width: 266px;
   }
@@ -154,11 +152,10 @@
     gap: 30px;
   }
 
-
   // ----- row--2----- //
   // ----- column left ----- //
 
-   &__dropdown {
+  &__dropdown {
     position: relative;
     z-index: 20;
     grid-column: 1 / 2;
@@ -209,7 +206,6 @@
     max-width: 292px;
   }
 
-
   // ----- row--4----- //
   // ----- column left ----- //
   &__icon-text-list {
@@ -224,4 +220,3 @@
     margin-top: 7px;
   }
 }
-

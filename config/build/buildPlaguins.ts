@@ -34,26 +34,28 @@ export function buildPlaguins({ mode, paths }: BuildOptions): Configuration['plu
   if (isDev) {
     plugins.push()  
   }
+  
   if (isProd) {
     plugins.push(
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',
         chunkFilename: 'css/[name].[contenthash:8].css',
       }),
-      // new FaviconsWebpackPlugin({
-      //   logo: './src/resources/favicon.png',
-      //   mode: 'webapp',
-      //   devMode: 'webapp',
-      //   prefix: 'assets/favicons/',
-      //   cache: true,
-      //   inject: htmlPlugin => {
-      //     return true
-      //   },
-      //   favicons: {
-      //     background: '#fff',
-      //     theme_color: '#333'
-      //   }
-      // }),
+      new FaviconsWebpackPlugin({
+        logo: './src/resources/favicon.png',
+        mode: 'webapp',
+        devMode: 'webapp',
+        prefix: 'assets/favicons/',
+        cache: true,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        inject: htmlPlugin => {
+          return true
+        },
+        favicons: {
+          background: '#fff',
+          theme_color: '#333'
+        }
+      }),
     );
   }
   return plugins;

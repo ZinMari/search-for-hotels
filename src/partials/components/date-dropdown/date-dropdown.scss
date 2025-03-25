@@ -1,5 +1,5 @@
-@use "../../../scss/mixins";
-@use "../../../scss/vars";
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
 
 .date-dropdown {
   position: relative;
@@ -8,12 +8,12 @@
   max-width: 100%;
   gap: 5px 20px;
 
-  @media(max-width: vars.$smart) {
+  @media (max-width: vars.$smart) {
     gap: 5px;
   }
 
   &__title {
-    @include mixins.form-subtitle;;
+    @include mixins.form-subtitle;
   }
 
   &__btn {
@@ -34,7 +34,7 @@
       padding-right: 15px;
     }
 
-    @media(max-width: vars.$smart) {
+    @media (max-width: vars.$smart) {
       padding: 0 10px;
       max-width: 100%;
     }

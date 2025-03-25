@@ -1,4 +1,4 @@
-@use "../../../scss/mixins";
+@use '../../../scss/mixins';
 
 .text-field {
   display: flex;
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include mixins.form-subtitle;;
+    @include mixins.form-subtitle;
   }
 
   &__subtitle {

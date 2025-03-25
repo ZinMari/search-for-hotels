@@ -1,4 +1,4 @@
-@use "../../../scss/mixins";
+@use '../../../scss/mixins';
 
 .range-slider {
   max-width: 100%;
@@ -29,7 +29,7 @@
   cursor: pointer;
 }
 
-.irs--flat .irs-handle{
+.irs--flat .irs-handle {
   top: -5px;
   border: 2px solid var(--color-light);
   border-radius: 50%;
@@ -49,4 +49,3 @@
 .irs--flat .irs-handle > i:first-child {
   display: none;
 }
-

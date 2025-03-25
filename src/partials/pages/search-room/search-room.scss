@@ -1,13 +1,16 @@
-@use "../../../scss/vars";
+@use '../../../scss/vars';
 
 .search-room {
   &__wrapp {
     display: grid;
-    grid-template-columns: minmax(235px, 23%) minmax(15px, 5%) minmax(270px, 72%);
+    grid-template-columns: minmax(235px, 23%) minmax(15px, 5%) minmax(
+        270px,
+        72%
+      );
     padding-top: 30px;
     padding-bottom: 70px;
 
-    @media(max-width: vars.$smart) {
+    @media (max-width: vars.$smart) {
       display: block;
     }
   }

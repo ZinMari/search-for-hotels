@@ -1,5 +1,5 @@
-@use "../../../scss/mixins";
-@use "../../../scss/vars";
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
 
 .room-card {
   @include mixins.form-style;
@@ -10,8 +10,8 @@
     padding: 0;
     max-width: 270px;
   }
-  
-  @media(max-width: vars.$smart) {
+
+  @media (max-width: vars.$smart) {
     padding: 0;
   }
 
@@ -33,12 +33,22 @@
 
         &--left {
           left: 0;
-          background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 0%) 99.99%, rgb(255 255 255 / 0%) 100%);
+          background: linear-gradient(
+            90deg,
+            rgb(0 0 0 / 50%) 0%,
+            rgb(0 0 0 / 0%) 99.99%,
+            rgb(255 255 255 / 0%) 100%
+          );
         }
 
         &--right {
           right: 0;
-          background: linear-gradient(90deg, rgb(0 0 0 / 50%) 0%, rgb(0 0 0 / 0%) 99.99%, rgb(255 255 255 / 0%) 100%);
+          background: linear-gradient(
+            90deg,
+            rgb(0 0 0 / 50%) 0%,
+            rgb(0 0 0 / 0%) 99.99%,
+            rgb(255 255 255 / 0%) 100%
+          );
           transform: rotate(-180deg);
         }
       }
@@ -47,7 +57,7 @@
         opacity: 1;
         visibility: visible;
       }
-      
+
       &__slide {
         height: 152px;
 
@@ -58,7 +68,6 @@
         }
       }
 
-      
       &__bullets {
         position: absolute;
         right: 15px;

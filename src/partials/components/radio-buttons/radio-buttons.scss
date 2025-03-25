@@ -1,4 +1,4 @@
-@use "../../../scss/mixins";
+@use '../../../scss/mixins';
 
 .radio {
   &__title {
@@ -29,7 +29,7 @@
     transition: var(--transit);
   }
 
-  &__span::before{
+  &__span::before {
     content: '';
     margin-right: 10px;
     border: 1px solid var(--color-dark-25);
@@ -39,7 +39,7 @@
     transition: var(--transit);
   }
 
-  &__span::after{
+  &__span::after {
     content: '';
     position: absolute;
     left: 4px;
