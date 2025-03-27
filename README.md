@@ -1,4 +1,4 @@
-# [Toxin](https://mariezin.github.io/search-for-hotels/)
+# [Toxin](https://zinmari.github.io/search-for-hotels/)
 Поиск гостиничных номеров.
 
 ## Начало работы
