@@ -10,9 +10,11 @@ mixin button({text, style, isDisabled= false})
   -
     const classes = [
       `btn`,
-      `btn__${styles[style]}`,
-      `btn_disabled_${isDisabled}`,
-      `btn__${styles[style]}_disabled_${isDisabled}`,
+      `btn_style_${styles[style]}`
     ]
+
+  if isDisabled
+    - classes.push('btn_disabled')
+
   button(class= [...classes])
     span= text

@@ -13,56 +13,59 @@
   background: var(--color-gradient);
   cursor: pointer;
 
-  &_disabled_true {
+  &_disabled {
     cursor: auto;
   }
 
-  &__fill {
-    &:hover,
-    &_disabled_true {
-      color: var(--color-light);
-      background: var(--color-gradient-opacity);
-    }
+  &_disabled.btn_style_fill,
+  &_style_fill:hover{
+    color: var(--color-light);
+    background: var(--color-gradient-opacity);
   }
 
-  &__border {
-    span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 22px;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
+  &_disabled.btn_style_border,
+  &_style_border:hover{
+    background: var(--color-gradient-opacity);
+  }
+
+  &_disabled.btn_style_text,
+  &_style_text:hover{
+    color: var(--color-dark-50);
+  }
+
+  &_style {
+    &_border {
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 22px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        color: var(--color-purple);
+        background: var(--color-light);
+      }
+    }
+  
+    &_text {
+      width: auto;
+      height: auto;
       color: var(--color-purple);
-      background: var(--color-light);
+      background: transparent;
     }
-
-    &:hover,
-    &_disabled_true {
-      background: var(--color-gradient-opacity);
-    }
-  }
-
-  &__text {
-    width: auto;
-    height: auto;
-    color: var(--color-purple);
-    background: transparent;
-
-    &:hover,
-    &_disabled_true {
-      color: var(--color-dark-50);
-    }
-  }
-
-  &__arrow {
-    background:
-      url('../partials/components/button/arrow_forward.svg') no-repeat
-        calc(100% - 13px) 50%,
-      var(--color-gradient);
-
-    &:hover {
-      background: var(--color-gradient-opacity);
+  
+    &_arrow {
+      background:
+        url('../partials/components/button/arrow_forward.svg') no-repeat
+          calc(100% - 13px) 50%,
+        var(--color-gradient);
+  
+      &:hover {
+        background:
+        url('../partials/components/button/arrow_forward.svg') no-repeat
+          calc(100% - 13px) 50%,
+        var(--color-gradient-opacity);
+      }
     }
   }
 }
