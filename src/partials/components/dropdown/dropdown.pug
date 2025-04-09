@@ -2,7 +2,12 @@ include ../button/button
 
 mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", subtitle=false, values= [2, 2, 0]})
   -
-    const className = isOpen ? "dropdown js-dropdown dropdown--open" : "dropdown js-dropdown"
+    const className = ["dropdown", "js-dropdown"]
+
+  if isOpen
+    - className.push("dropdown_open")
+
+  -  
     const elements = {
       rooms: ["спальни", "кровати", "ванные комнаты"],
       people: ["взрослые", "дети", "младенцы"],
