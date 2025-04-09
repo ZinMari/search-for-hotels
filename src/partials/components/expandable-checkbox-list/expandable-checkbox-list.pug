@@ -1,10 +1,12 @@
 include ../checkbox/checkbox
 
 mixin expandable-checkbox-list(title, checkboxList, isOpen= false)
-  - let className = "expandable-checkbox-list js-expandable-checkbox-list";
-  - if(isOpen) className = `${className} ${className}--open`;
+  - let className = ["expandable-checkbox-list", "js-expandable-checkbox-list"];
 
-  div(class= className)
+  if(isOpen)
+    - className.push("expandable-checkbox-list_open");
+
+  div(class= [...className])
     button.expandable-checkbox-list__btn.js-expandable-checkbox-list__btn= title
       svg.expandable-checkbox-list__svg(xmlns="http://www.w3.org/2000/svg"
               width="12"
