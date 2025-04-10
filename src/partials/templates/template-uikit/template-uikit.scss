@@ -1,8 +1,10 @@
 .template-uikt {
   position: relative;
 
-  &--dark {
-    background-color: #f4f4f6;
+  &_bg {
+    &_dark {
+      background-color: #f4f4f6;
+    }
   }
 
   &__container {
