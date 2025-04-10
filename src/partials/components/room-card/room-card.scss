@@ -31,25 +31,27 @@
         transition: var(--transit);
         cursor: pointer;
 
-        &--left {
-          left: 0;
-          background: linear-gradient(
-            90deg,
-            rgb(0 0 0 / 50%) 0%,
-            rgb(0 0 0 / 0%) 99.99%,
-            rgb(255 255 255 / 0%) 100%
-          );
-        }
+        &_direction {
+          &_left {
+            left: 0;
+            background: linear-gradient(
+              90deg,
+              rgb(0 0 0 / 50%) 0%,
+              rgb(0 0 0 / 0%) 99.99%,
+              rgb(255 255 255 / 0%) 100%
+            );
+          }
 
-        &--right {
-          right: 0;
-          background: linear-gradient(
-            90deg,
-            rgb(0 0 0 / 50%) 0%,
-            rgb(0 0 0 / 0%) 99.99%,
-            rgb(255 255 255 / 0%) 100%
-          );
-          transform: rotate(-180deg);
+          &_right {
+            right: 0;
+            background: linear-gradient(
+              90deg,
+              rgb(0 0 0 / 50%) 0%,
+              rgb(0 0 0 / 0%) 99.99%,
+              rgb(255 255 255 / 0%) 100%
+            );
+            transform: rotate(-180deg);
+          }
         }
       }
 
