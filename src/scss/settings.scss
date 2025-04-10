@@ -9,20 +9,26 @@
   font-family: var(--font-family);
   text-size-adjust: 100%;
   scroll-behavior: smooth;
-}
 
-.page--menu-open {
-  overflow: hidden;
-}
+  &__body {
+    margin: 0;
+    min-width: 360px;
+    min-height: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--color-dark-100);
+  }
 
-.page__body {
-  margin: 0;
-  min-width: 360px;
-  min-height: 100%;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.55;
-  color: var(--color-dark-100);
+  &__container {
+    overflow-x: hidden;
+  }
+
+  &_menu {
+    &_open {
+      overflow: hidden;
+    }
+  }
 }
 
 h1 {
@@ -46,10 +52,6 @@ h3 {
 
 a {
   text-decoration: none;
-}
-
-.site-container {
-  overflow-x: hidden;
 }
 
 .container {
