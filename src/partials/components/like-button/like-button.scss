@@ -7,12 +7,12 @@
     margin-bottom: 16px;
   }
 
-  &___container {
+  &__container {
     display: flex;
     gap: 10px;
   }
 
-  &___btn {
+  &__btn {
     border: 1px solid currentcolor;
     border-radius: 10px;
     padding: 0;
@@ -30,7 +30,7 @@
     transition: var(--trans);
     cursor: pointer;
 
-    &--like {
+    &_like {
       color: var(--color-purple);
       background-image: url('../partials/components/like-button/like.svg');
     }
