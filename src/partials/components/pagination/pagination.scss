@@ -26,7 +26,7 @@
     color: var(--color-dark-50);
     transition: var(--transit);
 
-    &--active {
+    &_active {
       font-weight: 700;
       color: var(--color-light);
       background-image: var(--color-gradient);
@@ -42,8 +42,10 @@
     background-image: var(--color-gradient-green);
     cursor: pointer;
 
-    &--first {
-      transform: scaleX(-1);
+    &_type {
+      &_left {
+        transform: scaleX(-1);
+      }
     }
 
     &__info {
