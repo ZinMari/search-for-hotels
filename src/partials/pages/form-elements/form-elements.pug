@@ -23,8 +23,8 @@ include ../../components/pagination/pagination
 block content
   main.forms-elements
     .forms-elements__container
-      section.forms-elements__row.forms-elements__row--1
-        .forms-elements__column.forms-elements__column--left
+      section.forms-elements__row.forms-elements__row_number_1
+        .forms-elements__column.forms-elements__column_type_left
           .forms-elements__text-field
             -
               const textField = {
@@ -76,7 +76,7 @@ block content
             +subtitle("subscription text field")
             +subscription-text-field
 
-        .forms-elements__column.forms-elements__column--center
+        .forms-elements__column.forms-elements__column_type_center
 
           .forms-elements__checkbox-buttons
             -
@@ -122,8 +122,7 @@ block content
               +rate-button(formElementsRateleft)
               +rate-button(formElementsRateRight)
 
-
-        .forms-elements__column.forms-elements__column--right
+        .forms-elements__column.forms-elements__column_type_right
           .forms-elements__range-slider
             -
               const rangeSlider = {
@@ -149,15 +148,15 @@ block content
               +button({text: "click me", style: "text"})
               +button({text: "click me", style: "text", isDisabled: true})
 
-            .forms-elements__button--arrow
+            .forms-elements__button-arrow
               +button({text: "перейти к оплате", style: "arrow"})
 
           .forms-elements__pagination
             +subtitle("pagination")
             +pagination("test")
 
-      section.forms-elements__row.forms-elements__row--2
-        .forms-elements__column.forms-elements__column--left
+      section.forms-elements__row.forms-elements__row_number_2
+        .forms-elements__column.forms-elements__column_type_left
           .forms-elements__dropdown
             -
               const dropdownData = {
@@ -180,7 +179,8 @@ block content
                 hasButtons: false
               }
             +dropdown(dropdownDataOpen)
-        .forms-elements__column.forms-elements__column--center
+        
+        .forms-elements__column.forms-elements__column_type_center
           .forms-elements__dropdown-guest-zero
             -
               const dropdownGuestZero = {
@@ -193,7 +193,8 @@ block content
                 values: [0, 0, 0],
               }
             +dropdown(dropdownGuestZero)
-        .forms-elements__column.forms-elements__column--right
+        
+        .forms-elements__column.forms-elements__column_type_right
           .forms-elements__dropdown-guest
               -
                 const dropdownGuest = {
@@ -208,8 +209,8 @@ block content
 
               +dropdown(dropdownGuest)
 
-      section.forms-elements__row.forms-elements__row--3
-        .forms-elements__column.forms-elements__column--left
+      section.forms-elements__row.forms-elements__row_number_3
+        .forms-elements__column.forms-elements__column_type_left
           .forms-elements__expandable-checkbox-list
             -
               const checkboxList = [
@@ -235,7 +236,8 @@ block content
             +expandable-checkbox-list("expandable checkbox list", checkboxList, false)
           .forms-elements__expandable-checkbox-list-open
             +expandable-checkbox-list("expandable checkbox list", checkboxList, true)
-        .forms-elements__column.forms-elements__column--center
+        
+        .forms-elements__column.forms-elements__column_type_center
           .forms-elements__rich-checkbox-buttons
             -
               const itemsRichBtns = [
@@ -244,12 +246,13 @@ block content
               ]
 
             +rich-checkbox-btns("rich Checkbox Buttons", itemsRichBtns)
-        .forms-elements__column.forms-elements__column--right
+        
+        .forms-elements__column.forms-elements__column_type_right
           .forms-elements__bullet-list
             - const items = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
             +bullet-list({title: "bullet list", items: items})
 
-      section.forms-elements__row.forms-elements__row--4
+      section.forms-elements__row.forms-elements__row_number_4
         .forms-elements__icon-text-list
           -
             const iconArr = [
@@ -258,6 +261,7 @@ block content
             ]
 
           +icon-text-list(iconArr)
+        
         .forms-elements__comment
           -
             const commentItem = {
