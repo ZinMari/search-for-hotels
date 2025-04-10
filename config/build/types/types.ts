@@ -12,7 +12,7 @@ export interface BuildPaths {
   userRegistration: string;
 }
 
-export type BuildMode = 'production' | 'development';
+export type BuildMode = "production" | "development";
 
 export interface BuildOptions {
   port: number;
