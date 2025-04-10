@@ -26,9 +26,10 @@ block content
       .cards__column.cards__column_mini
         .cards__calendar
           +datepicker({identifier: "calendar_static"})
-        .cards__room
-          -
-            const roomCard888 = {
+
+        - 
+          const rooms = [
+            {
               images: [
                     "./assets/1-sm.jpg",
                     "./assets/1-sm.jpg",
@@ -45,11 +46,8 @@ block content
                 numValueCheck: 5
               },
               reviews: 145,
-            }
-          +room-card(roomCard888)
-        .cards__room
-          -
-            const roomCard840 = {
+            },
+            {
               images: [
                 "./assets/840.jpg",
                 "./assets/840.jpg",
@@ -67,4 +65,8 @@ block content
               },
               reviews: 65,
             }
-          +room-card(roomCard840)
+          ]
+
+        each room in rooms
+          .cards__room
+            +room-card(room)
