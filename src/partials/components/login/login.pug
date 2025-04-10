@@ -7,24 +7,24 @@ mixin login
     h2.login__title Войти
     form.login__form(action="search-room.html")
       .login__inputs
-        .login__input
-          -
-            const inputEmail = {
+        -
+          const inputsData = [
+            {
               id: "loginEmail",
               typeInput: "email",
               placeholder: "Email",
-            }
-
-          +text-field(inputEmail)
-        .login__input
-          -
-            const inputPassword = {
+            },
+            {
               id: "loginPassword",
               typeInput: "password",
               placeholder: "Пароль",
             }
+          ]
+          
+        each element in inputsData
+          .login__input
+            +text-field(element)
 
-          +text-field(inputPassword)
       .login__form-btn
         +button({text: "войти", style: "arrow"})
 
