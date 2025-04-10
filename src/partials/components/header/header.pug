@@ -11,16 +11,19 @@ mixin header(username= false)
       .header__menu.js-header__menu
         nav.header__nav
           ul.header__list
-            li.header__item
-              +menu-link({text: "О нас"})
-            li.header__item
-              +menu-link({text: "Услуги", arrow: true})
-            li.header__item
-              +menu-link({text: "Вакансии"})
-            li.header__item
-              +menu-link({text: "Новости"})
-            li.header__item
-              +menu-link({text: "Соглашения", arrow: true})
+            - 
+              const headerNavItems = [
+                {text: "О нас"},
+                {text: "Услуги", arrow: true},
+                {text: "Вакансии"},
+                {text: "Новости"},
+                {text: "Соглашения", arrow: true}
+              ]
+            
+            each item in headerNavItems
+              li.header__item
+                +menu-link(item)
+                
         if username
           .header__user
             +menu-link({text: username})
