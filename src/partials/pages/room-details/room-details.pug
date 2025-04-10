@@ -8,12 +8,30 @@ include ../../components/bullet-list/bullet-list
 block content
   main.room-details
     section.room-details__photos
-      .room-details__photo.room-details__photo_big
-        img(src="./assets/1.jpg", alt="Фото большой кровати в номере")
-      .room-details__photo
-        img(src="./assets/2.jpg", alt="Фото маленькой кровати в номере")
-      .room-details__photo
-        img(src="./assets/3.jpg", alt="Фото окна в номере")
+      - 
+        const roomPhotos = [
+          {
+            src: "./assets/1.jpg",
+            alt: "Фото большой кровати в номере"
+          },
+          {
+            src: "./assets/2.jpg",
+            alt: "Фото маленькой кровати в номере"
+          },
+          {
+            src: "./assets/3.jpg",
+            alt: "Фото окна в номере"
+          },
+        ]
+      
+      each photo, index in roomPhotos
+        - const classNames = ["room-details__photo"]
+
+        if (index == 0)
+          - classNames.push("room-details__photo_big")
+
+        div(class= [...classNames])
+          img(src= photo.src, alt= photo.alt)
     section.room-details__details.container
       .room-details__info
         .room-details__room-info
