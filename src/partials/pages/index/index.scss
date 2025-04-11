@@ -1,12 +1,6 @@
 @use '../../../scss/vars';
 
 .start {
-  background-image: url('../resources/img/index-background/main-slider-1.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: 1s;
-
   &__content {
     display: grid;
     align-items: end;
