@@ -49,7 +49,6 @@
     "@glidejs/glide": "^3.7.1",
     "air-datepicker": "^3.5.3",
     "chart.js": "^4.4.8",
-    "inputmask": "^5.0.9",
     "jquery": "^3.7.1",
     "jquery.nice-number": "^2.1.0",
     "ng-ion-range-slider": "^2.0.2"
