@@ -9,7 +9,7 @@ export default class Backgroundparent {
   createSlider() {
     this.$slider = $("<div>", { class: "bg-slider", opacity: 0 });
 
-    this.$parent.addClass("parent__postion");
+    this.$parent.addClass("bg-slider__parent-container");
     this.$parent.prepend(this.$slider);
 
     this.$slider.css(

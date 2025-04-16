@@ -1,7 +1,3 @@
-.parent__postion {
-  position: relative;
-}
-
 .bg-slider {
   background-position: center;
   background-size: cover;
@@ -10,4 +6,8 @@
   inset: 0;
   z-index: -1000;
   transition: 2s;
+}
+
+.bg-slider__parent-container {
+  position: relative;
 }
