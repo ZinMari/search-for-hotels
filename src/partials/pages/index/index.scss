@@ -1,6 +1,7 @@
 @use '../../../scss/vars';
 
 .start {
+  position: relative;
   &__content {
     display: grid;
     align-items: end;

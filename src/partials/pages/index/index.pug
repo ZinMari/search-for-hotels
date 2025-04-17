@@ -1,9 +1,11 @@
 extends ../../templates/template-page/template-page
 include ../../components/find-rooms/find-rooms
+include ../../components/background-slider/background-slider
 
 
 block content
   main.start
+    +background-slider({typeSlider: "index"})
     .start__content.container
       .start__form
         +find-rooms({linkForm: "./search-room.html"})
