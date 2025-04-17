@@ -1,11 +1,12 @@
 export default class BackgroundSlider {
   constructor() {
     this.$slider = $('.background-slider');
-
-    this.typeSlider = this.$slider.attr('data-background-slider-type');
-    this.numberImage = this.getNumberImage();
-
-    this.createSlider();
+    if(this.$slider[0]) {
+      this.typeSlider = this.$slider.attr('data-background-slider-type');
+      this.numberImage = this.getNumberImage();
+  
+      this.createSlider();
+    }
   }
 
   images = {
