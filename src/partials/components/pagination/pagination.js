@@ -49,7 +49,7 @@ const paginate = () => {
       );
       li.textContent = i;
       if (i == currentPage) {
-        li.classList.add("pagination__num-element_active");
+        li.classList.add("pagination__num-element_activated");
       }
       paginationNumList.append(li);
     }

@@ -4,6 +4,6 @@ mixin like-button({countLike, isLike})
         - const classNames = ["like-button__btn", "js-like-button__btn"]
 
         if(isLike)
-          - classNames.push("like-button__btn_like");
+          - classNames.push("like-button__btn_liked");
         button(class= [...classNames])= countLike
 

@@ -2,7 +2,7 @@ mixin number-and-cost({number, price, isMiniVariant, nuberType=false})
   .number-and-cost
     .number-and-cost__number
       span.number-and-cost__symbol №
-      - const classVariant = isMiniVariant ? "number-and-cost__number-room_mini" : "number-and-cost__number-room";
+      - const classVariant = isMiniVariant ? "number-and-cost__number-room_size_mini" : "number-and-cost__number-room";
       span(class= classVariant)= number
       if nuberType
         span.number-and-cost__type-room= nuberType

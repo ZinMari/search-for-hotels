@@ -4,10 +4,10 @@ const $btnLogin = $(".js-header__login button");
 const $btnRegistration = $(".js-header__registration button");
 
 function handleBurgerClick() {
-  $burgerBtn.toggleClass("header__burger_open");
-  $burgerBtn.children().toggleClass("header__burger-line_open");
-  $headerMenu.toggleClass("header__menu_open");
-  $("html").toggleClass("page_menu_open");
+  $burgerBtn.toggleClass("header__burger_opened");
+  $burgerBtn.children().toggleClass("header__burger-line_opened");
+  $headerMenu.toggleClass("header__menu_opened");
+  $("html").toggleClass("page_menu_opened");
 }
 
 function handleBtnLoginClick() {

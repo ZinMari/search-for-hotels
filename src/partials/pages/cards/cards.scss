@@ -13,8 +13,10 @@
     width: 380px;
     gap: 40px;
 
-    &_mini {
-      width: 320px;
+    &_size{
+      &_mini {
+        width: 320px;
+      }
     }
   }
 }

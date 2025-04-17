@@ -55,7 +55,7 @@ function definitionOfDeclension(count) {
 
 function handleDropBtnsClick(e) {
   e.preventDefault();
-  e.currentTarget.closest(".js-dropdown").classList.toggle("dropdown_open");
+  e.currentTarget.closest(".js-dropdown").classList.toggle("dropdown_opened");
 }
 
 $dropBtns.on("click.dropdown", handleDropBtnsClick);

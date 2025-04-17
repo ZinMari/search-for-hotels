@@ -30,7 +30,7 @@
     transition: var(--trans);
     cursor: pointer;
 
-    &_like {
+    &_liked {
       color: var(--color-purple);
       background-image: url('../partials/components/like-button/like.svg');
     }

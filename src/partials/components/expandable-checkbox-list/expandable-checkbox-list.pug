@@ -4,7 +4,7 @@ mixin expandable-checkbox-list(title, checkboxList, isOpen= false)
   - let className = ["expandable-checkbox-list", "js-expandable-checkbox-list"];
 
   if(isOpen)
-    - className.push("expandable-checkbox-list_open");
+    - className.push("expandable-checkbox-list_opened");
 
   div(class= [...className])
     button.expandable-checkbox-list__btn.js-expandable-checkbox-list__btn= title

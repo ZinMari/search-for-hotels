@@ -21,8 +21,10 @@
   &__number-room {
     margin-right: 4px;
 
-    &_mini {
-      font-size: 19px;
+    &_size{
+      &_mini {
+        font-size: 19px;
+      }
     }
   }
 
