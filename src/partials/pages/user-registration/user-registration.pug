@@ -1,8 +1,10 @@
 extends ../../templates/template-page/template-page
 include ../../components/registration/registration
+include ../../components/background-slider/background-slider
 
 
 block content
   main.user-registration
+    +background-slider({typeSlider: "user-registration"})
     .user-registration__form
       +registration
