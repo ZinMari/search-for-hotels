@@ -1,8 +1,10 @@
 extends ../../templates/template-page/template-page
 include ../../components/login/login
+include ../../components/background-slider/background-slider
 
 
 block content
   main.user-login
+    +background-slider({typeSlider: "index"})
     .user-login__form
       +login
