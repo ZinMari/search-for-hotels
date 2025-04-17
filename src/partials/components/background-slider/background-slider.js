@@ -1,21 +1,29 @@
-export default class Backgroundparent {
-  constructor(targetElement, images) {
-    this.$parent = $(targetElement);
-    this.images = images;
+export default class BackgroundSlider {
+  constructor() {
+    this.$slider = $('.background-slider');
+
+    this.typeSlider = this.$slider.attr('data-background-slider-type');
     this.numberImage = this.getNumberImage();
 
     this.createSlider();
   }
+
+  images = {
+    "user-registration": ["/assets/slide-1.jpg", "/assets/slide-2.jpg"],
+    "index": [
+        "/assets/main-slider-1.jpg",
+        "/assets/main-slider-2.jpg",
+        "/assets/main-slider-3.jpg",
+      ],
+  }
+
   createSlider() {
-    this.$slider = $("<div>", { class: "bg-slider", opacity: 0 });
-
-    this.$parent.addClass("bg-slider__parent-container");
-    this.$parent.prepend(this.$slider);
-
     this.$slider.css(
       "background-image",
-      `url('${this.images[this.numberImage]}')`,
+      `url('${this.images[this.typeSlider][this.numberImage]}')`,
     );
+
+    this.start();
   }
 
   start() {
@@ -27,11 +35,13 @@ export default class Backgroundparent {
   animation = () => {
     this.$slider.css(
       "background-image",
-      `url('${this.images[this.getNumberImage()]}')`,
+      `url('${this.images[this.typeSlider][this.getNumberImage()]}')`,
     );
   };
 
   getNumberImage = () => {
-    return Math.floor(Math.random() * this.images.length);
+    return Math.floor(Math.random() * this.images[this.typeSlider].length);
   };
 }
+
+new BackgroundSlider();

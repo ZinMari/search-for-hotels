@@ -1,4 +1,6 @@
-.bg-slider {
+.background-slider {
+  position: absolute;
+  inset: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6,8 +8,4 @@
   inset: 0;
   z-index: -1000;
   transition: 2s;
-}
-
-.bg-slider__parent-container {
-  position: relative;
 }
