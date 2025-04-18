@@ -1,4 +1,4 @@
-import Login from "./LoginClass";
+import Login from "./Login";
 
 $.each($(".login"), function () {
   new Login($(this));
