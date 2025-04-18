@@ -149,6 +149,7 @@ class Dropdown {
     this._initNiceNumber();
     this._setButtonClear();
     this._setAvaibleInputs();
+    this._setTitle(this._getData());
   }
 }
 
