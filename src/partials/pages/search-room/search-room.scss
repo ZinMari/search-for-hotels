@@ -68,4 +68,9 @@
     margin-bottom: 44px;
     gap: 20px 12px;
   }
+
+  &__rooms-pagination {
+    display: flex;
+    justify-content: center;
+  }
 }
