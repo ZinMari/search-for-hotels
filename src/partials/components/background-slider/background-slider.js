@@ -1,22 +1,22 @@
 export default class BackgroundSlider {
   constructor() {
-    this.$slider = $('.background-slider');
-    if(this.$slider[0]) {
-      this.typeSlider = this.$slider.attr('data-background-slider-type');
+    this.$slider = $(".background-slider");
+    if (this.$slider[0]) {
+      this.typeSlider = this.$slider.attr("data-background-slider-type");
       this.numberImage = this.getNumberImage();
-  
+
       this.createSlider();
     }
   }
 
   images = {
     "user-registration": ["/assets/slide-1.jpg", "/assets/slide-2.jpg"],
-    "index": [
-        "/assets/main-slider-1.jpg",
-        "/assets/main-slider-2.jpg",
-        "/assets/main-slider-3.jpg",
-      ],
-  }
+    index: [
+      "./assets/main-slider-1.jpg",
+      "./assets/main-slider-2.jpg",
+      "./assets/main-slider-3.jpg",
+    ],
+  };
 
   createSlider() {
     this.$slider.css(
