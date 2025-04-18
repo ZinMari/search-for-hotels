@@ -7,7 +7,6 @@ class Login {
 
   _init() {
     this.$btnRegistration = this.$loginForm.find(".login__create-btn button");
-    console.log(this.$btnRegistration);
   }
 
   _handleBtnRegistration = () => {

@@ -1,47 +1,53 @@
-const paginate = () => {
-  const roomCards = [...document.querySelectorAll(".js-search-room__room")];
-  const roomCardsContainer = document.querySelector(
-    ".js-search-room__rooms-elements",
-  );
+class Pagination {
+  constructor(pagination) {
+    this.paginationPanel = pagination;
 
-  if (!roomCards.length) {
-    return;
+    this._render();
   }
 
-  const paginationPanel = document.querySelector(".js-pagination");
-  const paginationNumList = paginationPanel.querySelector(
-    ".js-pagination__numbers",
-  );
-  const startArrowBtn = paginationPanel.querySelector(
-    ".js-pagination__btn_type_left",
-  );
-  const endArrowBtn = paginationPanel.querySelector(
-    ".js-pagination__btn_type_right",
-  );
-  const paginationInfo = paginationPanel.querySelector(
-    ".js-pagination__info span",
-  );
+  _init() {
+    this.roomCards = [...document.querySelectorAll(".js-search-room__room")];
+    this.roomCardsContainer = document.querySelector(
+      ".js-search-room__rooms-elements",
+    );
 
-  const cardsCount = 12;
-  const nuberLastPage = Math.ceil(roomCards.length / cardsCount);
-  let currentPage = 1;
+    if (!this.roomCards.length) {
+      return;
+    }
 
-  function sliceCards(cardsCount, currentPage) {
-    roomCardsContainer.innerHTML = "";
+    this.paginationNumList = this.paginationPanel.querySelector(
+      ".js-pagination__numbers",
+    );
+    this.startArrowBtn = this.paginationPanel.querySelector(
+      ".js-pagination__btn_type_left",
+    );
+    this.endArrowBtn = this.paginationPanel.querySelector(
+      ".js-pagination__btn_type_right",
+    );
+    this.paginationInfo = this.paginationPanel.querySelector(
+      ".js-pagination__info span",
+    );
+    this.cardsCount = 12;
+    this.nuberLastPage = Math.ceil(this.roomCards.length / this.cardsCount);
+    this.currentPage = 1;
+  }
+
+  _sliceCards(cardsCount, currentPage) {
+    this.roomCardsContainer.innerHTML = "";
     const firstCardsIndex = cardsCount * currentPage - cardsCount;
     const lastCardsIndex = firstCardsIndex + cardsCount;
-    const cardsOnPage = roomCards.slice(firstCardsIndex, lastCardsIndex);
-    paginationInfo.textContent = `${firstCardsIndex + 1} - ${lastCardsIndex} `;
+    const cardsOnPage = this.roomCards.slice(firstCardsIndex, lastCardsIndex);
+    this.paginationInfo.textContent = `${firstCardsIndex + 1} - ${lastCardsIndex} `;
 
     return cardsOnPage;
   }
 
-  function createBtnPagination(currentPage) {
+  _createBtnPagination(currentPage) {
     const startBtn = currentPage == 1 ? 1 : currentPage - 1;
 
-    paginationNumList.innerHTML = "";
+    this.paginationNumList.innerHTML = "";
 
-    for (let i = startBtn; i < startBtn + 3 && i <= nuberLastPage; i++) {
+    for (let i = startBtn; i < startBtn + 3 && i <= this.nuberLastPage; i++) {
       let li = document.createElement("li");
       li.classList.add(
         "pagination__num-element",
@@ -51,16 +57,16 @@ const paginate = () => {
       if (i == currentPage) {
         li.classList.add("pagination__num-element_activated");
       }
-      paginationNumList.append(li);
+      this.paginationNumList.append(li);
     }
 
-    createEllipses(startBtn, nuberLastPage);
-    showArrowBtns(currentPage, nuberLastPage);
-    showlinkOnFirstPage(currentPage);
-    showlinkOnLastPage(currentPage, nuberLastPage);
+    this._createEllipses(startBtn, this.nuberLastPage);
+    this._showArrowBtns(currentPage, this.nuberLastPage);
+    this._showlinkOnFirstPage(currentPage);
+    this._showlinkOnLastPage(currentPage, this.nuberLastPage);
   }
 
-  function showlinkOnFirstPage(currentPage) {
+  _showlinkOnFirstPage(currentPage) {
     if (currentPage > 2) {
       let li = document.createElement("li");
       li.classList.add(
@@ -68,11 +74,11 @@ const paginate = () => {
         "pagination__num-element_type_number",
       );
       li.textContent = 1;
-      paginationNumList.prepend(li);
+      this.paginationNumList.prepend(li);
     }
   }
 
-  function showlinkOnLastPage(currentPage, nuberLastPage) {
+  _showlinkOnLastPage(currentPage, nuberLastPage) {
     if (currentPage < nuberLastPage - 1) {
       let li = document.createElement("li");
       li.classList.add(
@@ -80,16 +86,16 @@ const paginate = () => {
         "pagination__num-element_type_number",
       );
       li.textContent = nuberLastPage;
-      paginationNumList.append(li);
+      this.paginationNumList.append(li);
     }
   }
 
-  function showArrowBtns(currentPage, nuberLastPage) {
-    startArrowBtn.hidden = currentPage == 1;
-    endArrowBtn.hidden = currentPage == nuberLastPage;
+  _showArrowBtns(currentPage, nuberLastPage) {
+    this.startArrowBtn.hidden = currentPage == 1;
+    this.endArrowBtn.hidden = currentPage == nuberLastPage;
   }
 
-  function createEllipses(startBtn, nuberLastPage) {
+  _createEllipses(startBtn, nuberLastPage) {
     const ellipses = document.createElement("li");
     ellipses.classList.add(
       "pagination__num-element",
@@ -98,41 +104,61 @@ const paginate = () => {
     ellipses.textContent = "...";
 
     if (startBtn != 1) {
-      paginationNumList.insertAdjacentElement("afterbegin", ellipses);
+      this.paginationNumList.insertAdjacentElement("afterbegin", ellipses);
     }
-    if (currentPage < nuberLastPage - 1) {
-      paginationNumList.insertAdjacentElement(
+    if (this.currentPage < nuberLastPage - 1) {
+      this.paginationNumList.insertAdjacentElement(
         "beforeend",
         ellipses.cloneNode(true),
       );
     }
   }
 
-  function createPagination(cardsCount, currentPage) {
-    roomCardsContainer.append(...sliceCards(cardsCount, currentPage));
-    createBtnPagination(currentPage);
+  _createPagination(cardsCount, currentPage) {
+    this.roomCardsContainer.append(
+      ...this._sliceCards(cardsCount, currentPage),
+    );
+    this._createBtnPagination(currentPage);
   }
 
-  paginationNumList.addEventListener("click", (e) => {
+  _handlerPaginationNumListClick = (e) => {
     const btn = e.target;
 
     if (!btn.closest(".pagination__num-element_type_number")) {
       return;
     }
-    currentPage = btn.textContent;
+    this.currentPage = btn.textContent;
 
-    createPagination(cardsCount, currentPage);
-  });
+    this._createPagination(this.cardsCount, this.currentPage);
+  };
 
-  startArrowBtn.addEventListener("click", () => {
-    createPagination(cardsCount, --currentPage);
-  });
+  _handlerStartArrowBtnClick = () => {
+    this._createPagination(this.cardsCount, --this.currentPage);
+  };
 
-  endArrowBtn.addEventListener("click", () => {
-    createPagination(cardsCount, ++currentPage);
-  });
+  _handlerendArrowBtnClick = () => {
+    this._createPagination(this.cardsCount, ++this.currentPage);
+  };
 
-  createPagination(cardsCount, currentPage);
-};
+  _render() {
+    this._init();
 
-paginate();
+    if (!this.roomCards.length) {
+      return;
+    }
+
+    this.paginationNumList.addEventListener(
+      "click",
+      this._handlerPaginationNumListClick,
+    );
+
+    this.startArrowBtn.addEventListener(
+      "click",
+      this._handlerStartArrowBtnClick,
+    );
+
+    this._createPagination(this.cardsCount, this.currentPage);
+  }
+}
+
+export default Pagination;
