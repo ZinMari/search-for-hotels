@@ -1,6 +1,7 @@
 @use 'vars';
 
 @mixin form-subtitle {
+  display: inline-block;
   font: var(--sub-title);
   text-transform: uppercase;
   color: var(--color-dark-100);

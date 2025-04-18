@@ -3,8 +3,8 @@ include ../datepicker/datepicker
 mixin date-dropdown({titleStart, titleEnd, identifier, type, dateEndText="ДД.ММ.ГГГГ"})
   .date-dropdown
     +datepicker({identifier, typeCalendar: "dropdown"})
-    h3.date-dropdown__title= titleStart
-    h3.date-dropdown__title= titleEnd
+    label.date-dropdown__title= titleStart
+    label.date-dropdown__title= titleEnd
     button.date-dropdown__btn(data-value="start" data-identifier= identifier)
       span.date-dropdown__text ДД.ММ.ГГГГ
       svg.date-dropdown__arrow(

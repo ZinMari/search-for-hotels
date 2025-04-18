@@ -14,7 +14,7 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
     }
 
   div(class= className)
-    h3.dropdown__header= title
+    label.dropdown__header= title
       if(subtitle)
         span.dropdown__subtitle= subtitle
     .dropdown__menu

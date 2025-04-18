@@ -7,10 +7,10 @@
   gap: 5px;
 
   &__header {
+    @include mixins.form-subtitle;
+
     display: flex;
     justify-content: space-between;
-
-    @include mixins.form-subtitle;
   }
 
   &__subtitle {
