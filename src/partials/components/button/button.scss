@@ -18,18 +18,18 @@
   }
 
   &_disabled.btn_style_fill,
-  &_style_fill:hover{
+  &_style_fill:hover {
     color: var(--color-light);
     background: var(--color-gradient-opacity);
   }
 
   &_disabled.btn_style_border,
-  &_style_border:hover{
+  &_style_border:hover {
     background: var(--color-gradient-opacity);
   }
 
   &_disabled.btn_style_text,
-  &_style_text:hover{
+  &_style_text:hover {
     color: var(--color-dark-50);
   }
 
@@ -46,25 +46,23 @@
         background: var(--color-light);
       }
     }
-  
+
     &_text {
       width: auto;
       height: auto;
       color: var(--color-purple);
       background: transparent;
     }
-  
+
     &_arrow {
       background:
-        url('../partials/components/button/arrow-forward.svg') no-repeat
-          calc(100% - 13px) 50%,
+        url('./arrow-forward.svg') no-repeat calc(100% - 13px) 50%,
         var(--color-gradient);
-  
+
       &:hover {
         background:
-        url('../partials/components/button/arrow-forward.svg') no-repeat
-          calc(100% - 13px) 50%,
-        var(--color-gradient-opacity);
+          url('./arrow-forward.svg') no-repeat calc(100% - 13px) 50%,
+          var(--color-gradient-opacity);
       }
     }
   }

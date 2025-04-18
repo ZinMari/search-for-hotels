@@ -23,7 +23,7 @@
     font-weight: 400;
     font-size: 10px;
     color: var(--color-dark-25);
-    background-image: url('../partials/components/like-button/not-like.svg');
+    background-image: url('./not-like.svg');
     background-position: 4px center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -32,7 +32,7 @@
 
     &_liked {
       color: var(--color-purple);
-      background-image: url('../partials/components/like-button/like.svg');
+      background-image: url('./like.svg');
     }
   }
 }

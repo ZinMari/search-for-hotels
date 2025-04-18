@@ -1,8 +1,7 @@
-import Glide from '@glidejs/glide'
+import Glide from "@glidejs/glide";
 
-const $glides = $('.js-glide');
+const $glides = $(".js-glide");
 
-$glides.each(function(){
+$glides.each(function () {
   new Glide(this).mount();
-})
-
+});

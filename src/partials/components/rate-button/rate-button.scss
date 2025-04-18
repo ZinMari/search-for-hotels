@@ -12,7 +12,7 @@
         var(--star-offset-count)
     );
     height: 20px;
-    background-image: url('../partials/components/rate-button/star-empty.svg');
+    background-image: url('./star-empty.svg');
     background-size: 20px auto;
     background-repeat: space;
   }
@@ -60,11 +60,11 @@
 
     &:checked,
     &:hover {
-      background-image: url('../partials/components/rate-button/star.svg');
+      background-image: url('./star.svg');
     }
 
     &:hover ~ .rate-button__star {
-      background-image: url('../partials/components/rate-button/star-empty.svg');
+      background-image: url('./star-empty.svg');
     }
   }
 }
