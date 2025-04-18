@@ -1,23 +1,41 @@
-const $burgerBtn = $(".js-header__burger");
-const $headerMenu = $(".js-header__menu");
-const $btnLogin = $(".js-header__login button");
-const $btnRegistration = $(".js-header__registration button");
+class Header {
+  constructor($header) {
+    this.$header = $header;
 
-function handleBurgerClick() {
-  $burgerBtn.toggleClass("header__burger_opened");
-  $burgerBtn.children().toggleClass("header__burger-line_opened");
-  $headerMenu.toggleClass("header__menu_opened");
-  $("html").toggleClass("page_menu_opened");
+    this._render();
+  }
+
+  _init() {
+    this.$burgerBtn = this.$header.find(".js-header__burger");
+    this.$headerMenu = this.$header.find(".js-header__menu");
+    this.$btnLogin = this.$header.find(".js-header__login button");
+    this.$btnRegistration = this.$header.find(
+      ".js-header__registration button",
+    );
+  }
+
+  _handleBurgerClick = () => {
+    this.$burgerBtn.toggleClass("header__burger_opened");
+    this.$burgerBtn.children().toggleClass("header__burger-line_opened");
+    this.$headerMenu.toggleClass("header__menu_opened");
+    $("html").toggleClass("page_menu_opened");
+  };
+
+  _handleBtnLoginClick = () => {
+    document.location = "./user-login.html";
+  };
+
+  _handleBtnRegistrationClick = () => {
+    document.location = "./user-registration.html";
+  };
+
+  _render() {
+    this._init();
+
+    this.$burgerBtn.on("click.header", this._handleBurgerClick);
+    this.$btnLogin.on("click.header", this._handleBtnLoginClick);
+    this.$btnRegistration.on("click.header", this._handleBtnRegistrationClick);
+  }
 }
 
-function handleBtnLoginClick() {
-  document.location = "./user-login.html";
-}
-
-function handleBtnRegistrationClick() {
-  document.location = "./user-registration.html";
-}
-
-$burgerBtn.on("click.header", handleBurgerClick);
-$btnLogin.on("click.header", handleBtnLoginClick);
-$btnRegistration.on("click.header", handleBtnRegistrationClick);
+export default Header;
