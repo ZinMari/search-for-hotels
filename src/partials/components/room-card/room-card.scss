@@ -72,9 +72,11 @@
 
       &__bullets {
         position: absolute;
+        display: flex;
         right: 15px;
         bottom: 15px;
         line-height: 0;
+        gap: 3px;
       }
 
       &__bullet {
