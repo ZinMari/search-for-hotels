@@ -1,7 +1,7 @@
 mixin bullet-list({items, title=""})
   .bullet-list
     if title
-      label.bullet-list__title= title
+      h3.bullet-list__title= title
     ul.bullet-list__list
 
       each val in items

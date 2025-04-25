@@ -1,12 +1,13 @@
 mixin range-slider({title, min, max, start, end})
   .range-slider
     .range-slider__header
-      label.range-slider__title= title
+      label.range-slider__title(for="rangeSlider")= title
       .range-slider__values.js-range-slider__values
 
     .range-slider__body
       input.range-slider__slider.js-range-slider__slider(
-        data-min= min,
+        for="rangeSlider"
+        data-min= min
         data-max= max
         data-from= start
         data-to= end

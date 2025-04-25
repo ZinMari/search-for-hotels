@@ -14,11 +14,11 @@ mixin dropdown({title, buttonText, isOpen, hasButtons, typeDropdown= "rooms", su
     }
 
   div(class= className)
-    label.dropdown__header= title
+    label.dropdown__header(for='dropdownId')= title
       if(subtitle)
         span.dropdown__subtitle= subtitle
     .dropdown__menu
-      button.dropdown__btn.js-dropdown__btn
+      button.dropdown__btn.js-dropdown__btn(id='dropdownId')
         span.dropdown__title #{buttonText}
         svg.dropdown__svg(xmlns="http://www.w3.org/2000/svg"
             width="12"
