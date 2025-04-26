@@ -33,7 +33,9 @@ class Pagination {
   }
 
   _sliceCards(cardsCount, currentPage) {
-    this.roomCardsContainer.innerHTML = "";
+    this.roomCards.forEach((card) => {
+      card.classList.add("search-room__room-hide");
+    });
     const firstCardsIndex = cardsCount * currentPage - cardsCount;
     const lastCardsIndex = firstCardsIndex + cardsCount;
     const cardsOnPage = this.roomCards.slice(firstCardsIndex, lastCardsIndex);
@@ -115,9 +117,9 @@ class Pagination {
   }
 
   _createPagination(cardsCount, currentPage) {
-    this.roomCardsContainer.append(
-      ...this._sliceCards(cardsCount, currentPage),
-    );
+    this._sliceCards(cardsCount, currentPage).forEach((card) => {
+      card.classList.remove("search-room__room-hide");
+    });
     this._createBtnPagination(currentPage);
   }
 
@@ -136,7 +138,7 @@ class Pagination {
     this._createPagination(this.cardsCount, --this.currentPage);
   };
 
-  _handlerendArrowBtnClick = () => {
+  _handlerEndArrowBtnClick = () => {
     this._createPagination(this.cardsCount, ++this.currentPage);
   };
 
@@ -156,6 +158,8 @@ class Pagination {
       "click",
       this._handlerStartArrowBtnClick,
     );
+
+    this.endArrowBtn.addEventListener("click", this._handlerEndArrowBtnClick);
 
     this._createPagination(this.cardsCount, this.currentPage);
   }
