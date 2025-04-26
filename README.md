@@ -24,11 +24,10 @@
 
 ## Библиотеки:
 
-- [jQuery Validation ](https://jqueryvalidation.org/)
 - [jQuery Nice Number](https://www.npmjs.com/package/jquery.nice-number)
 - [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeslider/index.html)
-- [Inputmask](https://robinherbots.github.io/Inputmask/)
 - [Air Datepicker](https://air-datepicker.com/ru)
+- [Glide.js](https://glidejs.com/)
 
 ## Макет сайта:
 
