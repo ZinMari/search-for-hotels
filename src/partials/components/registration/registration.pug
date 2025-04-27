@@ -25,10 +25,8 @@ mixin registration
           +radioButtons(genders)
 
       .registration__group
-          .registration__subtitle
-            +subtitle("дата рождения")
           .registration__item
-            - const birthInput = {id: "userBirth", typeInput: "date", placeholder: "ДД.ММ.ГГГГ"}
+            - const birthInput = {id: "userBirth", typeInput: "date", placeholder: "ДД.ММ.ГГГГ", title: "дата рождения"}
             +text-field(birthInput)
 
       .registration__group
