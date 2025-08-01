@@ -27,7 +27,7 @@
     background-position: 4px center;
     background-repeat: no-repeat;
     background-color: transparent;
-    transition: var(--trans);
+    transition: var(--transition-all-short);
     cursor: pointer;
 
     &_liked {

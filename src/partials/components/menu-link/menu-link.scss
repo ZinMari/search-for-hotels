@@ -4,13 +4,13 @@
   font: var(--text);
   text-transform: capitalize;
   color: var(--color-dark-50);
-  transition: var(--transit);
+  transition: var(--transition-all-short);
   gap: 6px;
 
   &__arrow {
     width: 12px;
     height: 8px;
-    transition: var(--transit);
+    transition: var(--transition-all-short);
   }
 
   &:hover {
@@ -18,7 +18,7 @@
 
     .menu-link__arrow {
       transform: rotate(180deg);
-      transition: var(--transit);
+      transition: var(--transition-all-short);
     }
   }
 }

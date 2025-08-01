@@ -37,12 +37,12 @@
 
     &:hover svg {
       transform: scale(1.3);
-      transition: var(--transit);
+      transition: var(--transition-all-short);
 
       path {
         fill: var(--color-dark-75);
         fill-opacity: 1;
-        transition: var(--transit);
+        transition: var(--transition-all-short);
       }
     }
   }

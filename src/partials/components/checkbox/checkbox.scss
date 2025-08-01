@@ -11,7 +11,7 @@
     border-radius: var(--bd-radius);
     width: 20px;
     height: 20px;
-    transition: var(--transit);
+    transition: var(--transition-all-short);
 
     &::after {
       content: '';
@@ -22,7 +22,7 @@
       background-position: 50%;
       background-repeat: no-repeat;
       opacity: 0;
-      transition: var(--transit);
+      transition: var(--transition-all-short);
     }
   }
 

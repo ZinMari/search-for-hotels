@@ -2,7 +2,7 @@
 
 .dropdown {
   max-width: 100%;
-  transition: var(--transit);
+  transition: var(--transition-all-short);
 
   &__header {
     @include mixins.form-subtitle;

@@ -26,7 +26,7 @@
     font-size: 14px;
     line-height: 1.2;
     color: var(--color-dark-50);
-    transition: var(--transit);
+    transition: var(--transition-all-short);
   }
 
   &__span::before {
@@ -36,7 +36,7 @@
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    transition: var(--transit);
+    transition: var(--transition-all-short);
   }
 
   &__span::after {
@@ -50,7 +50,7 @@
     background: var(--color-gradient);
     opacity: 0;
     transform: translateY(-50%);
-    transition: var(--transit);
+    transition: var(--transition-all-short);
   }
 
   &__input {

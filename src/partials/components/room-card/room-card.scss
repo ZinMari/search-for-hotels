@@ -28,7 +28,7 @@
         background: transparent;
         opacity: 0;
         visibility: hidden;
-        transition: var(--transit);
+        transition: var(--transition-all-short);
         cursor: pointer;
 
         &_direction {

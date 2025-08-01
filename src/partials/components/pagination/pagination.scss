@@ -22,13 +22,13 @@
     height: 40px;
     font: var(--sub-title-light);
     color: var(--color-dark-50);
-    transition: var(--transit);
+    transition: var(--transition-all-short);
 
     &_activated {
       font-weight: 700;
       color: var(--color-light);
       background-image: var(--color-gradient);
-      transition: var(--transit);
+      transition: var(--transition-all-short);
     }
   }
 
