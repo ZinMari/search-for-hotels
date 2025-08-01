@@ -1,8 +1,9 @@
 include ../checkbox/checkbox
 
-mixin checkbox-list(title= 'Title', list= [])
+mixin checkbox-list(title= '', list= [])
   .checkbox-list
-    h3.checkbox-list__title= title
+    if title
+      h3.checkbox-list__title= title
     ul.checkbox-list__wrap
       if list.length
         each elem in list
