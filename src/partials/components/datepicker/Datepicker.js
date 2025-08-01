@@ -96,44 +96,28 @@ class Datepicker {
   };
 
   _defineCalendarOptions(typeCalendar) {
-    const staticCalendarOptions = {
-      inline: true,
-      buttons: [this._clearBtn, this._applyBtn],
+    const params = {
+      static: {
+        inline: true,
+        buttons: [this._clearBtn, this._applyBtn],
+      },
+      dropdown: {
+        buttons: [this._clearBtn, this._applyBtn],
+        classes: "date-calendar__dropdown",
+      },
+      filter: {
+        classes: "date-calendar__filter",
+        multipleDatesSeparator: " - ",
+        altFieldDateFormat: "dd MMM",
+        altField: document.querySelector(".filter-date-dropdown__input"),
+      },
     };
 
-    const dropdownCalendarOptions = {
-      buttons: [this._clearBtn, this._applyBtn],
-      classes: "date-calendar__dropdown",
-    };
-
-    const filterCalendarOptions = {
-      classes: "date-calendar__filter",
-      multipleDatesSeparator: " - ",
-      altFieldDateFormat: "dd MMM",
-      altField: document.querySelector(".filter-date-dropdown__input"),
-    };
-
-    let calendarOptions;
-
-    if (typeCalendar === "dropdown") {
-      calendarOptions = Object.assign(
-        {},
-        this._commonCalendarOptions,
-        dropdownCalendarOptions,
-      );
-    } else if (typeCalendar === "filter") {
-      calendarOptions = Object.assign(
-        {},
-        this._commonCalendarOptions,
-        filterCalendarOptions,
-      );
-    } else if (typeCalendar === "static") {
-      calendarOptions = Object.assign(
-        {},
-        this._commonCalendarOptions,
-        staticCalendarOptions,
-      );
-    }
+    let calendarOptions = Object.assign(
+      {},
+      this._commonCalendarOptions,
+      params[typeCalendar],
+    );
 
     return calendarOptions;
   }
