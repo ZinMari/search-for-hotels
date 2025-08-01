@@ -1,0 +1,13 @@
+include ../checkbox/checkbox.pug
+
+mixin rich-checkbox-list(title, elems)
+  .rich-checkbox-list
+    h3.rich-checkbox-list__title= title
+    ul.rich-checkbox-list__list
+
+      each elem in elems
+        li.rich-checkbox-list__item
+          +checkbox(elem.title, elem.isChecked)
+          p.rich-checkbox-list__description!= elem.description
+
+

@@ -2,7 +2,7 @@ extends ../../templates/template-uikit/template-uikit
 include ../../components/text-field/text-field
 include ../../components/bullet-list/bullet-list
 include ../../components/checkbox-buttons/checkbox-buttons
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../components/rich-checkbox-list/rich-checkbox-list
 include ../../components/icon-text-list/icon-text-list
 include ../../components/radio-buttons/radio-buttons
 include ../../components/dropdown/dropdown
@@ -238,14 +238,14 @@ block content
             +expandable-checkbox-list("expandable checkbox list", checkboxList, true)
         
         .forms-elements__column.forms-elements__column_type_center
-          .forms-elements__rich-checkbox-buttons
+          .forms-elements__rich-checkbox-list
             -
-              const itemsRichBtns = [
+              const itemsRichCheckboxList = [
                 {title: "Широкий коридор", description: "Ширина коридоров в номере<br>не менее 91 см.", isChecked: false},
                 {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", isChecked: false},
               ]
 
-            +rich-checkbox-btns("rich Checkbox Buttons", itemsRichBtns)
+            +rich-checkbox-list("rich Checkbox Buttons", itemsRichCheckboxList)
         
         .forms-elements__column.forms-elements__column_type_right
           .forms-elements__bullet-list

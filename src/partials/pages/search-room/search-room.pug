@@ -3,7 +3,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/checkbox-buttons/checkbox-buttons
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../components/rich-checkbox-list/rich-checkbox-list
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/room-card/room-card
 include ../../components/pagination/pagination
@@ -52,7 +52,7 @@ block content
               {title: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера.", isChecked: false},
             ]
 
-          +rich-checkbox-btns("доступность", availability)
+          +rich-checkbox-list("доступность", availability)
         .search-room__amenities
           -
             const amenities = {
