@@ -1,4 +1,4 @@
-mixin checkbox(text, isChecked)
+mixin checkbox(text= 'Text', isChecked= true)
   label.checkbox
     input.checkbox__input(type="checkbox", checked= isChecked, value= text)
     span.checkbox__box
