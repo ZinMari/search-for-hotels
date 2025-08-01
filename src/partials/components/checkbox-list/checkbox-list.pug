@@ -7,6 +7,6 @@ mixin checkbox-list(title= 'Title', list= [])
       if list.length
         each elem in list
           li.checkbox-list__item
-            +checkbox(elem.text, elem.isChecked)
+            +checkbox(elem.text || "Список пуст", elem.isChecked)
       else
         +checkbox("Список пуст", true)
