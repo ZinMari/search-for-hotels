@@ -1,3 +1,5 @@
+@use '../../../scss/mixins';
+
 .background-slider {
   position: absolute;
   inset: 0;
@@ -7,5 +9,5 @@
   position: absolute;
   inset: 0;
   z-index: -1000;
-  transition: 2s;
+  transition: var(--transition-all-long);
 }
