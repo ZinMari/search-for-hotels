@@ -1,8 +1,10 @@
-mixin bullet-list({items= ["Item_1", "Item_2"], title="Title"})
+mixin bullet-list({items= [], title="Title"})
   .bullet-list
     if title
       h3.bullet-list__title= title
     ul.bullet-list__list
-
-      each val in items
-        li.bullet-list__item= val
+      if items.length
+        each val in items
+          li.bullet-list__item= val
+      else
+        li.bullet-list__item= "Пустой список"
