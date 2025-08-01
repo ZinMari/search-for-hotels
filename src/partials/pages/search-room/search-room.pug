@@ -2,7 +2,7 @@ extends ../../templates/template-page/template-page
 include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
-include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/checkbox-list/checkbox-list
 include ../../components/rich-checkbox-list/rich-checkbox-list
 include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/room-card/room-card
@@ -44,7 +44,7 @@ block content
               {text: "Можно с питомцами", isChecked: true},
               {text: "Можно пригласить гостей (до 10 человек)", isChecked: true},
             ]
-          +checkbox-btns("правила дома", houseRules)
+          +checkbox-list("правила дома", houseRules)
         .search-room__availability
           -
             const availability = [

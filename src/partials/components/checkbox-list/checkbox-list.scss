@@ -1,6 +1,6 @@
 @use '../../../scss/mixins';
 
-.checkbox-btns {
+.checkbox-list {
   &__title {
     @include mixins.form-subtitle;
 

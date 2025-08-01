@@ -1,7 +1,7 @@
 extends ../../templates/template-uikit/template-uikit
 include ../../components/text-field/text-field
 include ../../components/bullet-list/bullet-list
-include ../../components/checkbox-buttons/checkbox-buttons
+include ../../components/checkbox-list/checkbox-list
 include ../../components/rich-checkbox-list/rich-checkbox-list
 include ../../components/icon-text-list/icon-text-list
 include ../../components/radio-buttons/radio-buttons
@@ -78,7 +78,7 @@ block content
 
         .forms-elements__column.forms-elements__column_type_center
 
-          .forms-elements__checkbox-buttons
+          .forms-elements__checkbox-list
             -
               const btns = [
                 {text: "Можно курить", isChecked: false},
@@ -86,7 +86,7 @@ block content
                 {text: "Можно пригласить гостей (до 10 человек)", isChecked: true},
               ]
 
-            +checkbox-btns("Checkbox Buttons", btns)
+            +checkbox-list("Checkbox Buttons", btns)
 
           .forms-elements__radio-buttons
             -
