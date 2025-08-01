@@ -1,12 +1,12 @@
 include ../checkbox/checkbox
 
-mixin checkbox-list(title= 'Title', btns= [])
+mixin checkbox-list(title= 'Title', list= [])
   .checkbox-list
     h3.checkbox-list__title= title
     ul.checkbox-list__wrap
-      if btns.length
-        each btn in btns
+      if list.length
+        each elem in list
           li.checkbox-list__item
-            +checkbox(btn.text, btn.isChecked)
+            +checkbox(elem.text, elem.isChecked)
       else
         +checkbox("Список пуст", true)
