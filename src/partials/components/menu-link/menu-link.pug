@@ -1,4 +1,4 @@
-mixin menu-link({text, arrow= "", href=""})
+mixin menu-link({text= "Введите текст", arrow= "", href=""})
   - const hrefValue = href ? href : "/mock-address/change-me"
   a(class= "menu-link", href= hrefValue)
     | #{text}
