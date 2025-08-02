@@ -1,0 +1,14 @@
+$font-family: montserrat, arial, sans-serif;
+$sub-title: 700 12px $font-family;
+
+.typography {
+  &__title {
+    font: $sub-title;
+    text-transform: uppercase;
+    color: var(--color-dark-100);
+  }
+
+  &__inlineBlock {
+    display: inline-block;
+  }
+}

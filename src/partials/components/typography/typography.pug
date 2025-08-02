@@ -1,0 +1,27 @@
+mixin typography({variant= 'p', text= 'Hello', style='title', className='', inlineBlock= false})
+    -
+        const tagMap = {
+            h1: 'h1',
+            h2: 'h2',
+            h3: 'h3',
+            p: 'p',
+            span: 'span'
+        }
+
+        const tag = tagMap[variant] || 'p'
+
+        const styleMap = {
+            title: 'title'
+        }
+
+        const fontStyle = styleMap[style] || 'title'
+
+        const classes = [
+            `typography__${fontStyle}`,
+            className
+        ]
+
+    if inlineBlock
+        classes.push('typography__inlineBlock')
+
+    #{tag}(class= [...classes])= text
