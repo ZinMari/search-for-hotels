@@ -1,4 +1,4 @@
-mixin rate-button({name, numValueCheck})
+mixin rate-button({name="Name", numValueCheck=2})
   .rate-button
     .rate-button__group
       -
@@ -15,4 +15,4 @@ mixin rate-button({name, numValueCheck})
 
         if numValueCheck == elem.value
           - isCheck = true;
-        input.rate-button__star(name= name value= elem.value aria-label= elem.ariaLabel type="radio" checked= isCheck)
+        input.rate-button__star(name= name value= elem.value aria-label= elem.ariaLabel type="radio" checked= isCheck autocomplete= "off")
