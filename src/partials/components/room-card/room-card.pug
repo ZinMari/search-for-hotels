@@ -2,15 +2,18 @@ include ../number-and-cost/number-and-cost
 include ../rate-button/rate-button
 
 
-mixin room-card({images, info, starValue, reviews})
+mixin room-card({info, starValue, reviews= 0, images=[]})
   .room-card
     .room-card__slider
       .glide.js-glide
         .glide__track(data-glide-el="track")
           ul.glide__slides
-            each img in images
-              li.glide__slide
-                img(src= img, alt="Изображение номера отеля")
+            if images.length
+              each img in images
+                li.glide__slide
+                  img(src= img, alt="Изображение номера отеля")
+            else
+              li.glide__slide= "Добавьте изображения"
         .glide__arrows(data-glide-el="controls")
           button.glide__arrow.glide__arrow_direction_left(data-glide-dir="<")
             svg(width="8"
