@@ -1,6 +1,6 @@
 include ../checkbox/checkbox.pug
 
-mixin rich-checkbox-list(title, elems= [])
+mixin rich-checkbox-list(title= "Заголовок", elems= [])
   .rich-checkbox-list
     h3.rich-checkbox-list__title= title
     ul.rich-checkbox-list__list
@@ -15,3 +15,4 @@ mixin rich-checkbox-list(title, elems= [])
             p.rich-checkbox-list__description!= "Пустое описание"
 
 
+  
