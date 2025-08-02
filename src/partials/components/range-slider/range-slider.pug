@@ -1,4 +1,4 @@
-mixin range-slider({title, min, max, start, end})
+mixin range-slider({title= "Заголовок", min= 0, max=100, start= 5, end= 10})
   .range-slider
     .range-slider__header
       label.range-slider__title(for="rangeSlider")= title
