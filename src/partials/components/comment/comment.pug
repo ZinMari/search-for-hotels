@@ -1,9 +1,12 @@
 include ../like-button/like-button
 
-mixin comment({imgPath, name, date, countLike, isLike, text})
+mixin comment({imgPath, name= "Имя Фамилия", date= "Дата", countLike, isLike, text="Текст комментария"})
   article.comment
     .comment__img
-      img(src= imgPath, alt="Фото комментатора")
+      if imgPath
+        img(src= imgPath, alt="Фото комментатора")
+      else
+        p= "IMAGE"
     .comment__title
       p.comment__name= name
       p.comment__time= date
