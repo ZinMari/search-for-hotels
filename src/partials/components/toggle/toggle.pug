@@ -1,7 +1,10 @@
+include ../typography/typography
+
 mixin toggle(elements=[], title= false)
   .toggle
     if title
-      h3.toggle__title= title
+      //- h3.toggle__title= title
+      +typography({className: 'toggle__title', variant: 'h3', text: title, style: 'title', inlineBlock: true})
     ul.toggle__container
       if elements.length
         each elem in elements
