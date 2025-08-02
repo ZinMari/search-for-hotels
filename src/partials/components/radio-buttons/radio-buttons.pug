@@ -1,9 +1,14 @@
-mixin radioButtons({radios, name, title=false})
+mixin radioButtons({radios, name= "Name", title=false})
   .radio
     if title
       h3.radio__title= title
     .radio__container
-      each radio in radios
+      if radios.length
+        each radio in radios
+          label.radio__btn
+            input.radio__input(type="radio" name= name checked= radio.isChecked)
+            span.radio__span= radio.text
+      else
         label.radio__btn
-          input.radio__input(type="radio" name= name checked= radio.isChecked)
-          span.radio__span= radio.text
+          input.radio__input(type="radio" name= name checked= true)
+          span.radio__span= "Добавьте элементы"
