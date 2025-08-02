@@ -1,6 +1,6 @@
 include ../checkbox-list/checkbox-list
 
-mixin expandable-checkbox-list(title, checkboxList, isOpen= false)
+mixin expandable-checkbox-list(title= "Заголовок", checkboxList, isOpen= false)
   - let className = ["expandable-checkbox-list", "js-expandable-checkbox-list"];
 
   if(isOpen)
