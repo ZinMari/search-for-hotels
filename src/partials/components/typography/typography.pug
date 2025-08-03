@@ -11,7 +11,8 @@ mixin typography({variant= 'p', text= 'Hello', style='title', className='', inli
         const tag = tagMap[variant] || 'p'
 
         const styleMap = {
-            title: 'title'
+            title: 'title',
+            text: 'text'
         }
 
         const fontStyle = styleMap[style] || 'title'

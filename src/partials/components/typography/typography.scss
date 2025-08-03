@@ -8,6 +8,10 @@ $sub-title: 700 12px $font-family;
     color: var(--color-dark-100);
   }
 
+  &__text {
+    font-family: $font-family;
+  }
+
   &__inlineBlock {
     display: inline-block;
   }
