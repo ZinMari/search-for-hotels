@@ -1,3 +1,5 @@
+import dictionary from "../../../data/lang.json";
+
 class Dropdown {
   constructor(dropdownElement) {
     this.$dropdown = dropdownElement;
@@ -77,7 +79,7 @@ class Dropdown {
     $.each(values, (key, value) => {
       if (+value !== 0) {
         const declension = this._definitionOfDeclension(value);
-        text.push(`${value} ${this._dictionary[key][declension]}`);
+        text.push(`${value} ${dictionary.ru[key][declension]}`);
       }
     });
 
@@ -97,14 +99,6 @@ class Dropdown {
     }
     return declension;
   }
-
-  _dictionary = {
-    спальни: ["спальня", "спальни", "спален"],
-    кровати: ["кровать", "кровати", "кроватей"],
-    "ванные комнаты": ["ванная комната", "ванные комнаты", "ванных комнат"],
-    взрослые: ["гость", "гостя", "гостей"],
-    младенцы: ["младенец", "младенца", "младенцев"],
-  };
 
   _setButtonClear() {
     const isShowBtnClear = this._isEmptyValues();
