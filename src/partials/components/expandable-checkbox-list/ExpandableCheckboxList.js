@@ -1,25 +1,35 @@
+import chevronRotated from "../chevron/chevron";
+
 class ExpandableCheckboxList {
-  constructor(expandableCheckboxListElement){
+  constructor(expandableCheckboxListElement) {
     this.$expandableCheckboxListElement = expandableCheckboxListElement;
 
     this._render();
   }
 
-  _initialize(){
-    this.$expandableCheckboxListBtn = this.$expandableCheckboxListElement.find('.expandable-checkbox-list__btn');
+  _initialize() {
+    this.$expandableCheckboxListBtn = this.$expandableCheckboxListElement.find(
+      ".expandable-checkbox-list__btn",
+    );
   }
 
-  _handlerExpandableCheckboxListClick(event){
-    $(event.currentTarget).closest('.js-expandable-checkbox-list').toggleClass('expandable-checkbox-list_opened');
+  _handlerExpandableCheckboxListClick(event) {
+    $(event.currentTarget)
+      .closest(".js-expandable-checkbox-list")
+      .toggleClass("expandable-checkbox-list_opened");
+    chevronRotated($(event.currentTarget));
   }
 
-  _setEventHandlers(){
-    this.$expandableCheckboxListBtn.on('click.expandableCheckboxList', this._handlerExpandableCheckboxListClick)
+  _setEventHandlers() {
+    this.$expandableCheckboxListBtn.on(
+      "click.expandableCheckboxList",
+      this._handlerExpandableCheckboxListClick,
+    );
   }
 
-  _render(){
+  _render() {
     this._initialize();
-    this._setEventHandlers()
+    this._setEventHandlers();
   }
 }
 

@@ -23,10 +23,6 @@
     cursor: pointer;
   }
 
-  &__svg {
-    fill: var(--color-dark-50);
-  }
-
   &__list {
     position: absolute;
     left: 0;
@@ -46,9 +42,5 @@
   .expandable-checkbox-list__list {
     opacity: 1;
     visibility: visible;
-  }
-
-  .expandable-checkbox-list__svg {
-    transform: rotate(-180deg);
   }
 }
