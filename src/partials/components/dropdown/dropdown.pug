@@ -21,7 +21,7 @@ mixin dropdown({title="Заголовок", buttonText="Текст кнопки"
     .dropdown__menu
       button.dropdown__btn.js-dropdown__btn(id='dropdownId')
         span.dropdown__title #{buttonText}
-        +chevron()
+        +chevron({})
       .dropdown__body
         ul.dropdown__list
           each element, index in elements[typeDropdown]
