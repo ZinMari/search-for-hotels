@@ -3,7 +3,6 @@
 .reservation {
   @include mixins.form-style;
 
-  /* stylelint-disable-next-line no-duplicate-selectors */
   & {
     padding-top: 36px;
     max-width: 100%;
@@ -28,19 +27,19 @@
 
   &__info {
     margin-bottom: 10px;
+  }
 
-    td {
-      position: relative;
-      vertical-align: top;
-      padding-bottom: 16px;
-      line-height: 1.29;
-    }
+  &__td {
+    position: relative;
+    vertical-align: top;
+    padding-bottom: 16px;
+    line-height: 1.29;
 
-    tr td:first-child {
+    &:first-child {
       max-width: 124px;
     }
 
-    tr td:last-child {
+    &:last-child {
       text-align: right;
     }
   }
@@ -64,13 +63,7 @@
       position: absolute;
       top: 75%;
       border-bottom: 1px dotted var(--color-dark-75);
-      width: 100%;
-    }
-
-    span {
-      position: relative;
-      z-index: 1;
-      background-color: var(--color-light);
+      width: 73%;
     }
   }
 

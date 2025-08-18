@@ -36,21 +36,21 @@ mixin reservation
       table.reservation__info
         tbody
           tr
-            td 9 990₽ х 4 суток
-            td
-            td 39 960₽
+            td.reservation__td 9 990₽ х 4 суток
+            td.reservation__td
+            td.reservation__td 39 960₽
           tr
-            td Сбор за услуги: скидка 2 179₽
-            td
+            td.reservation__td Сбор за услуги: скидка 2 179₽
+            td.reservation__td
               .reservation__tooltip
                 +tooltip("info")
-            td 0₽
+            td.reservation__td 0₽
           tr
-            td Сбор за дополнительные услуги
-            td
+            td.reservation__td Сбор за дополнительные услуги
+            td.reservation__td
               .reservation__tooltip
                 +tooltip("info")
-            td 300₽
+            td.reservation__td 300₽
       .reservation__total
         span.reservation__name-sum Итого
         span.reservation__sum 38 081₽
