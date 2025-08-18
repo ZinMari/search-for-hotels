@@ -7,12 +7,9 @@ mixin rich-checkbox-list(title= "Заголовок", elems= [])
       if elems.length
         each elem in elems
           li.rich-checkbox-list__item
-            +checkbox({text: elem.title || "Пустой список", isChecked: elem.isChecked, className: elem.className})
+            +checkbox({text: elem.title || "Пустой список", isChecked: elem.isChecked, className: "rich-checkbox-list__label"})
             p.rich-checkbox-list__description!= elem.description || "Пустое описание"
       else
         li.rich-checkbox-list__item
             +checkbox({text: "Пустой список", isChecked: true})
             p.rich-checkbox-list__description!= "Пустое описание"
-
-
-  

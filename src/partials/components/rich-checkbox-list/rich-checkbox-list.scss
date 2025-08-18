@@ -11,12 +11,12 @@
 
   &__item {
     margin-bottom: 9px;
+  }
 
-    label {
-      margin-bottom: 5px;
-      font: var(--text-bold);
-      color: var(--color-dark-75);
-    }
+  &__label {
+    margin-bottom: 5px;
+    font: var(--text-bold);
+    color: var(--color-dark-75);
   }
 
   &__description {
