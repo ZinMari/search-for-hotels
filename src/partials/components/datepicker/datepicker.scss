@@ -10,10 +10,6 @@
   font: var(--sub-title-light);
   color: var(--color-dark-50);
 
-  * {
-    box-sizing: border-box;
-  }
-
   span {
     display: flex;
     align-items: center;
@@ -24,13 +20,13 @@
   }
 
   &-nav--action[data-action='prev'] {
-    // background: url('../partials/components/datepicker/arrow_back.svg');
+    background: url('./img/arrow_back.svg');
     background-position: 24% center;
     background-repeat: no-repeat;
   }
 
   &-nav--action[data-action='next'] {
-    // background: url('../partials/components/datepicker/arrow_forward.svg');
+    background: url('./img/arrow_forward.svg');
     background-position: 76% center;
     background-repeat: no-repeat;
   }
