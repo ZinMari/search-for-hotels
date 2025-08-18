@@ -45,5 +45,5 @@ mixin room-card({info, starValue, reviews= 0, images=[]})
         .room-card__stars
           +rate-button(starValue)
         .room-card__reviews
-          span= reviews
+          span.room-card__reviews-count= reviews
           | Отзывов
