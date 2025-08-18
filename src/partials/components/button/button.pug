@@ -17,4 +17,4 @@ mixin button({text= 'Text', style= 'border', isDisabled= false})
     - classes.push('btn_disabled')
 
   button(class= [...classes])
-    span= text
+    span(class= 'btn__text')= text
