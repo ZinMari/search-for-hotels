@@ -3,9 +3,9 @@ mixin icon-text-list(iconArr= [])
     if iconArr.length
       each elem in iconArr
         li.icon-text-list__item
-          .icon-text-list__img
+          .icon-text-list__img-wrap
             if(elem.src_icon)
-              img(src= elem.src_icon , alt= elem.title)
+              img.icon-text-list__img(src= elem.src_icon , alt= elem.title)
             else
               p= "image"
           .icon-text-list__text

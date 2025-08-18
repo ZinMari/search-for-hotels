@@ -10,13 +10,13 @@
     gap: 14px;
   }
 
-  &__img {
+  &__img-wrap {
     width: 41px;
+  }
 
-    img {
-      display: block;
-      margin: 0 auto;
-    }
+  &__img {
+    display: block;
+    margin: 0 auto;
   }
 
   &__title {
