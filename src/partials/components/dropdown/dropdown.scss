@@ -66,8 +66,11 @@
     justify-content: space-between;
   }
 
-  &__input:disabled {
-    background: transparent;
+  &__input {
+    @include mixins.form-subtitle;
+
+    border: none;
+    max-width: 20px;
   }
 
   &__buttons {
@@ -93,7 +96,7 @@
   justify-content: space-between;
   width: 92px;
 
-  &__button_disabed {
+  &__button_disabled {
     border-color: var(--color-dark-25) !important;
     color: var(--color-dark-25) !important;
     cursor: not-allowed !important;
@@ -109,11 +112,4 @@
   color: var(--color-dark-50);
   background-color: transparent;
   cursor: pointer;
-}
-
-.nice-number input {
-  @include mixins.form-subtitle;
-
-  border: none;
-  max-width: 20px;
 }

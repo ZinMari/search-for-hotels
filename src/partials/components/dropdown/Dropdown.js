@@ -21,7 +21,7 @@ class Dropdown {
 
     this.$dropdownInputs.each((index, input) => {
       $(input).val("0");
-      $(input).prev().addClass("nice-number__button_disabed");
+      $(input).prev().addClass("nice-number__button_disabled");
     });
 
     this.$title.text("Выберете количество");
@@ -38,19 +38,19 @@ class Dropdown {
     this.$dropdownInputs.niceNumber({
       autoSize: false,
       onIncrement: (currentInput, amount) => {
-        currentInput.prev().removeClass("nice-number__button_disabed");
+        currentInput.prev().removeClass("nice-number__button_disabled");
 
         if (amount == currentInput.attr("max")) {
-          currentInput.next().addClass("nice-number__button_disabed");
+          currentInput.next().addClass("nice-number__button_disabled");
         }
         this._setTitle(this._getData());
         this._setButtonClear();
       },
 
       onDecrement: (currentInput, amount) => {
-        currentInput.next().removeClass("nice-number__button_disabed");
+        currentInput.next().removeClass("nice-number__button_disabled");
         if (amount == currentInput.attr("min")) {
-          currentInput.prev().addClass("nice-number__button_disabed");
+          currentInput.prev().addClass("nice-number__button_disabled");
         }
 
         this._setTitle(this._getData());
@@ -65,11 +65,11 @@ class Dropdown {
       const currentValue = currentInput.attr("value");
 
       if (currentValue == currentInput.attr("min")) {
-        currentInput.prev().addClass("nice-number__button_disabed");
+        currentInput.prev().addClass("nice-number__button_disabled");
       }
 
       if (currentValue == currentInput.attr("max")) {
-        currentInput.next().addClass("nice-number__button_disabed");
+        currentInput.next().addClass("nice-number__button_disabled");
       }
     });
   }
