@@ -2,9 +2,9 @@ include ../like-button/like-button
 
 mixin comment({imgPath, name= "Имя Фамилия", date= "Дата", countLike, isLike, text="Текст комментария"})
   article.comment
-    .comment__img
+    .comment__img-wrap
       if imgPath
-        img(src= imgPath, alt="Фото комментатора")
+        img.comment__img(src= imgPath, alt="Фото комментатора")
       else
         p= "IMAGE"
     .comment__title
