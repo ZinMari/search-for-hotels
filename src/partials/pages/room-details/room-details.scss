@@ -24,6 +24,12 @@
         }
       }
     }
+
+    &:last-child {
+      @media (max-width: vars.$min-tab) {
+        grid-column: 1/ -1;
+      }
+    }
   }
 
   &__img {
