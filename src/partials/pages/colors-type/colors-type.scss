@@ -6,8 +6,6 @@
   &__container {
     display: flex;
     justify-content: space-between;
-
-    // background-image: url('../img/logo.svg');
     background-position: 30px 30px;
     background-repeat: no-repeat;
   }
@@ -51,15 +49,11 @@
     display: grid;
     grid-template-columns: 38px 369px;
     gap: 29px;
+  }
 
-    span {
-      font-weight: 400;
-      text-align: right;
-      color: var(--color-dark-25);
-    }
-
-    p {
-      max-width: 200px;
-    }
+  &__tag {
+    font-weight: 400;
+    text-align: right;
+    color: var(--color-dark-25);
   }
 }
