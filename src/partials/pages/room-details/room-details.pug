@@ -31,7 +31,7 @@ block content
           - classNames.push("room-details__photo_size_big")
 
         div(class= [...classNames])
-          img(src= photo.src, alt= photo.alt)
+          img.room-details__img(src= photo.src, alt= photo.alt)
     section.room-details__details.container
       .room-details__info
         .room-details__room-info
@@ -51,7 +51,7 @@ block content
               canvas#diagram
               p.room-details__impressions-value
                 |260
-                span голосов
+                span.room-details__impressions-value-text голосов
             ul.room-details__impressions-list
               li.room-details__impressions-item Великолепно
               li.room-details__impressions-item Хорошо

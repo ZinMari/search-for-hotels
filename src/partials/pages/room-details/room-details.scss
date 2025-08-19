@@ -24,13 +24,13 @@
         }
       }
     }
+  }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__subtitle {
@@ -127,12 +127,12 @@
     font-size: 24px;
     line-height: 1.2;
     color: var(--color-purple);
+  }
 
-    span {
-      font-size: 12px;
-      text-transform: uppercase;
-      color: inherit;
-    }
+  &__impressions-value-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: inherit;
   }
 
   &__reviews {
