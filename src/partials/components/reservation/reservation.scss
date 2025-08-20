@@ -1,12 +1,9 @@
 @use '../../../scss/mixins';
 
 .reservation {
-  @include mixins.form-style;
+  max-width: 100%;
 
-  & {
-    padding-top: 36px;
-    max-width: 100%;
-  }
+  @include mixins.form-style;
 
   &__wrapp {
     display: flex;
