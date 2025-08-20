@@ -1,8 +1,9 @@
-mixin menu-link({text= "Введите текст", arrow= "", href=""})
+include ../chevron/chevron
+
+mixin menu-link({text= "Введите текст", hasDropdown= "", href=""})
   - const hrefValue = href ? href : "/mock-address/change-me"
   a(class= "menu-link", href= hrefValue)
     | #{text}
-    if arrow
-      svg.menu-link__arrow 
-        use(href="./assets/sprite.svg#arrow")
+    if hasDropdown
+      +chevron({className: "menu-link__arrow"})
 
