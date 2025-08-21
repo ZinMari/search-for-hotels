@@ -1,6 +1,20 @@
 .chevron {
-  fill: var(--color-dark-75);
   transition: var(--transition-all-short);
+
+  &_color {
+    &_dark {
+      fill: var(--color-dark-75);
+    }
+    &_white {
+      fill: var(--color-light);
+    }
+  }
+
+  &_direction {
+    &_left {
+      transform: rotate(90deg);
+    }
+  }
 
   &_open {
     transform: rotate(180deg);

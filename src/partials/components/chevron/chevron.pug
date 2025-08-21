@@ -1,7 +1,9 @@
-mixin chevron({className="", isOpen= false})
+mixin chevron({className="", isOpen= false, direction= "bottom", color= "dark"})
   -
     const classes = [
       'chevron',
+      `chevron_direction_${direction}`,
+      `chevron_color_${color}`,
       className
     ]
 
