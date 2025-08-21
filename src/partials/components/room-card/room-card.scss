@@ -19,7 +19,7 @@
     max-width: 100%;
 
     .glide {
-      &__arrow {
+      &__button {
         position: absolute;
         top: 0;
         border: none;
@@ -55,7 +55,7 @@
         }
       }
 
-      &:hover .glide__arrow {
+      &:hover .glide__button {
         opacity: 1;
         visibility: visible;
       }
