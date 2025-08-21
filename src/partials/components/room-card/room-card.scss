@@ -2,13 +2,13 @@
 @use '../../../scss/vars';
 
 .room-card {
+  overflow: hidden;
+  max-width: 270px;
+
   @include mixins.form-style;
 
-  /* stylelint-disable-next-line no-duplicate-selectors */
   & {
-    overflow: hidden;
     padding: 0;
-    max-width: 270px;
   }
 
   @media (max-width: vars.$smart) {
