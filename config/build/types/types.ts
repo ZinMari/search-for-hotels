@@ -16,6 +16,6 @@ export type BuildMode = "production" | "development";
 
 export interface BuildOptions {
   port: number;
-  paths: Partial<BuildPaths>;
+  paths: BuildPaths;
   mode: BuildMode;
 }
