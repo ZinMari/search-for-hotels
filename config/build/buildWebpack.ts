@@ -6,13 +6,13 @@ import { buildResolvers } from "./buildResolvers";
 import { BuildOptions } from "./types/types";
 
 export function buildWebpack(options: BuildOptions): webpack.Configuration {
-  const { mode, paths } = options;
+  const { mode, entry, output } = options;
   const isDev = options.mode === "development";
   return {
     mode: mode ?? "development",
-    entry: paths.entry,
+    entry: entry,
     output: {
-      path: paths.output,
+      path: output,
       filename: "bundle.[contenthash].js",
       clean: true,
       assetModuleFilename: "assets/[hash][ext][query]",

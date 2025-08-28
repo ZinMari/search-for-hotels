@@ -8,87 +8,41 @@ interface EnvVariables {
   port: number;
 }
 
+const pages = [
+  { name: "index", folder: "index" },
+  { name: "cards", folder: "cards" },
+  { name: "colorsType", folder: "colors-type" },
+  { name: "formElements", folder: "form-elements" },
+  { name: "headersFooters", folder: "headers-footers" },
+  { name: "roomDetails", folder: "room-details" },
+  { name: "searchRoom", folder: "search-room" },
+  { name: "userLogin", folder: "user-login" },
+  { name: "userRegistration", folder: "user-registration" },
+];
+
 export default (env: EnvVariables) => {
-  const paths: BuildPaths = {
-    entry: path.resolve(__dirname, "src", "js", "main.js"),
-    output: path.resolve(__dirname, "build"),
-    index: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "index",
-      "index.pug",
-    ),
-    cards: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "cards",
-      "cards.pug",
-    ),
-    colorsType: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "colors-type",
-      "colors-type.pug",
-    ),
-    formElements: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "form-elements",
-      "form-elements.pug",
-    ),
-    headersFooters: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "headers-footers",
-      "headers-footers.pug",
-    ),
-    roomDetails: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "room-details",
-      "room-details.pug",
-    ),
-    searchRoom: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "search-room",
-      "search-room.pug",
-    ),
-    userLogin: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "user-login",
-      "user-login.pug",
-    ),
-    userRegistration: path.resolve(
-      __dirname,
-      "src",
-      "partials",
-      "pages",
-      "user-registration",
-      "user-registration.pug",
-    ),
-  };
+  const pagesData = pages.reduce(
+    (acc, page) => {
+      acc[page.name] = path.resolve(
+        __dirname,
+        "src",
+        "partials",
+        "pages",
+        page.folder,
+        `${page.folder}.pug`,
+      );
+      return acc;
+    },
+    {} as Record<string, string>,
+  );
+
   const config: webpack.Configuration = buildWebpack({
     port: env.port ?? 3000,
     mode: env.mode ?? "development",
-    paths,
+    entry: path.resolve(__dirname, "src", "js", "main.js"),
+    output: path.resolve(__dirname, "build"),
+    pagesData,
   });
+
   return config;
 };
