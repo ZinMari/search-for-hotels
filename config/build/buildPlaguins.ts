@@ -10,7 +10,6 @@ export function buildPlaguins({
   mode,
   pagesData,
 }: BuildOptions): Configuration["plugins"] {
-  console.log(pagesData);
   const isDev = mode === "development";
   const isProd = mode === "production";
   const plugins: Configuration["plugins"] = [

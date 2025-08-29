@@ -10,7 +10,7 @@
   font: var(--sub-title);
   text-transform: uppercase;
   color: var(--color-light);
-  background: var(--color-gradient);
+  background-image: var(--color-gradient);
   cursor: pointer;
 
   &_disabled {
@@ -20,12 +20,12 @@
   &_disabled.btn_style_fill,
   &_style_fill:hover {
     color: var(--color-light);
-    background: var(--color-gradient-opacity);
+    background-image: var(--color-gradient-opacity);
   }
 
   &_disabled.btn_style_border,
   &_style_border:hover {
-    background: var(--color-gradient-opacity);
+    background-image: linear-gradient(#fff), var(--color-gradient-opacity);
   }
 
   &_disabled.btn_style_text,
@@ -35,16 +35,14 @@
 
   &_style {
     &_border {
-      .btn__text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 22px;
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        color: var(--color-purple);
-        background: var(--color-light);
-      }
+      border: 2px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-purple);
+      background-image: linear-gradient(#fff), var(--color-gradient);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
     }
 
     &_text {
