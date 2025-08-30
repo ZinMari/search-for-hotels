@@ -12,7 +12,6 @@ class Dropdown {
     this.$dropdownInputs = this.$dropdown.find(".js-dropdown__input");
     this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear-btn");
     this.$labels = this.$dropdown.find(".js-dropdown__label");
-    this.$title = this.$dropdown.find(".js-dropdown__btn span");
   }
 
   _handelDropClearBtnClick = (e) => {
@@ -23,7 +22,7 @@ class Dropdown {
       $(input).prev().addClass("nice-number__button_disabled");
     });
 
-    this.$title.text("Выберете количество");
+    this.$dropdownOpenBtn.html("Выберете количество");
     this.$dropClearBtn.addClass("dropdown__clear-btn_hidden");
   };
 
@@ -77,11 +76,11 @@ class Dropdown {
     $.each(values, (key, value) => {
       if (+value !== 0) {
         const declension = this._definitionOfDeclension(value);
-        // text.push(`${value} ${dictionary.ru[key][declension]}`);
+        text.push(`${value} ${dictionary.ru[key][declension]}`);
       }
     });
 
-    this.$title.text(
+    this.$dropdownOpenBtn.html(
       text.length === 0 ? "Выберете количество" : text.join(", "),
     );
   }
