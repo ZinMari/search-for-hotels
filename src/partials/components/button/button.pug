@@ -1,4 +1,4 @@
-mixin button({text= 'Text', style= 'border', isDisabled= false})
+mixin button({text= 'Text', style= 'border', isDisabled= false, className=""})
   -
     const styles = {
       fill: "fill",
@@ -10,7 +10,8 @@ mixin button({text= 'Text', style= 'border', isDisabled= false})
   -
     const classes = [
       `btn`,
-      `btn_style_${styles[style]}`
+      `btn_style_${styles[style]}`,
+      className
     ]
 
   if isDisabled

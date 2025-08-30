@@ -37,6 +37,6 @@ mixin dropdown({title="Заголовок", buttonText="Текст кнопки"
         if(hasButtons)
           .dropdown__buttons
             .dropdown__clear.js-dropdown__clear
-              +button({text: "очистить", style: "text"})
+              +button({className: "dropdown__clear-btn js-dropdown__clear-btn", text: "очистить", style: "text"})
             .dropdown__apply
               +button({text: "применить", style: "text"})
