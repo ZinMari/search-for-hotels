@@ -23,17 +23,7 @@ mixin dropdown({title="Заголовок", buttonText="Текст кнопки"
         span.dropdown__title #{buttonText}
         +chevron({})
       .dropdown__body
-        ul.dropdown__list
-          each element, index in elements[typeDropdown]
-            li.dropdown__item
-              label.dropdown__label.js-dropdown__label
-                span.dropdown__label-title #{element}
-                input.dropdown__input.js-dropdown__input(
-                  type="number",
-                  value= values[index],
-                  min= 0,
-                  max= 5
-                )
+        ul.js-dropdown__list.dropdown__list
         if(hasButtons)
           .dropdown__buttons
             .dropdown__clear.js-dropdown__clear

@@ -3,13 +3,44 @@ import dictionary from "../../../data/lang.json";
 class Dropdown {
   constructor(dropdownElement) {
     this.$dropdown = dropdownElement;
+    this.dropdownType = this.$dropdown.attr("data-type");
+
+    this._createItems();
+
     this.$dropdownOpenBtn = this.$dropdown.find(".js-dropdown__btn");
     this.$dropdownInputs = this.$dropdown.find(".js-dropdown__input");
     this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear-btn");
     this.$labels = this.$dropdown.find(".js-dropdown__label");
-    this.dropdownType = this.$dropdown.attr("data-type");
 
-    this._render();
+    this.$dropClearBtn.on("click.dropdown", this._handelDropClearBtnClick);
+    this.$dropdownOpenBtn.on(
+      "click.dropdown",
+      this._handleDropdownOpenBtnClick,
+    );
+    this._initNiceNumber();
+    this._setButtonClear();
+    this._setAvaibleInputs();
+    this._setTitle(this._getData());
+  }
+
+  _createItems() {
+    const list = this.$dropdown.find(".js-dropdown__list");
+
+    for (let element in dictionary["ru"][this.dropdownType]) {
+      $("<li>")
+        .addClass("dropdown__item")
+        .append(
+          $("<label>")
+            .addClass("dropdown__label js-dropdown__label")
+            .append(
+              $("<span>").addClass("dropdown__label-title").text(element),
+              $("<input>")
+                .attr({ type: "number", min: 0, max: 5, value: 4 })
+                .addClass("dropdown__input js-dropdown__input"),
+            ),
+        )
+        .appendTo(list);
+    }
   }
 
   _handelDropClearBtnClick = (e) => {
@@ -131,18 +162,6 @@ class Dropdown {
       0,
     );
     return sum === 0;
-  }
-
-  _render() {
-    this.$dropClearBtn.on("click.dropdown", this._handelDropClearBtnClick);
-    this.$dropdownOpenBtn.on(
-      "click.dropdown",
-      this._handleDropdownOpenBtnClick,
-    );
-    this._initNiceNumber();
-    this._setButtonClear();
-    this._setAvaibleInputs();
-    this._setTitle(this._getData());
   }
 }
 
