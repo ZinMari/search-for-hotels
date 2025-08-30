@@ -10,9 +10,9 @@ class Dropdown {
   _init() {
     this.$dropdownOpenBtn = this.$dropdown.find(".js-dropdown__btn");
     this.$dropdownInputs = this.$dropdown.find(".js-dropdown__input");
-    this.$dropClearBtn = this.$dropdown.find(".dropdown__clear button");
-    this.$dropClearBtnText = this.$dropdown.find(".dropdown__clear span");
-    this.$labels = this.$dropdown.find(".dropdown__label");
+    this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear button");
+    this.$dropClearBtnText = this.$dropdown.find(".js-dropdown__clear span");
+    this.$labels = this.$dropdown.find(".js-dropdown__label");
     this.$title = this.$dropdown.find(".js-dropdown__btn span");
   }
 
@@ -79,7 +79,7 @@ class Dropdown {
     $.each(values, (key, value) => {
       if (+value !== 0) {
         const declension = this._definitionOfDeclension(value);
-        text.push(`${value} ${dictionary.ru[key][declension]}`);
+        // text.push(`${value} ${dictionary.ru[key][declension]}`);
       }
     });
 
