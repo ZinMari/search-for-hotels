@@ -8,13 +8,7 @@ mixin dropdown({title="Заголовок", buttonText="Текст кнопки"
   if isOpen
     - className.push("dropdown_opened")
 
-  -  
-    const elements = {
-      rooms: ["спальни", "кровати", "ванные комнаты"],
-      people: ["взрослые", "дети", "младенцы"],
-    }
-
-  div(class= className data-type= typeDropdown)
+  div(class= className data-type= typeDropdown, data-values= values)
     label.dropdown__header(for='dropdownId')= title
       if(subtitle)
         span.dropdown__subtitle= subtitle

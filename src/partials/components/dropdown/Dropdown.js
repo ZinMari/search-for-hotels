@@ -25,8 +25,13 @@ class Dropdown {
 
   _createItems() {
     const list = this.$dropdown.find(".js-dropdown__list");
+    const values = JSON.parse(this.$dropdown.attr("data-values"));
 
     for (let element in dictionary["ru"][this.dropdownType]) {
+      const index = Object.keys(dictionary["ru"][this.dropdownType]).indexOf(
+        element,
+      );
+
       $("<li>")
         .addClass("dropdown__item")
         .append(
@@ -35,7 +40,7 @@ class Dropdown {
             .append(
               $("<span>").addClass("dropdown__label-title").text(element),
               $("<input>")
-                .attr({ type: "number", min: 0, max: 5, value: 4 })
+                .attr({ type: "number", min: 0, max: 5, value: values[index] })
                 .addClass("dropdown__input js-dropdown__input"),
             ),
         )
