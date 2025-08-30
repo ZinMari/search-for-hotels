@@ -10,8 +10,7 @@ class Dropdown {
   _init() {
     this.$dropdownOpenBtn = this.$dropdown.find(".js-dropdown__btn");
     this.$dropdownInputs = this.$dropdown.find(".js-dropdown__input");
-    this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear button");
-    this.$dropClearBtnText = this.$dropdown.find(".js-dropdown__clear span");
+    this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear-btn");
     this.$labels = this.$dropdown.find(".js-dropdown__label");
     this.$title = this.$dropdown.find(".js-dropdown__btn span");
   }
@@ -25,8 +24,7 @@ class Dropdown {
     });
 
     this.$title.text("Выберете количество");
-
-    $("span", this.$dropClearBtn).attr("hidden", true);
+    this.$dropClearBtn.addClass("dropdown__clear-btn_hidden");
   };
 
   _handleDropdownOpenBtnClick = (e) => {
@@ -102,7 +100,11 @@ class Dropdown {
 
   _setButtonClear() {
     const isShowBtnClear = this._isEmptyValues();
-    this.$dropClearBtnText.attr("hidden", isShowBtnClear);
+    if (isShowBtnClear) {
+      this.$dropClearBtn.addClass("dropdown__clear-btn_hidden");
+    } else {
+      this.$dropClearBtn.removeClass("dropdown__clear-btn_hidden");
+    }
   }
 
   _getData() {

@@ -79,6 +79,10 @@
     margin-top: 15px;
     margin-bottom: 10px;
   }
+
+  &__clear-btn_hidden {
+    visibility: hidden;
+  }
 }
 
 .dropdown_opened {
