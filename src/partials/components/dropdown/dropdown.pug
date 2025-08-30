@@ -14,7 +14,7 @@ mixin dropdown({title="Заголовок", buttonText="Текст кнопки"
       people: ["взрослые", "дети", "младенцы"],
     }
 
-  div(class= className)
+  div(class= className data-type= typeDropdown)
     label.dropdown__header(for='dropdownId')= title
       if(subtitle)
         span.dropdown__subtitle= subtitle

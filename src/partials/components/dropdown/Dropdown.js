@@ -3,15 +3,13 @@ import dictionary from "../../../data/lang.json";
 class Dropdown {
   constructor(dropdownElement) {
     this.$dropdown = dropdownElement;
-
-    this._render();
-  }
-
-  _init() {
     this.$dropdownOpenBtn = this.$dropdown.find(".js-dropdown__btn");
     this.$dropdownInputs = this.$dropdown.find(".js-dropdown__input");
     this.$dropClearBtn = this.$dropdown.find(".js-dropdown__clear-btn");
     this.$labels = this.$dropdown.find(".js-dropdown__label");
+    this.dropdownType = this.$dropdown.attr("data-type");
+
+    this._render();
   }
 
   _handelDropClearBtnClick = (e) => {
@@ -76,7 +74,9 @@ class Dropdown {
     $.each(values, (key, value) => {
       if (+value !== 0) {
         const declension = this._definitionOfDeclension(value);
-        text.push(`${value} ${dictionary.ru[key][declension]}`);
+        text.push(
+          `${value} ${dictionary.ru[this.dropdownType][key][declension]}`,
+        );
       }
     });
 
@@ -134,8 +134,6 @@ class Dropdown {
   }
 
   _render() {
-    this._init();
-
     this.$dropClearBtn.on("click.dropdown", this._handelDropClearBtnClick);
     this.$dropdownOpenBtn.on(
       "click.dropdown",
