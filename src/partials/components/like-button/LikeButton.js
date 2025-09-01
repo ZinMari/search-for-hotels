@@ -5,7 +5,7 @@ class LikeButton {
     this._render();
   }
 
-  _handlelikeBtnsClick = (e) => {
+  _handleLikeBtnsClick = (e) => {
     e.currentTarget.classList.toggle("like-button__btn_liked");
     e.currentTarget.classList.contains("like-button__btn_liked")
       ? this.textContent++
@@ -13,7 +13,7 @@ class LikeButton {
   };
 
   _render() {
-    this.$likeBtn.on("click.likeBtn", this._handlelikeBtnsClick);
+    this.$likeBtn.on("click.likeBtn", this._handleLikeBtnsClick);
   }
 }
 
