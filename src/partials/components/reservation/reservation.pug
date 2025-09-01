@@ -4,7 +4,7 @@ include ../tooltip/tooltip
 include ../number-and-cost/number-and-cost
 mixin reservation
   form.reservation(action="search-room.html")
-    .reservation__wrapp
+    .reservation__wrap
       .reservation__header
         -
           const reservationHeader = {
@@ -16,7 +16,7 @@ mixin reservation
 
         +number-and-cost(reservationHeader)
       .reservation__date-dropdown
-        - const reservationDateDropdown = {titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_reserv"}
+        - const reservationDateDropdown = {titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_reserve"}
         +date-dropdown(reservationDateDropdown)
       .reservation__guest
         -
