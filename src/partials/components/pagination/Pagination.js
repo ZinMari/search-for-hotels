@@ -28,7 +28,7 @@ class Pagination {
       ".js-pagination__info span",
     );
     this.cardsCount = 12;
-    this.nuberLastPage = Math.ceil(this.roomCards.length / this.cardsCount);
+    this.numberLastPage = Math.ceil(this.roomCards.length / this.cardsCount);
     this.currentPage = 1;
   }
 
@@ -49,7 +49,7 @@ class Pagination {
 
     this.paginationNumList.innerHTML = "";
 
-    for (let i = startBtn; i < startBtn + 3 && i <= this.nuberLastPage; i++) {
+    for (let i = startBtn; i < startBtn + 3 && i <= this.numberLastPage; i++) {
       let li = document.createElement("li");
       li.classList.add(
         "pagination__num-element",
@@ -62,13 +62,13 @@ class Pagination {
       this.paginationNumList.append(li);
     }
 
-    this._createEllipses(startBtn, this.nuberLastPage);
-    this._showArrowBtns(currentPage, this.nuberLastPage);
-    this._showlinkOnFirstPage(currentPage);
-    this._showlinkOnLastPage(currentPage, this.nuberLastPage);
+    this._createEllipses(startBtn, this.numberLastPage);
+    this._showArrowBtns(currentPage, this.numberLastPage);
+    this._showLinkOnFirstPage(currentPage);
+    this._showLinkOnLastPage(currentPage, this.numberLastPage);
   }
 
-  _showlinkOnFirstPage(currentPage) {
+  _showLinkOnFirstPage(currentPage) {
     if (currentPage > 2) {
       let li = document.createElement("li");
       li.classList.add(
@@ -80,24 +80,24 @@ class Pagination {
     }
   }
 
-  _showlinkOnLastPage(currentPage, nuberLastPage) {
-    if (currentPage < nuberLastPage - 1) {
+  _showLinkOnLastPage(currentPage, numberLastPage) {
+    if (currentPage < numberLastPage - 1) {
       let li = document.createElement("li");
       li.classList.add(
         "pagination__num-element",
         "pagination__num-element_type_number",
       );
-      li.textContent = nuberLastPage;
+      li.textContent = numberLastPage;
       this.paginationNumList.append(li);
     }
   }
 
-  _showArrowBtns(currentPage, nuberLastPage) {
+  _showArrowBtns(currentPage, numberLastPage) {
     this.startArrowBtn.hidden = currentPage == 1;
-    this.endArrowBtn.hidden = currentPage == nuberLastPage;
+    this.endArrowBtn.hidden = currentPage == numberLastPage;
   }
 
-  _createEllipses(startBtn, nuberLastPage) {
+  _createEllipses(startBtn, numberLastPage) {
     const ellipses = document.createElement("li");
     ellipses.classList.add(
       "pagination__num-element",
@@ -108,7 +108,7 @@ class Pagination {
     if (startBtn != 1) {
       this.paginationNumList.insertAdjacentElement("afterbegin", ellipses);
     }
-    if (this.currentPage < nuberLastPage - 1) {
+    if (this.currentPage < numberLastPage - 1) {
       this.paginationNumList.insertAdjacentElement(
         "beforeend",
         ellipses.cloneNode(true),
