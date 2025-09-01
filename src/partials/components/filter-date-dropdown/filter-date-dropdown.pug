@@ -5,7 +5,7 @@ mixin filter-date-dropdown({title= "Заголовок", initialText= "Нача�
   div.filter-date-dropdown
     +datepicker({identifier, typeCalendar: "filter"})
     label.filter-date-dropdown__title(for=identifier)= title
-    .filter-date-dropdown__wrapp
+    .filter-date-dropdown__wrap
       input.filter-date-dropdown__input(id=identifier value= initialText disabled data-identifier= identifier)
       button.filter-date-dropdown__btn(data-identifier= identifier)
        +chevron({})
