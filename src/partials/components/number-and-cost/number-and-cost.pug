@@ -1,11 +1,11 @@
-mixin number-and-cost({number= 000, price= 000, isMiniVariant= false, nuberType= false})
+mixin number-and-cost({number= 000, price= 000, isMiniVariant= false, numberType= false})
   .number-and-cost
     .number-and-cost__number
       span.number-and-cost__symbol №
       - const classVariant = isMiniVariant ? "number-and-cost__number-room_size_mini" : "number-and-cost__number-room";
       span(class= classVariant)= number
-      if nuberType
-        span.number-and-cost__type-room= nuberType
+      if numberType
+        span.number-and-cost__type-room= numberType
     .number-and-cost__cost
       span.number-and-cost__price= `${price}₽`
       span.number-and-cost__in-what-time в сутки
