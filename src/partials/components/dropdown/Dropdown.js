@@ -19,7 +19,7 @@ class Dropdown {
     );
     this._initNiceNumber();
     this._setButtonClear();
-    this._setAvaibleInputs();
+    this._setAvailableInputs();
     this._setTitle(this._getData());
   }
 
@@ -90,7 +90,7 @@ class Dropdown {
     });
   }
 
-  _setAvaibleInputs() {
+  _setAvailableInputs() {
     this.$dropdownInputs.each(function () {
       const currentInput = $(this);
       const currentValue = currentInput.attr("value");
