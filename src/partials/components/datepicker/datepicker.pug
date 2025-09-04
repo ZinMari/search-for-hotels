@@ -1,4 +1,4 @@
-mixin datepicker({identifier, typeCalendar="static", titleStart="", titleEnd="", dateEndText="ДД.ММ.ГГГГ"})
+mixin datepicker({identifier, typeCalendar="static", titleStart="", titleEnd="", dateEndText="ДД.ММ.ГГГГ", title= "Заголовок", initialText= "Начальный текст"})
   if(typeCalendar === "static")
     input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
 
@@ -14,12 +14,12 @@ mixin datepicker({identifier, typeCalendar="static", titleStart="", titleEnd="",
         span.date-dropdown__text= dateEndText
         +chevron({})
 
-  //- if(typeCalendar === "filter")
-  //-   div.filter-date-dropdown
-  //-     +datepicker({identifier, typeCalendar: "filter"})
-  //-     label.filter-date-dropdown__title(for=identifier)= title
-  //-     .filter-date-dropdown__wrap
-  //-       input.filter-date-dropdown__input(id=identifier value= initialText disabled data-identifier= identifier)
-  //-       button.filter-date-dropdown__btn(data-identifier= identifier)
-  //-       +chevron({})
+  if(typeCalendar === "filter")
+    div.filter-date-dropdown
+      input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
+      label.filter-date-dropdown__title(for=identifier)= title
+      .filter-date-dropdown__wrap
+        input.filter-date-dropdown__input(id=identifier value= initialText disabled data-identifier= identifier)
+        button.filter-date-dropdown__btn(data-identifier= identifier)
+          +chevron({})
 
