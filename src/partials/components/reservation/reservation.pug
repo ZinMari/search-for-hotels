@@ -1,4 +1,4 @@
-include ../date-dropdown/date-dropdown
+include ../datepicker/datepicker
 include ../dropdown/dropdown
 include ../tooltip/tooltip
 include ../number-and-cost/number-and-cost
@@ -16,8 +16,8 @@ mixin reservation
 
         +number-and-cost(reservationHeader)
       .reservation__date-dropdown
-        - const reservationDateDropdown = {titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_reserve"}
-        +date-dropdown(reservationDateDropdown)
+        - const reservationDateDropdown = {typeCalendar:"dropdown", titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_reserve"}
+        +datepicker(reservationDateDropdown)
       .reservation__guest
         -
           const guestDropdownItem = {

@@ -1,4 +1,4 @@
-include ../date-dropdown/date-dropdown
+include ../datepicker/datepicker
 include ../dropdown/dropdown
 include ../button/button
 
@@ -8,8 +8,8 @@ mixin find-rooms({linkForm="empty-link"})
       h2.find-rooms__title Найдём номера под ваши пожелания
 
       .find-rooms__date
-        - const dateDropdown = {titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_start"}
-        +date-dropdown(dateDropdown)
+        - const dateDropdown = {typeCalendar: "dropdown", titleStart: "прибытие", titleEnd: "выезд", identifier: "calendar_start"}
+        +datepicker(dateDropdown)
 
       .find-rooms__guests
         -
