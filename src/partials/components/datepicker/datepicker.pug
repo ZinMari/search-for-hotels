@@ -1,4 +1,25 @@
-mixin datepicker({identifier, typeCalendar="static"})
-  input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
+mixin datepicker({identifier, typeCalendar="static", titleStart="", titleEnd="", dateEndText="ДД.ММ.ГГГГ"})
+  if(typeCalendar === "static")
+    input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
 
+  if(typeCalendar === "dropdown")
+    .date-dropdown
+      input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
+      label.date-dropdown__title(for="dateDropdownBtnStart")= titleStart
+      label.date-dropdown__title(for="dateDropdownBtnEnd")= titleEnd
+      button.date-dropdown__btn(id="dateDropdownBtnStart" data-value="start" data-identifier= identifier)
+        span.date-dropdown__text ДД.ММ.ГГГГ
+        +chevron({})
+      button.date-dropdown__btn(id="dateDropdownBtnEnd" data-value="end" data-identifier= identifier)
+        span.date-dropdown__text= dateEndText
+        +chevron({})
+
+  //- if(typeCalendar === "filter")
+  //-   div.filter-date-dropdown
+  //-     +datepicker({identifier, typeCalendar: "filter"})
+  //-     label.filter-date-dropdown__title(for=identifier)= title
+  //-     .filter-date-dropdown__wrap
+  //-       input.filter-date-dropdown__input(id=identifier value= initialText disabled data-identifier= identifier)
+  //-       button.filter-date-dropdown__btn(data-identifier= identifier)
+  //-       +chevron({})
 
