@@ -15,7 +15,6 @@ include ../../components/expandable-checkbox-list/expandable-checkbox-list
 include ../../components/comment/comment
 include ../../components/rate-button/rate-button
 include ../../components/subscription-text-field/subscription-text-field
-include ../../components/filter-date-dropdown/filter-date-dropdown
 include ../../components/pagination/pagination
 include ../../components/datepicker/datepicker
 
@@ -70,7 +69,7 @@ block content
             +datepicker(dateDropdownElement)
 
           .forms-elements__filter-date-dropdown
-            +filter-date-dropdown({title: "filter date dropdown", initialText: "19 авг - 23 авг", identifier: "calendar_filter"})
+            +datepicker({typeCalendar:"filter", title: "filter date dropdown", initialText: "19 авг - 23 авг", identifier: "calendar_filter"})
 
           .forms-elements__subscription-text-field
             +subtitle("subscription text field")

@@ -1,5 +1,5 @@
 extends ../../templates/template-page/template-page
-include ../../components/filter-date-dropdown/filter-date-dropdown
+include ../../components/datepicker/datepicker
 include ../../components/dropdown/dropdown
 include ../../components/range-slider/range-slider
 include ../../components/checkbox-list/checkbox-list
@@ -14,7 +14,7 @@ block content
     .search-room__wrapp
       form.search-room__settings-form
         .search-room__dates-of-stay
-          +filter-date-dropdown({title: "даты пребывания в отеле", initialText: "19 авг - 23 авг", identifier: "search-room"})
+          +datepicker({typeCalendar: "filter", title: "даты пребывания в отеле", initialText: "19 авг - 23 авг", identifier: "search-room"})
         .search-room__guests
           -
             const guestSettings = {
