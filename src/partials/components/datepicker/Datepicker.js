@@ -109,7 +109,7 @@ class Datepicker {
         classes: "date-calendar__filter",
         multipleDatesSeparator: " - ",
         altFieldDateFormat: "dd MMM",
-        altField: document.querySelector(".filter-date-dropdown__input"),
+        altField: document.querySelector(".datepicker__filter-input"),
       },
     };
 
