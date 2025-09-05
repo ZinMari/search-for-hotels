@@ -1,22 +1,25 @@
 @use '../../../scss/mixins';
 @use '../../../scss/vars';
 
-.date-dropdown {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 100%;
-  gap: 5px 20px;
+.datepicker {
+  &_type {
+    &_dropdown {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%;
+      gap: 5px 20px;
 
-  @media (max-width: vars.$smart) {
-    gap: 5px;
+      @media (max-width: vars.$smart) {
+        gap: 5px;
+      }
+    }
   }
-
-  &__title {
+  &__dropdown-title {
     @include mixins.form-subtitle;
   }
 
-  &__btn {
+  &__dropdown-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,22 +38,20 @@
       max-width: 100%;
     }
   }
-}
 
-.filter-date-dropdown {
-  &__title {
+  &__filter-title {
     @include mixins.form-subtitle;
 
     margin-bottom: 5px;
   }
 
-  &__wrap {
+  &__filter-wrap {
     display: flex;
     height: 44px;
     max-width: 100%;
   }
 
-  &__input {
+  &__filter-input {
     flex-grow: 1;
     margin: 0;
     border: 1px solid var(--color-dark-25);
@@ -64,7 +65,7 @@
     background-color: var(--color-light);
   }
 
-  &__btn {
+  &__filter-btn {
     border: 1px solid var(--color-dark-25);
     border-left: none;
     border-radius: 0 var(--bd-radius) var(--bd-radius) 0;
