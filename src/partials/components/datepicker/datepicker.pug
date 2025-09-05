@@ -1,25 +1,21 @@
 mixin datepicker({identifier, typeCalendar="static", titleStart="", titleEnd="", dateEndText="ДД.ММ.ГГГГ", title= "Заголовок", initialText= "Начальный текст"})
-  if(typeCalendar === "static")
-    input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
+  .datepicker(class= `datepicker_type_${typeCalendar}`)
+    input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)    
 
-  if(typeCalendar === "dropdown")
-    .date-dropdown
-      input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
-      label.date-dropdown__title(for="dateDropdownBtnStart")= titleStart
-      label.date-dropdown__title(for="dateDropdownBtnEnd")= titleEnd
-      button.date-dropdown__btn(id="dateDropdownBtnStart" data-value="start" data-identifier= identifier)
-        span.date-dropdown__text ДД.ММ.ГГГГ
+    if(typeCalendar === "dropdown")
+      label.datepicker__dropdown-title(for="dateDropdownBtnStart")= titleStart
+      label.datepicker__dropdown-title(for="dateDropdownBtnEnd")= titleEnd
+      button.datepicker__dropdown-btn(id="dateDropdownBtnStart" data-value="start" data-identifier= identifier)
+        span.datepicker__dropdown-text ДД.ММ.ГГГГ
         +chevron({})
-      button.date-dropdown__btn(id="dateDropdownBtnEnd" data-value="end" data-identifier= identifier)
-        span.date-dropdown__text= dateEndText
+      button.datepicker__dropdown-btn(id="dateDropdownBtnEnd" data-value="end" data-identifier= identifier)
+        span.datepicker__dropdown-text= dateEndText
         +chevron({})
 
-  if(typeCalendar === "filter")
-    div.filter-date-dropdown
-      input.date-calendar.js-date-calendar(class= identifier, data-typeCalendar= typeCalendar, data-identifier= identifier)
-      label.filter-date-dropdown__title(for=identifier)= title
-      .filter-date-dropdown__wrap
-        input.filter-date-dropdown__input(id=identifier value= initialText disabled data-identifier= identifier)
-        button.filter-date-dropdown__btn(data-identifier= identifier)
+    if(typeCalendar === "filter")
+      label.datepicker__filter-title(for=identifier)= title
+      .datepicker__filter-wrap
+        input.datepicker__filter-input(id=identifier value= initialText disabled data-identifier= identifier)
+        button.datepicker__filter-btn(data-identifier= identifier)
           +chevron({})
 
